@@ -1,0 +1,5 @@
+#text{
+	
+	-fx-font : 25px "sans-serif";
+	-fx-fil  : #eb2020;
+}

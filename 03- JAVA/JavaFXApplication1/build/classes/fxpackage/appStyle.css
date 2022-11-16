@@ -1,0 +1,11 @@
+#rect {
+     -fx-fill:linear-gradient(from 50% 0% to 50% 100%, black 50%, white 100%, black 50%);
+}
+
+#text{
+	
+	-fx-font : 30px "sans-serif";
+        -fx-font-weigh : bold ;
+        
+	-fx-fill: #eb2020;        
+}
