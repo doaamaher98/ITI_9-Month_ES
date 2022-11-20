@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Chat_Room_GUI.jnlp">
+  <information>
+    <title>Chat_Room_GUI</title>
+    <vendor>engdo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Chat_Room_GUI.jar" size="3984" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="Chat_Room_GUI_Client"  name="Chat_Room_GUI" />
+  <update check="always"/>
+</jnlp>
