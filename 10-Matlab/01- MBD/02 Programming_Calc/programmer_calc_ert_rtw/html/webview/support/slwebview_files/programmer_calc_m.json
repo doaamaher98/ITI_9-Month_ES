@@ -1,0 +1,97 @@
+[
+ {
+  "sid":"programmer_calc",
+  "className":"Simulink.BlockDiagram",
+  "icon":"WebViewIcon0",
+  "name":"programmer_calc",
+  "label":"programmer_calc",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.11",
+    "Sun Dec 25 01:52:30 2022",
+    "disabled",
+    "off",
+    "off",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ },
+ {
+  "sid":"programmer_calc:43",
+  "className":"Bit Clear",
+  "icon":"WebViewIcon2",
+  "name":"Bit Clear",
+  "label":"Bit Clear",
+  "parent":"programmer_calc",
+  "inspector":{
+   "params":[
+    "iBit"
+   ],
+   "values":[
+    "0"
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":{
+   "blocktype":"SubSystem",
+   "masktype":"Bit Clear"
+  }
+ },
+ {
+  "sid":"programmer_calc:42",
+  "className":"Bit Set",
+  "icon":"WebViewIcon2",
+  "name":"Bit Set",
+  "label":"Bit Set",
+  "parent":"programmer_calc",
+  "inspector":{
+   "params":[
+    "iBit"
+   ],
+   "values":[
+    "0"
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":{
+   "blocktype":"SubSystem",
+   "masktype":"Bit Set"
+  }
+ }
+]

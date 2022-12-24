@@ -1,0 +1,37 @@
+function RTW_SidParentMap() {
+    this.sidParentMap = new Array();
+    this.sidParentMap["Normal_Calc:21"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:22"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:1"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:9"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:11"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:12"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:13"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:14"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:15"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:16"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:17"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:18"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:40"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:41"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:6"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:37"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:38"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:5"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:7"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:2"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:10"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:8"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:23"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:44"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:45"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:46"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:47"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:48"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:49"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:50"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:51"] = "Normal_Calc";
+    this.sidParentMap["Normal_Calc:52"] = "Normal_Calc";
+    this.getParentSid = function(sid) { return this.sidParentMap[sid];}
+}
+    RTW_SidParentMap.instance = new RTW_SidParentMap();
