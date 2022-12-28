@@ -1,0 +1,22 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of Project [PCB_Project.PrjPcb]
+   Generated File[PCB_PROJECT_BOARD_Copper_Signal_Bot.gbr]
+   Generated File[PCB_PROJECT_BOARD_Pads_Bot.gbr]
+   Generated File[PCB_PROJECT_BOARD_Soldermask_Bot.gbr]
+   Generated File[PCB_PROJECT_BOARD_Paste_Bot.gbr]
+   Generated File[PCB_PROJECT_BOARD_Legend_Top.gbr]
+   Generated File[PCB_PROJECT_BOARD_Keep-out.gbr]
+   Generated File[PCB_PROJECT_BOARD_Mechanical_13.gbr]
+   Generated File[PCB_PROJECT_BOARD_Mechanical_1.gbr]
+   Generated File[PCB_PROJECT_BOARD_Mechanical_15.gbr]
+   Generated File[PCB_PROJECT_BOARD_Profile.gbr]
+   Generated File[PCB_PROJECT_BOARD.RUL]
+   Generated File[PCB_PROJECT_BOARD.EXTREP]
+   Generated File[PCB_PROJECT_BOARD.REP]
+
+
+Files Generated   : 13
+Documents Printed : 0
+
+Finished Output Generation At 08:27:31 ? On 28/12/2022
