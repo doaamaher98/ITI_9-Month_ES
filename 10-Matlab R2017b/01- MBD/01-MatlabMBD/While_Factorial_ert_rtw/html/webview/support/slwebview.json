@@ -1,0 +1,26 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"While_Factorial",
+   "name":"While_Factorial",
+   "fullname":"While_Factorial",
+   "label":"While_Factorial",
+   "parent":0,
+   "descendants":[
+    2
+   ],
+   "hierarchyUrl":"support/slwebview_files/While_Factorial_h_1.json",
+   "backingUrl":"support/slwebview_files/While_Factorial_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/While_Factorial_icons.css"
+}

@@ -1,0 +1,158 @@
+[
+ {
+  "hid":1,
+  "sid":"GradingSystem",
+  "esid":"",
+  "parent":0,
+  "children":[
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "name":"GradingSystem",
+  "fullname":"GradingSystem",
+  "label":"GradingSystem",
+  "icon":"WebViewIcon0",
+  "svg":"support/slwebview_files/GradingSystem_d.svg",
+  "thumbnail":"support/slwebview_files/GradingSystem_d.png",
+  "backingUrl":"support/slwebview_files/GradingSystem_d.json",
+  "elements":[
+   ":1",
+   ":2",
+   ":3",
+   ":7",
+   ":11",
+   ":19",
+   ":23",
+   ":46",
+   ":49",
+   ":50",
+   ":51",
+   ":52",
+   ":1#out:1",
+   ":2#out:1",
+   ":2#out:2",
+   ":2#out:3",
+   ":2#out:4",
+   ":2#out:5",
+   ":3#out:1",
+   ":7#out:1",
+   ":11#out:1",
+   ":19#out:1",
+   ":23#out:1"
+  ],
+  "sameAsElement":false
+ },
+ {
+  "hid":2,
+  "sid":"GradingSystem:3",
+  "esid":"GradingSystem:3",
+  "parent":1,
+  "children":[
+  ],
+  "name":"If Excellent Subsystem",
+  "fullname":"GradingSystem/If Excellent Subsystem",
+  "label":"If Excellent Subsystem",
+  "icon":"WebViewIcon2",
+  "svg":"support/slwebview_files/GradingSystem_3_d.svg",
+  "thumbnail":"support/slwebview_files/GradingSystem_3_d.png",
+  "backingUrl":"support/slwebview_files/GradingSystem_3_d.json",
+  "elements":[
+   ":6",
+   ":5",
+   ":4",
+   ":4#out:1"
+  ],
+  "sameAsElement":true
+ },
+ {
+  "hid":3,
+  "sid":"GradingSystem:23",
+  "esid":"GradingSystem:23",
+  "parent":1,
+  "children":[
+  ],
+  "name":"If Fail Subsystem",
+  "fullname":"GradingSystem/If Fail Subsystem",
+  "label":"If Fail Subsystem",
+  "icon":"WebViewIcon2",
+  "svg":"support/slwebview_files/GradingSystem_23_d.svg",
+  "thumbnail":"support/slwebview_files/GradingSystem_23_d.png",
+  "backingUrl":"support/slwebview_files/GradingSystem_23_d.json",
+  "elements":[
+   ":26",
+   ":25",
+   ":24",
+   ":24#out:1"
+  ],
+  "sameAsElement":true
+ },
+ {
+  "hid":4,
+  "sid":"GradingSystem:11",
+  "esid":"GradingSystem:11",
+  "parent":1,
+  "children":[
+  ],
+  "name":"If Good Subsystem",
+  "fullname":"GradingSystem/If Good Subsystem",
+  "label":"If Good Subsystem",
+  "icon":"WebViewIcon2",
+  "svg":"support/slwebview_files/GradingSystem_11_d.svg",
+  "thumbnail":"support/slwebview_files/GradingSystem_11_d.png",
+  "backingUrl":"support/slwebview_files/GradingSystem_11_d.json",
+  "elements":[
+   ":14",
+   ":13",
+   ":12",
+   ":12#out:1"
+  ],
+  "sameAsElement":true
+ },
+ {
+  "hid":5,
+  "sid":"GradingSystem:19",
+  "esid":"GradingSystem:19",
+  "parent":1,
+  "children":[
+  ],
+  "name":"If Pass Subsystem",
+  "fullname":"GradingSystem/If Pass Subsystem",
+  "label":"If Pass Subsystem",
+  "icon":"WebViewIcon2",
+  "svg":"support/slwebview_files/GradingSystem_19_d.svg",
+  "thumbnail":"support/slwebview_files/GradingSystem_19_d.png",
+  "backingUrl":"support/slwebview_files/GradingSystem_19_d.json",
+  "elements":[
+   ":22",
+   ":21",
+   ":20",
+   ":20#out:1"
+  ],
+  "sameAsElement":true
+ },
+ {
+  "hid":6,
+  "sid":"GradingSystem:7",
+  "esid":"GradingSystem:7",
+  "parent":1,
+  "children":[
+  ],
+  "name":"If VeryGood Subsystem",
+  "fullname":"GradingSystem/If VeryGood Subsystem",
+  "label":"If VeryGood Subsystem",
+  "icon":"WebViewIcon2",
+  "svg":"support/slwebview_files/GradingSystem_7_d.svg",
+  "thumbnail":"support/slwebview_files/GradingSystem_7_d.png",
+  "backingUrl":"support/slwebview_files/GradingSystem_7_d.json",
+  "elements":[
+   ":10",
+   ":9",
+   ":8",
+   ":8#out:1"
+  ],
+  "sameAsElement":true
+ }
+]

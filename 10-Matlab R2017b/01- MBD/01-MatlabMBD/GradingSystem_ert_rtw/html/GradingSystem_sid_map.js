@@ -1,0 +1,32 @@
+function RTW_SidParentMap() {
+    this.sidParentMap = new Array();
+    this.sidParentMap["GradingSystem:1"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:2"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:3"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:23"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:11"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:19"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:7"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:46"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:49"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:50"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:51"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:52"] = "GradingSystem";
+    this.sidParentMap["GradingSystem:4"] = "GradingSystem:3";
+    this.sidParentMap["GradingSystem:5"] = "GradingSystem:3";
+    this.sidParentMap["GradingSystem:6"] = "GradingSystem:3";
+    this.sidParentMap["GradingSystem:24"] = "GradingSystem:23";
+    this.sidParentMap["GradingSystem:25"] = "GradingSystem:23";
+    this.sidParentMap["GradingSystem:26"] = "GradingSystem:23";
+    this.sidParentMap["GradingSystem:12"] = "GradingSystem:11";
+    this.sidParentMap["GradingSystem:13"] = "GradingSystem:11";
+    this.sidParentMap["GradingSystem:14"] = "GradingSystem:11";
+    this.sidParentMap["GradingSystem:20"] = "GradingSystem:19";
+    this.sidParentMap["GradingSystem:21"] = "GradingSystem:19";
+    this.sidParentMap["GradingSystem:22"] = "GradingSystem:19";
+    this.sidParentMap["GradingSystem:8"] = "GradingSystem:7";
+    this.sidParentMap["GradingSystem:9"] = "GradingSystem:7";
+    this.sidParentMap["GradingSystem:10"] = "GradingSystem:7";
+    this.getParentSid = function(sid) { return this.sidParentMap[sid];}
+}
+    RTW_SidParentMap.instance = new RTW_SidParentMap();
