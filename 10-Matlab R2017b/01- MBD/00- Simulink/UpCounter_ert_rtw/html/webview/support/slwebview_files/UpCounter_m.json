@@ -1,0 +1,39 @@
+[
+ {
+  "sid":"UpCounter",
+  "className":"Simulink.BlockDiagram",
+  "icon":"WebViewIcon0",
+  "name":"UpCounter",
+  "label":"UpCounter*",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.8",
+    "Sat Dec 31 16:59:58 2022",
+    "disabled",
+    "off",
+    "on",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ }
+]

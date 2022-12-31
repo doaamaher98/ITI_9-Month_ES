@@ -1,0 +1,39 @@
+[
+ {
+  "sid":"If_Condition",
+  "className":"Simulink.BlockDiagram",
+  "icon":"WebViewIcon0",
+  "name":"If_Condition",
+  "label":"If_Condition",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.4",
+    "Sat Dec 31 16:50:29 2022",
+    "disabled",
+    "off",
+    "off",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ }
+]

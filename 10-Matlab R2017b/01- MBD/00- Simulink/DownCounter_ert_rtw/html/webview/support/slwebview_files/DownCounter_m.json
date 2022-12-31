@@ -1,0 +1,39 @@
+[
+ {
+  "sid":"DownCounter",
+  "className":"Simulink.BlockDiagram",
+  "icon":"WebViewIcon0",
+  "name":"DownCounter",
+  "label":"DownCounter",
+  "parent":"",
+  "inspector":{
+   "params":[
+    "ModelVersion",
+    "LastModifiedDate",
+    "LibraryLinkDisplay",
+    "ModelBrowserVisibility",
+    "Dirty",
+    "Description"
+   ],
+   "values":[
+    "1.20",
+    "Sat Dec 31 17:24:13 2022",
+    "disabled",
+    "off",
+    "off",
+    ""
+   ],
+   "tabs":[
+   ],
+   "tabs_idx":[
+   ]
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ }
+]

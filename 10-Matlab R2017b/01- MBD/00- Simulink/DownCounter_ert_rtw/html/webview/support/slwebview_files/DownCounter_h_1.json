@@ -1,0 +1,33 @@
+[
+ {
+  "hid":1,
+  "sid":"DownCounter",
+  "esid":"",
+  "parent":0,
+  "children":[
+  ],
+  "name":"DownCounter",
+  "fullname":"DownCounter",
+  "label":"DownCounter",
+  "icon":"WebViewIcon0",
+  "svg":"support/slwebview_files/DownCounter_d.svg",
+  "thumbnail":"support/slwebview_files/DownCounter_d.png",
+  "backingUrl":"support/slwebview_files/DownCounter_d.json",
+  "elements":[
+   ":1",
+   ":6",
+   ":7",
+   ":8",
+   ":9",
+   ":14",
+   ":15",
+   ":16",
+   ":1#out:1",
+   ":6#out:1",
+   ":9#out:1",
+   ":14#out:1",
+   ":15#out:1"
+  ],
+  "sameAsElement":false
+ }
+]

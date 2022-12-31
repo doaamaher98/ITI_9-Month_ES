@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"If_Condition",
+   "name":"If_Condition",
+   "fullname":"If_Condition",
+   "label":"If_Condition",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/If_Condition_h_1.json",
+   "backingUrl":"support/slwebview_files/If_Condition_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/If_Condition_icons.css"
+}

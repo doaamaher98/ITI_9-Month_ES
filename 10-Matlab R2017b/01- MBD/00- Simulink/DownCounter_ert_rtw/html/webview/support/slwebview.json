@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"DownCounter",
+   "name":"DownCounter",
+   "fullname":"DownCounter",
+   "label":"DownCounter",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/DownCounter_h_1.json",
+   "backingUrl":"support/slwebview_files/DownCounter_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/DownCounter_icons.css"
+}
