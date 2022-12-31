@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - While_Counter.c</title>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" language="JavaScript" src="slwebview.js"></SCRIPT>
+<SCRIPT type="text/javascript" language="JavaScript" src="id_mapping.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('While_Counter_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../While_Counter.c" target="rtwreport_document_frame" id="linkToText_plain">While_Counter.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: While_Counter.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'While_Counter'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.17</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.13 (R2017b) 24-Jul-2017</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * C/C++ source code generated on : Sat Dec 31 21:53:24 2022</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Embedded hardware selection: Intel-&gt;x86-64 (Windows64)</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Code generation objectives:</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> *    1. Execution efficiency</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> *    2. ROM efficiency</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> *    3. RAM efficiency</span>
+</span><span><a class="LN" name="16">   16   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="17">   17   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="18">   18   </a>
+</span><span><a class="LN" name="19">   19   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;While_Counter.h&quot;</font>
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;While_Counter_private.h&quot;</font>
+</span><span><a class="LN" name="21">   21   </a>
+</span><span><a class="LN" name="22">   22   </a><span class="CT">/* Block states (auto storage) */</span>
+</span><span><a class="LN" name="23">   23   </a><a href="While_Counter_h.html#type_DW_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_DW_While_Counter_T');" target="_self"><font color="#1122aa">DW_While_Counter_T</font></a> <a name="var_While_Counter_DW">While_Counter_DW</a>;
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><span class="CT">/* External inputs (root inport signals with auto storage) */</span>
+</span><span><a class="LN" name="26">   26   </a><a href="While_Counter_h.html#type_ExtU_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExtU_While_Counter_T');" target="_self"><font color="#1122aa">ExtU_While_Counter_T</font></a> <a name="var_While_Counter_U">While_Counter_U</a>;
+</span><span><a class="LN" name="27">   27   </a>
+</span><span><a class="LN" name="28">   28   </a><span class="CT">/* External outputs (root outports fed by signals with auto storage) */</span>
+</span><span><a class="LN" name="29">   29   </a><a href="While_Counter_h.html#type_ExtY_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExtY_While_Counter_T');" target="_self"><font color="#1122aa">ExtY_While_Counter_T</font></a> <a name="var_While_Counter_Y">While_Counter_Y</a>;
+</span><span><a class="LN" name="30">   30   </a>
+</span><span><a class="LN" name="31">   31   </a><span class="CT">/* Real-time model */</span>
+</span><span><a class="LN" name="32">   32   </a><a href="While_Counter_types_h.html#type_RT_MODEL_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL_While_Counter_T');" target="_self"><font color="#1122aa">RT_MODEL_While_Counter_T</font></a> <a name="var_While_Counter_M_">While_Counter_M_</a>;
+</span><span><a class="LN" name="33">   33   </a><a href="While_Counter_types_h.html#type_RT_MODEL_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL_While_Counter_T');" target="_self"><font color="#1122aa">RT_MODEL_While_Counter_T</font></a> *<span class="DT">const</span> <a name="var_While_Counter_M">While_Counter_M</a> = &amp;<a href="#var_While_Counter_M_" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_M_');" target="_self"><font color="#1122aa">While_Counter_M_</font></a>;
+</span><span><a class="LN" name="34">   34   </a>
+</span><span><a class="LN" name="35">   35   </a><span class="CT">/* Model step function */</span>
+</span><span><a class="LN" name="36">   36   </a><span class="DT">void</span> <a name="fcn_While_Counter_step">While_Counter_step</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="37">   37   </a><b>{</b>
+</span><span><a class="LN" name="38">   38   </a>  <a href="rtwtypes_h.html#type_int32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int32_T');" target="_self"><font color="#1122aa">int32_T</font></a> s1_iter;
+</span><span><a class="LN" name="39">   39   </a>  <a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> rtb_RelationalOperator;
+</span><span><a class="LN" name="40">   40   </a>
+</span><span><a class="LN" name="41">   41   </a>  <span class="CT">/* Outputs for Iterator SubSystem: '<a href="matlab:coder.internal.code2model('While_Counter:1')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/While_Counter</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="42">   42   </a><span class="CT">   *  WhileIterator: '<a href="matlab:coder.internal.code2model('While_Counter:4')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/WhileLoop</i></font></a>'</span>
+</span><span><a class="LN" name="43">   43   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="44">   44   </a>  s1_iter = 1;
+</span><span><a class="LN" name="45">   45   </a>
+</span><span><a class="LN" name="46">   46   </a>  <span class="CT">/* Inport: '<a href="matlab:coder.internal.code2model('While_Counter:19')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/InitCondition</i></font></a>' */</span>
+</span><span><a class="LN" name="47">   47   </a>  rtb_RelationalOperator = <a href="#var_While_Counter_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_U');" target="_self"><font color="#1122aa">While_Counter_U</font></a>.InitCondition;
+</span><span><a class="LN" name="48">   48   </a>  <span class="KW">while</span> (rtb_RelationalOperator &amp;&amp; (s1_iter &lt;= 5)) <b>{</b>
+</span><span><a class="LN" name="49">   49   </a>    <span class="CT">/* Outport: '<a href="matlab:coder.internal.code2model('While_Counter:15')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Out</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="50">   50   </a><span class="CT">     *  Sum: '<a href="matlab:coder.internal.code2model('While_Counter:8')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Add</i></font></a>'</span>
+</span><span><a class="LN" name="51">   51   </a><span class="CT">     *  UnitDelay: '<a href="matlab:coder.internal.code2model('While_Counter:9')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay</i></font></a>'</span>
+</span><span><a class="LN" name="52">   52   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="53">   53   </a>    <a href="#var_While_Counter_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_Y');" target="_self"><font color="#1122aa">While_Counter_Y</font></a>.Out += s1_iter;
+</span><span><a class="LN" name="54">   54   </a>
+</span><span><a class="LN" name="55">   55   </a>    <span class="CT">/* RelationalOperator: '<a href="matlab:coder.internal.code2model('While_Counter:14')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Relational Operator</i></font></a>' incorporates:</span>
+</span><span><a class="LN" name="56">   56   </a><span class="CT">     *  Inport: '<a href="matlab:coder.internal.code2model('While_Counter:18')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/InParam</i></font></a>'</span>
+</span><span><a class="LN" name="57">   57   </a><span class="CT">     *  UnitDelay: '<a href="matlab:coder.internal.code2model('While_Counter:10')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay1</i></font></a>'</span>
+</span><span><a class="LN" name="58">   58   </a><span class="CT">     */</span>
+</span><span><a class="LN" name="59">   59   </a>    rtb_RelationalOperator = (<a href="#var_While_Counter_DW" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_DW');" target="_self"><font color="#1122aa">While_Counter_DW</font></a>.UnitDelay1_DSTATE &lt;=
+</span><span><a class="LN" name="60">   60   </a>      <a href="#var_While_Counter_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_U');" target="_self"><font color="#1122aa">While_Counter_U</font></a>.InParam);
+</span><span><a class="LN" name="61">   61   </a>
+</span><span><a class="LN" name="62">   62   </a>    <span class="CT">/* Update for UnitDelay: '<a href="matlab:coder.internal.code2model('While_Counter:10')" name="code2model"><font color="#117755"><i>&lt;S1&gt;/Unit Delay1</i></font></a>' */</span>
+</span><span><a class="LN" name="63">   63   </a>    <a href="#var_While_Counter_DW" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_DW');" target="_self"><font color="#1122aa">While_Counter_DW</font></a>.UnitDelay1_DSTATE = s1_iter;
+</span><span><a class="LN" name="64">   64   </a>    s1_iter++;
+</span><span><a class="LN" name="65">   65   </a>  <b>}</b>
+</span><span><a class="LN" name="66">   66   </a>
+</span><span><a class="LN" name="67">   67   </a>  <span class="CT">/* End of Outputs for SubSystem: '<a href="matlab:coder.internal.code2model('While_Counter:1')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/While_Counter</i></font></a>' */</span>
+</span><span><a class="LN" name="68">   68   </a><b>}</b>
+</span><span><a class="LN" name="69">   69   </a>
+</span><span><a class="LN" name="70">   70   </a><span class="CT">/* Model initialize function */</span>
+</span><span><a class="LN" name="71">   71   </a><span class="DT">void</span> <a name="fcn_While_Counter_initialize">While_Counter_initialize</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="72">   72   </a><b>{</b>
+</span><span><a class="LN" name="73">   73   </a>  <span class="CT">/* Registration code */</span>
+</span><span><a class="LN" name="74">   74   </a>
+</span><span><a class="LN" name="75">   75   </a>  <span class="CT">/* initialize error status */</span>
+</span><span><a class="LN" name="76">   76   </a>  rtmSetErrorStatus(<a href="#var_While_Counter_M" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_M');" target="_self"><font color="#1122aa">While_Counter_M</font></a>, (NULL));
+</span><span><a class="LN" name="77">   77   </a>
+</span><span><a class="LN" name="78">   78   </a>  <span class="CT">/* states (dwork) */</span>
+</span><span><a class="LN" name="79">   79   </a>  (<span class="DT">void</span>) memset((<span class="DT">void</span> *)&amp;<a href="#var_While_Counter_DW" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_DW');" target="_self"><font color="#1122aa">While_Counter_DW</font></a>, 0,
+</span><span><a class="LN" name="80">   80   </a>                <span class="KW">sizeof</span>(<a href="While_Counter_h.html#type_DW_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_DW_While_Counter_T');" target="_self"><font color="#1122aa">DW_While_Counter_T</font></a>));
+</span><span><a class="LN" name="81">   81   </a>
+</span><span><a class="LN" name="82">   82   </a>  <span class="CT">/* external inputs */</span>
+</span><span><a class="LN" name="83">   83   </a>  (<span class="DT">void</span>)memset((<span class="DT">void</span> *)&amp;<a href="#var_While_Counter_U" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_U');" target="_self"><font color="#1122aa">While_Counter_U</font></a>, 0, <span class="KW">sizeof</span>(<a href="While_Counter_h.html#type_ExtU_While_Counter_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExtU_While_Counter_T');" target="_self"><font color="#1122aa">ExtU_While_Counter_T</font></a>));
+</span><span><a class="LN" name="84">   84   </a>
+</span><span><a class="LN" name="85">   85   </a>  <span class="CT">/* external outputs */</span>
+</span><span><a class="LN" name="86">   86   </a>  <a href="#var_While_Counter_Y" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_While_Counter_Y');" target="_self"><font color="#1122aa">While_Counter_Y</font></a>.Out = 0;
+</span><span><a class="LN" name="87">   87   </a><b>}</b>
+</span><span><a class="LN" name="88">   88   </a>
+</span><span><a class="LN" name="89">   89   </a><span class="CT">/* Model terminate function */</span>
+</span><span><a class="LN" name="90">   90   </a><span class="DT">void</span> <a name="fcn_While_Counter_terminate">While_Counter_terminate</a>(<span class="DT">void</span>)
+</span><span><a class="LN" name="91">   91   </a><b>{</b>
+</span><span><a class="LN" name="92">   92   </a>  <span class="CT">/* (no terminate code required) */</span>
+</span><span><a class="LN" name="93">   93   </a><b>}</b>
+</span><span><a class="LN" name="94">   94   </a>
+</span><span><a class="LN" name="95">   95   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="96">   96   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="97">   97   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="98">   98   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="99">   99   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="100">  100   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>
