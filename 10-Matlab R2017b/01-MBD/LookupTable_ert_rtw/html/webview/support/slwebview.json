@@ -1,0 +1,25 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"LookupTable",
+   "name":"LookupTable",
+   "fullname":"LookupTable",
+   "label":"LookupTable",
+   "parent":0,
+   "descendants":[
+   ],
+   "hierarchyUrl":"support/slwebview_files/LookupTable_h_1.json",
+   "backingUrl":"support/slwebview_files/LookupTable_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/LookupTable_icons.css"
+}

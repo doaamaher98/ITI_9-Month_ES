@@ -6,6 +6,8 @@
 
 @echo off
 
+title My Calculator
+
 :opr
 goto :main
 

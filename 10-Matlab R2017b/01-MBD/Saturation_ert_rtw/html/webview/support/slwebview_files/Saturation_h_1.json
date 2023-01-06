@@ -1,0 +1,26 @@
+[
+ {
+  "hid":1,
+  "sid":"Saturation",
+  "esid":"",
+  "parent":0,
+  "children":[
+  ],
+  "name":"Saturation",
+  "fullname":"Saturation",
+  "label":"Saturation",
+  "icon":"WebViewIcon0",
+  "svg":"support/slwebview_files/Saturation_d.svg",
+  "thumbnail":"support/slwebview_files/Saturation_d.png",
+  "backingUrl":"support/slwebview_files/Saturation_d.json",
+  "elements":[
+   ":1",
+   ":4",
+   ":7",
+   ":8",
+   ":7#out:1",
+   ":1#out:1"
+  ],
+  "sameAsElement":false
+ }
+]

@@ -1,0 +1,27 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"SubSystem",
+   "name":"SubSystem",
+   "fullname":"SubSystem",
+   "label":"SubSystem",
+   "parent":0,
+   "descendants":[
+    2,
+    3
+   ],
+   "hierarchyUrl":"support/slwebview_files/SubSystem_h_1.json",
+   "backingUrl":"support/slwebview_files/SubSystem_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/SubSystem_icons.css"
+}
