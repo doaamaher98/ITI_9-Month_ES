@@ -1,0 +1,35 @@
+[
+ {
+  "sid":"CalculatorChart_GraphicalFunc:1:68",
+  "className":"Stateflow.Transition",
+  "icon":"WebViewIcon5",
+  "name":"",
+  "label":"{Result = n1-n2;}",
+  "parent":"CalculatorChart_GraphicalFunc:1:66",
+  "inspector":{
+   "params":[
+    "ExecutionOrder",
+    "LabelString",
+    "Description",
+    "Document"
+   ],
+   "values":[
+    1,
+    "{Result = n1-n2;}",
+    "",
+    ""
+   ],
+   "tabs":[
+    "Parameter Attributes"
+   ],
+   "tabs_idx":0
+  },
+  "viewer":{
+   "jshandler":"webview/handlers/ElementHandler"
+  },
+  "obj_viewer":[
+  ],
+  "finder":[
+  ]
+ }
+]

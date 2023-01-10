@@ -1,0 +1,30 @@
+{
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "initialElement":"",
+ "sections":[
+  {
+   "hid":1,
+   "sid":"CalculatorChart_GraphicalFunc",
+   "name":"CalculatorChart_GraphicalFunc",
+   "fullname":"CalculatorChart_GraphicalFunc",
+   "label":"CalculatorChart_GraphicalFunc",
+   "parent":0,
+   "descendants":[
+    2,
+    3,
+    6,
+    5,
+    4
+   ],
+   "hierarchyUrl":"support/slwebview_files/CalculatorChart_GraphicalFunc_h_1.json",
+   "backingUrl":"support/slwebview_files/CalculatorChart_GraphicalFunc_m.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false
+ },
+ "iconsUrl":"support/slwebview_files/CalculatorChart_GraphicalFunc_icons.css"
+}
