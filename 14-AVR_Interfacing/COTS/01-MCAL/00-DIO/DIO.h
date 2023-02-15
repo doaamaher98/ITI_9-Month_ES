@@ -64,4 +64,11 @@ DIO_tenuErrorStatus DIO_enuSetPort (DIO_tenuPort Cpy_enuPortNumber, u8 Cpy_Assig
 
 
 /***************************************************************/
+/*    DIO Set PIN Value Function							  */
+/*	  Input  : Pin Number (Range from 0-31)					  */
+/*			   & Value (HIGH or LOW							  */
+/*	  Output : DIO_tenuErrorStatus to Report Errors			  */
+/***************************************************************/
+DIO_tenuErrorStatus DIO_enuSetPinValue (DIO_tenuPins Cpy_enuPinNumber, DIO_tenuPinMode Cpy_enuPinValue);
+/***************************************************************/
 #endif /* DIO_H */

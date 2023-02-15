@@ -1,13 +1,13 @@
 /*******************************************************/
 /* Author    : Doaa Maher                              */
-/* Date      : 27 JAN 2023                             */
+/* Date      : 16 JAN 2023                             */
 /* Version   : V.02                                    */
 /* Target    : AVR32								   */
 /* Descrip.   : C File with the Driver Functions	   */
 /*				for Checking their Saftey.			   */
 /*******************************************************/
-#include "Bit_Math.h"
-#include "Std_Types.h"
+#include "../00-LIB/Bit_Math.h"
+#include "../00-LIB/Std_Types.h"
 
 #include "GIE.h"
 #include "GIE_Cfg.h"
@@ -19,21 +19,18 @@
 /*	  Output : GIE_tenuErrorStatus to Report Errors				*/
 /****************************************************************/
 GIE_tenuErrorStatus GIE_enuInit_EnableGIE (void)
-{
+{	
 	GIE_tenuErrorStatus LocalErrorStatus = GIE_enuOK;
 	
-	u8 SREG_GIE_Bit = GET_BIT(SREG,SREG_GIE_Pin);
+	u8 Check_Status = GET_BIT(SREG,SREG_GIE_Pin);
 	
-	if (SREG_GIE_Bit == GIE_DisableGIE)
-	{
-		LocalErrorStatus = GIE_enuNOK;
-	}
-	else
-	{
+	if (Check_Status != 1)
 		// Setting the GIE at Bit #7 [GIE = 1]
 		SET_BIT(SREG,SREG_GIE_Pin);
-	}
-
+	
+	else 
+		return GIE_enuNOK;
+		
 	return LocalErrorStatus;
 }
 	
@@ -43,20 +40,17 @@ GIE_tenuErrorStatus GIE_enuInit_EnableGIE (void)
 /*		Output : GIE_tenuErrorStatus to Report Errors		   	*/
 /****************************************************************/
 GIE_tenuErrorStatus GIE_enuInit_DisbaleGIE (void)
-{
+{	
 	GIE_tenuErrorStatus LocalErrorStatus = GIE_enuOK;
 	
-	u8 SREG_GIE_Bit = GET_BIT(SREG,SREG_GIE_Pin);
+	u8 Check_Status = GET_BIT(SREG,SREG_GIE_Pin);
 	
-	if (SREG_GIE_Bit == GIE_EnableGIE)
-	{
-		LocalErrorStatus = GIE_enuNOK;
-	}
-	else
-	{
-		// Clearing the pin [GIE = 0]
+	if (Check_Status != 0)
+		// Clearing the GIE at Bit #7 [GIE = 0]
 		CLR_BIT(SREG,SREG_GIE_Pin);
-	}
-
-	return LocalErrorStatus;
+	
+	else
+		return GIE_enuNOK;
+	
+	return LocalErrorStatus;	
 }

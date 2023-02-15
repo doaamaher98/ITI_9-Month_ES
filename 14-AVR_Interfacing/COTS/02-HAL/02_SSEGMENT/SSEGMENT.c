@@ -3,19 +3,20 @@
 /* Date      : 18 JAN 2023                              	  */
 /* Version   : V.01                                     	  */
 /* Target    : AVR32								    	  */
-/* Descrip.  : A c file that includes the SSEGMENT function	  */
+/* Descrip.  : A c file that includes the PUSH_BUTTON 	      */
+/*			   function to get it's State [Pressed, Released] */   	 
 /**************************************************************/
 #include "Std_Types.h"
 
-#include "../../01-MCAL/00-DIO/DIO.h"
-#include "../../01-MCAL/00-DIO/DIO_Cfg.h"
+#include "DIO.h"
+#include "DIO_Cfg.h"
 
 #include "SSEGMENT_Cfg.h"
 #include "SSEGMENT_Prv.h"
 /*********************************************************************************/
-/*    Get Value on SSEG Function												 */
-/*	  Input  : Port Number & Value 												 */
-/*	  Output : SSEG_tenuErrorStatus to Report Errors							 */
+/*    Get Value on Push Button Function											 */
+/*	  Input  : Pin number that needs to be set & Address of the Pin Value To Get */
+/*	  Output : LED_tenuErrorStatus to Report Errors								 */
 /*********************************************************************************/
 SSEG_tenuErrorStatus HAL_SSEG_Display(DIO_tenuPort Cpy7SEGMENT_u8Port ,u8 Cpy7SEGMENT_u8Value)
 {

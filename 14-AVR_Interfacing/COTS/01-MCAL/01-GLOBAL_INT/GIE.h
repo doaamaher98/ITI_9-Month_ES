@@ -32,7 +32,5 @@ GIE_tenuErrorStatus GIE_enuInit_EnableGIE (void);
 /****************************************************************/
 GIE_tenuErrorStatus GIE_enuInit_DisbaleGIE (void);
 
-
-
 /***************************************************************/
 #endif /* GIE_H */

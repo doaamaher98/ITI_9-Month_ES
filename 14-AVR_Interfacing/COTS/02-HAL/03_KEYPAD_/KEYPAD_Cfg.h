@@ -1,49 +1,90 @@
 /**************************************************************/
 /* Author    : Doaa Maher                               	  */
-/* Date      : 18 JAN 2023                              	  */
+/* Date      : 2 FEB 2023                              	  */
 /* Version   : V.01                                     	  */
 /* Target    : AVR32								    	  */
-/* Descrip.  : A config file For the SSEG				 	  */	 
+/* Descrip.  : A config file For the KEYPAD				 	  */	 
 /**************************************************************/
-#ifndef _SSEG_CFG_H
-#define _SSEG_CFG_H
+#ifndef KEYPAD_CFG_H
+#define KEYPAD_CFG_H
 
-#include "../../00-LIB/Std_Types.h"
-#include "SSEGMENT.h"
-#include "SSEGMENT_Prv.h"
+#include "Std_Types.h"
 
-/********************* Enum with the PORTS NO. *********************/
+// #define			Keypad_NumberOfRows			4
+// #define			Keypad_NumberOfCols			4
+
+// Choosing the Port
+#define			Keypad_Port							DIO_enuPORTA
+/***************************** COLS ***********************************/
+typedef enum 
+{
+	Keypad_enuCol0=0,
+	Keypad_enuCol1,
+	Keypad_enuCol2,
+	Keypad_enuCol3,
+	Keypad_enuNumberOfCols
+	}Keypad_tenuCol;
+
+/***************************** ROWS ***********************************/
+typedef enum 
+{
+	Keypad_enuRow0=0,
+	Keypad_enuRow1,
+	Keypad_enuRow2,
+	Keypad_enuRow3,
+	Keypad_enuNumberOfRows
+	}Keypad_tenuRow;
+
+/***************************** MODES ***********************************/
 typedef enum
 {
-	SSEG_enuPORTA,
-	SSEG_enuPORTB,
-	SSEG_enuPORTC,
-	SSEG_enuPORTD,
-	SSEG_enuNumberOfPorts
-}SSEG_enuPORT;
+	Keypad_enuNotPressed=0,
+	Keypad_enuPressed
+	}Keypad_enuModes;
 
-/*********************************************************************/
-typedef enum {
-	CommonAnode=0,
-	CommonCathode
-}SSEG_enuModes;
+/***************************** ROWS CONFIG ***********************************/
+typedef struct 
+{
+	DIO_tenuPins strRow_Pin;
+	Keypad_enuModes strRow_Mode;
+	}Keypad_tstrRowsConfig_t;
 
-/*********************************************************************/
-typedef enum {
-	SSEGenu_One=0,
-	SSEGenu_Two,
-	SSEGenu_NumberofSEGS
-}SSEG_Numbers;
+/***************************** COLS CONFIG ***********************************/
+typedef struct
+{
+	DIO_tenuPins strCol_Pin;
+	Keypad_enuModes strCol_Mode;
+}Keypad_tstrColsConfig_t;
 
-/*********************************************************/
-typedef struct{
-	SSEG_enuPORT		    SSEGPort;	
-	SSEG_enuModes			SSEGMode;
-}SSEG_tstrPinCfg_t;
+// 
+// // Choosing Keypad (4x4) Rows' Pins
+// #define			ROW1_4x4		Keypad4x4Pin_0		
+// #define			ROW2_4x4		Keypad4x4Pin_1		
+// #define			ROW3_4x4		Keypad4x4Pin_2		
+// #define			ROW4_4x4		Keypad4x4Pin_3
+// 
+// // Choosing Keypad (4x4) Columns' Pins				
+// #define			COL1_4x4		Keypad4x4Pin_4
+// #define			COL2_4x4		Keypad4x4Pin_5
+// #define			COL3_4x4		Keypad4x4Pin_6
+// #define			COL4_4x4		Keypad4x4Pin_7		
+// /***********************************************************************/
+// 
+// // Choosing Keypad (4x3) Rows' Pins
+// #define			ROW14x3		Keypad4x3Pin_0
+// #define			ROW24x3		Keypad4x3Pin_1
+// #define			ROW34x3		Keypad4x3Pin_2
+// #define			ROW44x3		Keypad4x3Pin_3
+// 
+// // Choosing Keypad (4x3) Columns' Pins
+// #define			COL1_4x3		Keypad4x3Pin_4
+// #define			COL2_4x3		Keypad4x3Pin_5
+// #define			COL3_4x3		Keypad4x3Pin_6
 
-/*********************************************************/
-//extern SSEG_tstrPinCfg_t SSEG_tstrPinCfg[SSEGenu_NumberofSEGS];
-extern const u8  SSEG_LookupTable[10];
-/*********************************************************************/
+/***********************************************************************/
+extern const u8 Keypad_Pin_Vals [Keypad_enuNumberOfRows][Keypad_enuNumberOfCols] ;
 
-#endif         /* _SSEG */
+extern const  Keypad_tstrRowsConfig_t Keypad_tstrRowsConfig[Keypad_enuNumberOfRows];
+extern const  Keypad_tstrColsConfig_t Keypad_tstrColsConfig[Keypad_enuNumberOfCols];
+
+#endif         /* KEYPAD */

@@ -11,7 +11,7 @@
 #define GIE_PRIV_H
 
 /*********************** Register Addresses ****************************/
-#define 	SREG			(*(volatile u8*) 0x3F)
+#define 	SREG			(*(volatile u8*) 0x5F)
 
 
 /***************************** NULL POINTER ************************************/

@@ -10,7 +10,7 @@
 #ifndef DIO_CFG_H
 #define DIO_CFG_H
 
-#include "../../00-LIB/Std_Types.h"
+#include "Std_Types.h"
 
 /********************* Enum with the REG DIRECTION *********************/
 typedef enum {

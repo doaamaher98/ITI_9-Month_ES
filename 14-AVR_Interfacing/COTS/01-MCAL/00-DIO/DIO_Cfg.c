@@ -3,7 +3,7 @@
 /* Date      : 16 JAN 2023                              */
 /* Version   : V.01                                     */
 /* Target    : AVR32								    */
-/* Descrip.  : Configurations implementation c file		*/ 
+/* Descrip.  : Configurations implementation c file		*/
 /********************************************************/
 #include "DIO_Cfg.h"
 
@@ -12,21 +12,21 @@ DIO_strPinCfg_t DIO_strPinCfg [DIO_enuNumberOfPins] =
 	/*********************************************************************/
 	/*PORTA   PIN DIRECTION		PULL UP/PULL DOWN/OUTPUT LOW/OUTPUT HIGH */
 	/*********************************************************************/
-	/*PIN0*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN1*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN2*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN3*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN4*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN5*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN6*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
-	/*PIN7*/  {DIO_enuOUTPUT,  DIO_enuOutputHigh},
+	/*PIN0*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN1*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN2*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN3*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN4*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN5*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN6*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN7*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*********************************************************************/
 
 	/*PORTB   PIN DIRECTION		PULL UP/PULL DOWN */
 	/*********************************************************************/
 	/*PIN8*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN9*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN10*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN10*/ {DIO_enuINPUT,  DIO_enuInputPinHighImp},
 	/*PIN11*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN12*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN13*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
@@ -50,8 +50,8 @@ DIO_strPinCfg_t DIO_strPinCfg [DIO_enuNumberOfPins] =
 	/*********************************************************************/
 	/*PIN24*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN25*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN26*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN27*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN26*/ {DIO_enuINPUT,  DIO_enuInputPinHighImp},
+	/*PIN27*/ {DIO_enuINPUT,  DIO_enuInputPinHighImp},
 	/*PIN28*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN29*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN30*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},

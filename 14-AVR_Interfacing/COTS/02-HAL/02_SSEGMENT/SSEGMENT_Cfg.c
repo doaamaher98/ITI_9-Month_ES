@@ -5,11 +5,10 @@
 /* Target    : AVR32								    */
 /* Descrip.  : Configurations implementation c file		*/ 
 /********************************************************/
-#include "../../01-MCAL/00-DIO/DIO.h"
-#include "../../01-MCAL/00-DIO/DIO_Cfg.h"
+#include "DIO.h"
+#include "DIO_Cfg.h"
 
 #include "SSEGMENT_Cfg.h"
-#include "SSEGMENT_Prv.h"
 
 /********************************************************/
 /*
@@ -27,7 +26,7 @@ SSEG_tstrPinCfg_t SSEG_tstrPinCfg[SSEGenu_NumberofSEGS]=
 };
 */
 /********************************************************/
-// ~ : COMMON ANODE
+// COMMON ANODE
 const u8  SSEG_LookupTable[SSEG_enuNumbersofPins] =
 {
 	~ZERO,

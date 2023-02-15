@@ -8,7 +8,8 @@
 #ifndef _SSEG_CFG_H
 #define _SSEG_CFG_H
 
-#include "../../00-LIB/Std_Types.h"
+#include "Std_Types.h"
+
 #include "SSEGMENT.h"
 #include "SSEGMENT_Prv.h"
 

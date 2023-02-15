@@ -9,7 +9,7 @@
 #ifndef SSEG_H
 #define SSEG_H
 
-
+#include "SSEGMENT_Cfg.h"
 /********************* Enum with the Error Status *********************/
 typedef enum
 {
@@ -20,7 +20,7 @@ typedef enum
 	SSEG_enuInvalidValue
 }SSEG_tenuErrorStatus;
 
-/********************* for interfacing with the SSEG  *********************/
+/********************* for interfacing with the LED				*********************/
 typedef enum
 {
 	SSEG_enuA = 0,
@@ -35,7 +35,6 @@ typedef enum
 	SSEG_enuDot,
 	SSEG_enuNumbersofPins
 }SSEG_tenuPins;
-
 
 /****************************************************************/
 /*    7-Segment State Function									*/

@@ -1,44 +1,36 @@
 /********************************************************/
 /* Author    : Doaa Maher                               */
-/* Date      : 18 JAN 2023                              */
-/* Version   : V.01                                     */
+/* Date      : 4 FEB 2023                              */
+/* Version   : V.02                                     */
 /* Target    : AVR32								    */
 /* Descrip.  : Configurations implementation c file		*/ 
 /********************************************************/
-#include "../../01-MCAL/00-DIO/DIO.h"
-#include "../../01-MCAL/00-DIO/DIO_Cfg.h"
+#include "DIO.h"
 
-#include "SSEGMENT_Cfg.h"
-#include "SSEGMENT_Prv.h"
+#include "KEYPAD_Cfg.h"
+#include "SSEGMENT.h"
 
-/********************************************************/
-/*
-SSEG_tstrPinCfg_t SSEG_tstrPinCfg[SSEGenu_NumberofSEGS]=
-{	
-	{
-		.SSEGPort = DIO_enuPORTA,
-		.SSEGMode = CommonAnode	
-	},
-	
-	{
-		.SSEGPort = DIO_enuPORTB,
-		.SSEGMode = CommonAnode
-	}
-};
-*/
-/********************************************************/
-// ~ : COMMON ANODE
-const u8  SSEG_LookupTable[SSEG_enuNumbersofPins] =
+const  Keypad_tstrRowsConfig_t Keypad_tstrRowsConfig[Keypad_enuNumberOfRows]=
 {
-	~ZERO,
-	~ONE,
-	~TWO,
-	~THREE,
-	~FOUR,
-	~FIVE,
-	~SIX,
-	~SEVEN,
-	~EIGHT,
-	~NINE
+	{DIO_enuPin0, Keypad_enuNotPressed},
+	{DIO_enuPin1, Keypad_enuNotPressed},	
+	{DIO_enuPin2, Keypad_enuNotPressed},	
+	{DIO_enuPin3, Keypad_enuNotPressed}	
 };
 
+const  Keypad_tstrColsConfig_t Keypad_tstrColsConfig[Keypad_enuNumberOfCols]=
+{
+	{DIO_enuPin4, Keypad_enuNotPressed},
+	{DIO_enuPin5, Keypad_enuNotPressed},
+	{DIO_enuPin6, Keypad_enuNotPressed},
+	{DIO_enuPin7, Keypad_enuNotPressed}
+};
+
+// 4x4 Keypad
+const u8 Keypad_Pin_Vals [Keypad_enuNumberOfRows][Keypad_enuNumberOfCols] =
+{
+	{7,8,9,7},
+	{4,5,6,4},
+	{1,2,3,1},
+	{0,0,0,0}
+};
