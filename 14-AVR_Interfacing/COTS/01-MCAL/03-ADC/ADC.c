@@ -1,7 +1,7 @@
 /*******************************************************/
 /* Author    : Doaa Maher                              */
-/* Date      : 5 FEB 2023                              */
-/* Version   : V.02									   */
+/* Date      : 16 FEB 2023                              */
+/* Version   : V.03									   */
 /*			   Post-Build Config                       */
 /* Target    : AVR32								   */
 /* Descrip.   : C File with the Driver Functions	   */
@@ -18,6 +18,11 @@
 #include "../00-LIB/Std_Types.h"
 
 #include "ADC.h"
+
+// Global Pointer to function to be used twice in this file
+// Global pointer to function to hold the ADC ISR Address
+void (*ptf)(void) = NULL_PTR;
+
 /********************** Defines ***********************/
 // Static Global Flag to detect ENABLE/DISABLE ADC
 static u8 Global_ADCEnable_Flag;
@@ -355,5 +360,37 @@ ADC_tenuErrorStatus ADC_ReadADC_Channel8_Bit (u8 *Add_pu8Value)
 	}
     
 	return LocalErrorStatus;
+}
+/*******************************************************/
+// Asynchronous Function for reading the ADC Value
+ADC_tenuErrorStatus ADC_AsynchReadADC_Channel10_Bit (u16 *Add_pu16Value, void (*Cpy_ptf)(void))
+{
+	ADC_tenuErrorStatus LocalErrorStatus = ADC_enuOK;
+	/************* Validation ****************/
+	if (Add_pu16Value == NULL_PTR || Cpy_ptf == NULL_PTR)
+	{
+		LocalErrorStatus = ADC_enuNullPointerException;
+	}
+	else
+	{
+		ptf = Cpy_ptf;
+	}
+	/* Clearing Interrupt Flag bit */
+	SET_BIT(ADCSRA,ADC_enuADIF);
+
+	return LocalErrorStatus;
+}
+/*******************************************************/
+ADC_ISR_Func(ADC_ISR)
+{
+	if (ptf != NULL_PTR)
+	{
+		ptf();
+	}
+	else
+	{
+		// nothing
+	}
+	
 }
 /*******************************************************/

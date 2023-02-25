@@ -1,7 +1,7 @@
 /**************************************************************/
 /* Author    : Doaa Maher                               	  */
-/* Date      : 10 FEB 2023                              	  */
-/* Version   : V.01                                     	  */
+/* Date      : 16 FEB 2023                              	  */
+/* Version   : V.02                                     	  */
 /* Target    : AVR32								    	  */
 /* Descrip.  : A file that includes the APIS of the			  */
 /*			   LCD Driver									  */
@@ -27,7 +27,10 @@ typedef enum
 	LCD_enuOK=0,
 	LCD_enuNOK,
 	LCD_enuInvalidBlockNumber,
-	LCD_enuNullPtr
+	LCD_enuNullPtr,
+	LCD_enuInvalidInitialization,
+	LCD_enuInvalidCommand,
+	LCD_enuInvalidData
 	}LCD_tenuErrorStatus;
 
 
@@ -55,7 +58,8 @@ typedef enum
 	LCD_4Bits_Data
 	LCD_8Bits_Data
 */
-#define			LCD_DataPinsMode			LCD_8Bits_Data
+#define			LCD_DataPinsMode			LCD_4Bits_Data
+
 
 /* Options :-
    ---------

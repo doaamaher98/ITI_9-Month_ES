@@ -1,7 +1,7 @@
 /*******************************************************/
 /* Author    : Doaa Maher                              */
-/* Date      : 5 FEB 2023                              */
-/* Version   : V.01                                    */
+/* Date      : 16 FEB 2023                              */
+/* Version   : V.02                                   */
 /* Target    : AVR32								   */
 /* Descrip.   : Header file for Interfaces      	   */
 /*******************************************************/
@@ -226,9 +226,16 @@ ADC_tenuErrorStatus ADC_EnableADCInterrupt (void);
 /*********************************************************************************************/
 ADC_tenuErrorStatus ADC_EnablePolling (void);
 
+/*********************** Interrupt ********************/
+// Pointer to function
+void (*ptf)(void);
 
 // CallBack Function
-// void CallbackFunction (void (*cbf) (void));
+//void ADC_SetCallBackFun (void(*cbf)(void));
+
+ADC_tenuErrorStatus ADC_AsynchReadADC_Channel10_Bit (u16 *Add_pu16Value, void (*Cpy_ptf)(void));
+
+
 
 
 #endif /* ADC_H */

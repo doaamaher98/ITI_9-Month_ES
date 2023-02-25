@@ -13,9 +13,6 @@ int main(void)
 	ADC_EnableADC();
 	ADC_SetVoltageReference(ADC_enuExternalAVCC);
 	ADC_SetDataAdjustment(ADC_enuADLAR_RightAdjust);
-// 	ADC_SetChannelNumber(ADC_enuChannel0);
-	ADC_SetTriggerSource(ADC_enuAutoTrigger);
-	ADC_SetTriggerMode(ADC_enuAutoTrigFree_Running);
 	ADC_SetPrescaler(ADC_enuPrescalerDiv128);
 	
 	u16 TempSensorReading=0;
@@ -23,6 +20,7 @@ int main(void)
 	u8 Val1=0;
 	u8 Val2=0;
 	u8 Voltage_Val;
+
     /* Replace with your application code */
     while (1) 
     {

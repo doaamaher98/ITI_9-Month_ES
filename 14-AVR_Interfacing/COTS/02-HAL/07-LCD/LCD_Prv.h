@@ -1,7 +1,7 @@
 /**************************************************************/
 /* Author    : Doaa Maher                               	  */
-/* Date      : 10 FEB 2023                              	  */
-/* Version   : V.01                                     	  */
+/* Date      : 16 FEB 2023                              	  */
+/* Version   : V.02	                                    	  */
 /* Target    : AVR32								    	  */
 /* Descrip.  : A file that includes the Private Addresses of  */
 /*			   LCD Driver									  */
@@ -26,7 +26,7 @@
 #define		LCD_NumberOfBlocks	8
 
 /* LCD Function Set (8-bits) */
-#define			LCD_8_BitsFunctionSet			0b000111011
+#define			LCD_8_BitsFunctionSet			0b00111011
 /* LCD Display Control (8-bits) */
 #define			LCD_8_BitsDisplayControl		0b00001100
 /* Clear Display Mask (8-bits) */
@@ -41,10 +41,14 @@
 
 /* LCD Function Set Mask (4-bits) */
 #define			LCD_4_BitsFunctionSet1			0b00100000
-
 #define			LCD_4_BitsFunctionSet2			0b00100000
-
-#define			LCD_4_BitsFunctionSet3			0b11000000
+#define			LCD_4_BitsFunctionSet3			0b10000000
+/* LCD Display ON/OFF Control Mask (4-bits) */
+#define			LCD_4_BitsDisplayControl1		0b00000000
+#define			LCD_4_BitsDisplayControl2		0b11000000
+/* LCD Display Clear (4-bits) */
+#define			LCD_4_BitsClearDisplay1			0b00000000
+#define			LCD_4_BitsClearDisplay2			0b00010000
 
 #define			NULL_PTR			((void*)0)
 

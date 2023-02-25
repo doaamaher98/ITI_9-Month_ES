@@ -1,7 +1,7 @@
 /*******************************************************/
 /* Author    : Doaa Maher                              */
-/* Date      : 5 FEB 2023                              */
-/* Version   : V.01                                    */
+/* Date      : 16 FEB 2023                              */
+/* Version   : V.02                                    */
 /* Target    : AVR32								   */
 /* Descrip.   : Configurations file for the user	   */
 /*******************************************************/
@@ -41,8 +41,12 @@
 #define         ADC_10xGain             1
 #define         ADC_200xGain            2
 
-/* CLEAR MASKS */
 
+/***************** Interrupt *****************/
+#define		ADC_ISR_Func(ISR_NUMBER) void __vector_##ISR_NUMBER(void) __attribute__((signal));\
+												void __vector_##ISR_NUMBER(void)
+
+#define		ADC_ISR			16
 /************************************ Types *******************************************/
 // ADC Channels
 typedef enum

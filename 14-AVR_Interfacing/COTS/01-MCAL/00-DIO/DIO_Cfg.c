@@ -7,26 +7,27 @@
 /********************************************************/
 #include "DIO_Cfg.h"
 
+
 DIO_strPinCfg_t DIO_strPinCfg [DIO_enuNumberOfPins] =
 {
 	/*********************************************************************/
 	/*PORTA   PIN DIRECTION		PULL UP/PULL DOWN/OUTPUT LOW/OUTPUT HIGH */
 	/*********************************************************************/
-	/*PIN0*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN1*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN2*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN3*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN4*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN5*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN6*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN7*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN0*/  {DIO_enuINPUT,  DIO_enuInputPinPullUp},	
+	/*PIN1*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},	    
+	/*PIN2*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},	    
+	/*PIN3*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},		
+	/*PIN4*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},		
+	/*PIN5*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},		
+	/*PIN6*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},		
+	/*PIN7*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},		
 	/*********************************************************************/
 
 	/*PORTB   PIN DIRECTION		PULL UP/PULL DOWN */
 	/*********************************************************************/
 	/*PIN8*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN9*/  {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN10*/ {DIO_enuINPUT,  DIO_enuInputPinHighImp},
+	/*PIN10*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN11*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN12*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN13*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
@@ -36,10 +37,10 @@ DIO_strPinCfg_t DIO_strPinCfg [DIO_enuNumberOfPins] =
 
 	/*PORTC   PIN DIRECTION		PULL UP/PULL DOWN */
 	/*********************************************************************/
-	/*PIN16*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN17*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN18*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN19*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN16*/ {DIO_enuINPUT,  DIO_enuInputPinPullUp},
+	/*PIN17*/ {DIO_enuINPUT,  DIO_enuInputPinPullUp},
+	/*PIN18*/ {DIO_enuINPUT,  DIO_enuInputPinPullUp},
+	/*PIN19*/ {DIO_enuINPUT,  DIO_enuInputPinPullUp},
 	/*PIN20*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN21*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN22*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
@@ -50,8 +51,8 @@ DIO_strPinCfg_t DIO_strPinCfg [DIO_enuNumberOfPins] =
 	/*********************************************************************/
 	/*PIN24*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN25*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
-	/*PIN26*/ {DIO_enuINPUT,  DIO_enuInputPinHighImp},
-	/*PIN27*/ {DIO_enuINPUT,  DIO_enuInputPinHighImp},
+	/*PIN26*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
+	/*PIN27*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN28*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN29*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},
 	/*PIN30*/ {DIO_enuOUTPUT,  DIO_enuOutputLow},

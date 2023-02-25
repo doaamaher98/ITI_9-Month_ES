@@ -11,6 +11,7 @@
 #define PUSH_BUTTON_H
 
 #include "PUSH_BUTTON_Cfg.h"
+#include "../00-LIB/Std_Types.h"
 /********************* Enum with the Error Status *********************/
 typedef enum
 {
@@ -20,6 +21,16 @@ typedef enum
 	PUSH_BUTTON_enuInvalidPortNum,
 	PUSH_BUTTON_enuInvalidPinNum
 }PUSH_BUTTON_tenuErrorStatus;
+
+
+/****************************************************************/
+/*    PUSH_BUTTON Init Function									*/
+/*	  Input  : Void												*/
+/*	  Output : PUSH_BUTTON_tenuErrorStatus to Report Errors		*/
+/****************************************************************/
+PUSH_BUTTON_tenuErrorStatus PUSH_BUTTON_INIT(void);
+
+
 
 /****************************************************************/
 /*    PUSH_BUTTON State Function								*/
