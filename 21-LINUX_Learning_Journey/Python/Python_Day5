@@ -1,0 +1,80 @@
+																		Lec(5)
+																		-----------
+																	Sequence Types :
+																	-------------------------
+1- List :
+=====
+	x = ["1",5,2.3,"hi"]
+	Access :
+		1- Positive Index
+		2- Negative Index
+		3- Slicing.
+	Length :
+		len(x)
+	Search :
+		if xx in x :
+	Loop :
+		for i in x :
+	Functions (Object private functions) :
+		1- Append		[val]
+		2- Insert			[index,val]
+		3- Remove		[val]
+		4- Pop				[none or index]
+		5- Index			[Take value to say where it's located]
+		6- Count			[How many times the val existed]
+		7- Sort			[Sort the list in alphabetical order]
+		8- Copy			[Copies a list into another list], name of list is a pointer to it.
+		9- Extend		[Extend a list with another list]
+		10- Clear			[Clears all the list]
+/* ================================================================== */
+- None keyword [when function doesn't return any value] Occurs only ONCE.
+- False :
+	1- 0
+	2- False
+	3- ""
+	4- None
+/* ================================================================== */
+- Redirect :
+======
+- ">"			file.py > output.py
+/* ================================================================== */
+- To change encoding to UTF-08 that represents each letter in 4 bytes:
+	To make you able to write in Arabic: change the standard in both cmd & python
+	chcp 65001													[Change in cmd]
+	And in python :	
+		SET PYTHONENCODING = utf-8						[Change in python] or just write print(u"Arabic_text")
+	Finally, redirect the file into a new one to see the result.
+/* ================================================================== */
+																  Tuple
+																=====
+- It's the list but with() instead of [] 
+- x = [1,2,3]			=> List
+- y = (1,2,3)			=> Tuple
+Q) What is the difference between the list & tuple?
+- The only difference is that the tuple is FIXED LIST, while the list can be editable.
+- It could be accessed,looped,operated as the list.
+##############################################################################
+						List	[]										  |							Tuple		()
+- Works with append, insert,remove,pop,sort,clear,extend	  |   - As it's FIXED, doesn't work with append or insert or remove or pop or 																 
+																		  |	   extend
+- Works with index,count,copy									  |		- Works with index,count,copy too
+##############################################################################
+/* ================================================================== */
+															Dictionary
+															======
+- It's a sequence type, used in databases & lookup tables
+- Has Pairs [key:value], each pair is represented as a 1 value
+- mydict = {"Ahmed":1000, "Ali":2000, "Amr":3000}			[Dict with 3 pairs]
+- It could be accessed with keys :
+	print(mydict["Ahmed"])
+X: It could not be accessed with indicies.
+X: Keys can't be duplicated!
+We can use a list inside the dict & give it a specefic key :
+mydict = {
+			1 :	["Ahmed",5000,"Engineer"],
+			2 :	["Abdallah",2000,"Tech"],
+			3 :	["Maged",1000,Office],
+			4 :	["Doaa",10000,Manager]
+			}
+print(mydict[1])					// Ahmed 5000 Engineer
+print(mydict[1][0])				// Ahmed

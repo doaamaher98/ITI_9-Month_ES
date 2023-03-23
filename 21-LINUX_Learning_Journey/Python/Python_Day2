@@ -1,0 +1,98 @@
+											 Day (2)
+											---------
+Loops & Condition Statements :
+-------------------------------
+if condition :
+	...
+	...
+	...
+- Must be in same scope (same allignment) 
+if x>y and,or,not x>10 :
+	print("True")
+else :
+	...
+or
+elif condition :
+	...
+	...
+elif condition :
+	...
+	...
+- if the input is integer, cast it
+	x= int(input("Enter integer))
+
+Logical Operators :
+--------------------
+and or not
+
+Loops :-
+--------
+1- While 
+============
+while condition :
+	...
+	...
+2- For 
+=============
+for iterator in sequance_type :
+sequance_type :
+	- string
+	- list
+	- set,..
+example :
+----------
+name = "Doaa"
+for i in name:
+	print(i)
+gives : D o a a
+ex:
+---
+number = str(input("Enter the numbers : "))
+sum = 0
+
+for i in number:
+	sum = sum + int(i)
+	
+print("Total is :" + str(sum))
+/* ========================================================================= */
+Continue & Break : only used in loops (for & while)
+-----------------
+1- Continue :-
+	Go to next iteration
+2- Break :-
+	Break the loop
+	
+ex:
+----
+number = str(input("Enter the numbers : "))
+sum = 0
+
+for i in number:
+	if i == '5':
+		continue #break
+	else :
+		sum = sum + int(i)
+	
+print("Total is :" + str(sum))
+/* ========================================================================= */
+number = str(input("Please Enter your Number : "))
+count = 0
+flag = 0
+
+for i in number:
+		if i >= '0' and i <= '9' :
+			count = count + 1
+		else :
+			print("Number is wrong")
+			flag = 1
+			break
+			
+if flag == 0:
+	if count == 11:
+		print("Correct entry")
+	else :
+		print("Number must be 11 digits")
+else :
+	pass			# like do nothing but it cant be left empty
+/* ========================================================================= */
+
