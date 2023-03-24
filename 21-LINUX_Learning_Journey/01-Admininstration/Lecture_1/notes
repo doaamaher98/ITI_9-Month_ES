@@ -1,0 +1,43 @@
+Why Embedded Linux?
+==============
+1- Python is much faster than C
+2- Linux development is fast
+3- Direct to OS
+4- Have it's drivers for the Hardware used.
+5- Saves time.
+6- Open source.
+7- Portable
+So, it's the use of Linux Kernel and other SW components required for the application.
+- We customize the Linux image with only our needed SW components for the application.
+Job Profiles of Embedded Linux Software Engineers:
+/* ============================================================ */
+1- Application Engineer 					[QT, Python, ...]
+2- System Integration Engineer		[Integrates the whole system with image customization using] :
+	1- Buildroot
+	2- Yocto
+3- BSP [Board Support Package]		[Developes Device Drivers]
+/* ============================================================= */
+Linux History :
+========
+- UNIX : Multitasking and time sharing [multiuser]  "many can use the same computer @ same time"
+- Made by Bell Labs
+- But it was expensive [only free for universities profs]
+1- Richard Stallman :
+=============
+- He was the first to ask for the call for freedom, to have a cheap OS
+- Developed in Other Software Components As:
+	1-  GNU Toolchain
+	2-  GNU Shell
+	3-  GNU Binaries  
+	4- They worked on a kernel "GNU HURD" but Failed doing it.
+	
+2- Linus Torvalds
+===========
+1- Made the Kernel that does :-
+	1- Scheduling								
+	2- Dispatching    [Saves data of current task and gives the memory and resources to the new process : Context Switching]
+	3- Other functionalities.
+/* ============================================================= */
+Booting Process :
+===========
+
