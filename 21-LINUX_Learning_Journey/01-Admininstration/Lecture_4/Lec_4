@@ -1,6 +1,116 @@
 																		   Lec(4)	
 																		  =====
-1-
-2-
-3-
-4-
+1- Groups & Users 
+2- File Permissions
+3- Package Management
+4- Bash Scripting
+/* ========================================================================== */
+																	1- Groups & Users 
+																	===========
+- Multiple terminals use the same Main Frame.
+- su : switch user.
+- Group of users have the same access to files.
+- To know users in system : /etc/passwd
+- To see permissions :			[ls -l]					=>  _ | _ _ _ | _ _ _ | _ _ _ owner user sz date 		file_name
+	1) - : is a file
+	2) d: is a directory
+	3) b: binary
+	=====================================
+	1) rwx : file permissions for the file owner.
+	2) rx-  : file permissions for the group where the file owner is in.
+	3) r--   : file permissions for others.
+	=====================================
+	1) doaa : name of file owner.
+	2) dodo : name of user.
+	3) Size of file
+	4) Date + Time of creation of file.
+	5) File name.
+/* ========================================================================== */
+																	2- File Permissions
+																	============
+- Permissions :
+========= 
+ r 		: read
+ w 		: write
+ x 		: execute
+- How to write in folder :-
+	To create a file into the folder.
+- To get back to main user : 			[su + user_name]
+	1) To make another user a sudoer :
+		1- sudo udermod -aG sudo new_user_name
+		2- sudo /etc/sudoers :		File showing the actions that could be done by the sudoer.
+										You can edit this file.
+- To change permissions :				[chmod]
+- Permissions Anatomy :
+	1) Using octal numbers			[$chmod 777 f<file_name>]	 => 7 = 111, 	then it has [ rwx|rwx|rwx ] => gets x only from each
+	2) Using characters				[$chmod u+rwx]			(u:user)
+											[$chmod u+r]
+											[$chmod go+rw]			(g:group, o:others)
+- To Take away the permission use "-" instead of "+"
+- You can change permissions using wild cards.
+	- chmod -R 777 folder_name
+- cd is a shell builtin, so it can't be used with sudo
+- [ls -l] 				== 		[ll]
+- To give the commands a new nicknames :-
+	1) alias nickname="old_command"
+		ex:		[alias go="cd"]
+- To delete the alias :-
+	1) unalias nickname
+/* ========================================================================== */	
+																	3- Package Management
+																	===============
+- It's a tool that's used to : [for any program]
+	1) install
+	2) configure
+	3) remove
+	4) upgrade
+- at Debian Distribution used : (dpkg) -> But it doesn't resolve dependancies
+	ex : [$dpkg -i vlc.dec] + Downloading it
+- apt : is a package manager which install the wanted application AND ALSO RESOLVE DEPENDENCIES.			[Advanced package tool]
+	1) Repository : It's a storage location -Servers- 
+	2) apt makes the searching from these links like repos
+	3) From time to time, we just have to update these repos, 		[sudo apt update] : Updates the repos links installed Locally.
+	4) Run the installation command.										[sudo apt install + program]
+		- It builds the dependencies tree.
+	5) Hit  : No change in our local link
+	    Get : Getting the link as it doesn't exist locally.
+	6)  To remove a program :												[sudo apt remove + program]
+		- BUT it doesn't remove it's dependancies.
+			- If you want to remove dependancies : 						[sudo apt autoremove]
+			- BUT what if this dependency is used in another program?
+				- It won't operate!
+/* ========================================================================== */
+																		4- Bash Scripting 
+																		===========	
+- The name “bash” is an acronym for “Bourne Again SHell”
+- Scripting language
+- Group of linux commands to be executed in order.
+	1) Applying algorithms
+	2) Conditions
+	3) Variables
+	4) Loops
+- Types of Shells :-
+	1) Interactive shells
+	2) Non-Interactive shells				(script running in background)
+- Interpreting language
+- Shell Script :
+	1) First thing to write [sha-bang] : which is the File Path of the shell that will run the file.
+											   [#!/bin/bash]
+	2) source : to run file & [./file] to run file too. 		[Doesn't seperate the parent from the child processes]
+		If a terminal is parent process & when writing a command that runs another process it's "child process" that have both the properties of parent & child processes.
+- To enable debugging mode 		  [set -x]	: Start Debugging					[set +x] : End Debugging
+	- To detect the errors presented at the file, list the set -x command before the commands to know at while stage it fails.
+- We have 2 types of files : 
+	1) Local variables
+	2) Global variables					[in terminal : export global_var=100] 	It's shared between parent & child processes. ALL UPPER CASE
+	3) To show all global variables [env]
+- To take an Input from the user :
+	1) read -p "Please enter your name " name
+	2) echo "Your name is : " name	
+- To give your command an arguments :
+	1)  echo $#			: Number of user input arguments
+	2) Then we can switch these arguments.
+	3) echo $0 			: Prints the name of the bash file
+	    echo $1			: Prints the first argument passed by user
+	    ....
+/* ========================================================================== */	

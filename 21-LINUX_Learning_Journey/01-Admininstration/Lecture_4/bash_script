@@ -1,0 +1,46 @@
+#!/bin/bash
+
+
+
+set +x		#for Debugging
+
+# Local variable
+my_name="Doaa Maher"
+
+# Printing the variable
+echo $my_name
+
+echo $global_var
+global_var=18
+echo $global_var
+
+echo "==================================================="
+
+# Reading a value from User
+read -p "Please Enter your name : " name
+echo "Your Name is : " $name
+
+echo "==================================================="
+
+# Giving the Command an Arguments, this prints the number of arguments given 
+echo $#
+
+echo "==================================================="
+# Accessing the first argument : Script name
+echo $0
+
+# Accessing the second argument : Passed Argument
+echo $1
+
+# Accessing the third argument : Passed Argument_2
+echo $2
+echo "==================================================="
+
+clear
+
+echo "Welcome " $user_name
+cat /etc/passwd
+cat /etc/user
+
+
+exit 0 #To indicates the program executed successfully!
