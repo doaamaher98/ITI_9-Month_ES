@@ -1,0 +1,1000 @@
+  424  ps aux | grep -i apt
+  425  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  426  ps aux | grep -i apt
+  427  end qemu
+  428  pkill qemu
+  429  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  430  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "console=tty1"
+  431  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  432  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "console=tty1"
+  433  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  434  sudo qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  435  etc/profile
+  436  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=../System/sbin/init"
+  437  clear
+  438  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit="../System/sbin/init"
+  439  qemu
+  440  sudo qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  441  chmod +x rcS
+  442  make ARCH=arm CROSS_COMPILE=arm-linux-gnueab- defconfig
+  443  make vexpress_defconfig ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+  444  clear
+  445  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  446  WorkDir/MiniOS/Output$
+  447  qm cleanup <vmid> False True
+  448  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-defconfig
+  449  make vexpress_defconfig ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+  450  make menuconfig ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+  451  make all ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+  452  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-defconfig
+  453  make CONFIG_PREFIX=/home/<username>/minios/system ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- install
+  454  make CONFIG_PREFIX=/home/doaa/MiniOS/System ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- install
+  455  cp -a /usr/arm-linux-gnueabi/lib/*
+  456  /home/doaa/MiniOS/System/lib/
+  457  cp -a /usr/arm-linux-gnueabi/lib/* /home/doaa/MiniOS/System/lib/
+  458  qemu-system-arm -M vexpress-a9 -kernel zImage -dtb vexpress-v2p-ca9.dtb -initrd rootfs.img -append "root=/dev/ram rdinit=/sbin/init"
+  459  find . | cpio -o --format=newc > ../output/rootfs.img
+  460  find . | cpio -o --format=newc > ../Output/rootfs.img
+  461  ../
+  462  cd ..
+  463  clear
+  464  sudo apt-get install qemu-system
+  465  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-defconfig
+  466  sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-defconfig
+  467  gcc main.c
+  468  file helloArm
+  469  arm
+  470  arm-linux-gnueabi-gcc main.c -o mainArm
+  471  file mainArm 
+  472  file gcccompiler 
+  473  clear
+  474  tar xvf poky-4.1.2.tar.bz2
+  475  tar xvf poky-74c92e38c701e268406bb656b45ccd68471c217e.tar.bz2 
+  476  source oe-init-build-env
+  477  cd ..
+  478  clear
+  479  source oe-init-build-env
+  480  cd ..
+  481  gedit conf/local.conf
+  482  clear
+  483  bitbake core-image-minimal
+  484  sudo apt-get install lz4c
+  485  ../
+  486  cd ..
+  487  sudo-apt get sudo apt-get install lz4c
+  488  sudo apt-get install build-essential bison flex make libncurses5-dev chrpath diffstat gawk git zstd python3-distutils
+  489  sudo apt-get install lz4c
+  490  sudo apt-get install lz4
+  491  bitbake core-image-minimal
+  492  sudo apt-get bitbake
+  493  bitbake core-image-minimal
+  494  source oe-init-build-env
+  495  clear
+  496  sudo apt-get install build-essential bison flex make libncurses5-dev chrpath diffstat gawk git zstd python3-distutils lz4
+  497  bitbake core-image-minimal
+  498  clear
+  499  bitbake core-image-minimal
+  500  cd ..
+  501  bitbake core-image-minimal
+  502  sudo apt-get install build-essential bison f ex make libncurses5-dev chrpath diffstat gawk git zstd python3-distutils lz4
+  503  sudo apt-get install build-essential bison flex make libncurses5-dev chrpath diffstat gawk git zstd python3-distutils lz4
+  504  bitbake core-image-minimal
+  505  sudo apt-get install build-essential bison flex make libncurses5-dev chrpath diffstat gawk git zstd python3-distutils lz4
+  506  bitbake core-image-minimal
+  507  clear
+  508  sudo apt-get install build-essential bison flex make libncurses5-dev chrpath diffstat gawk git zstd python3-distutils lz4
+  509  bitbake core-image-minimal
+  510  source oe-init-build-env
+  511  bitbake core-image-minimal
+  512  source oe-init-build-env
+  513  bitbake core-image-minimal
+  514  touch ADC.h ADC_Cfg.h ADC.c ADC_Cfg.c ADC_Prv.h
+  515  source oe-init-build-env
+  516  bitbake core-image-minimal
+  517  clear
+  518  bitbake core-image-minimal
+  519  source oe-init-build-env
+  520  bitbake core-image-minimal
+  521  bitbake-layers -h
+  522  bitbake -layers -h
+  523  source oe-init-build-env 
+  524  bitbake-layers -h
+  525  lbitbake -c populate_sdk imagename
+  526  bitbake -c populate_sdk imagename
+  527  cd ..
+  528  cd..
+  529  cd ..
+  530  source oe-init-build-env
+  531  bitbake core-image-minimal
+  532  runqemu qemux86
+  533  bitbake core-image-minimal
+  534  runqemu qemux86
+  535  bitbake core-image-minimal
+  536  clear
+  537  bitbake core-image-minimal
+  538  runqemu qemux86
+  539  runqemu qemux-86
+  540  runqemu qemux86-64
+  541  gedit
+  542  runqemu qemux86-68
+  543  runqemu qemux86-64
+  544  runqemu qemux86-86
+  545  cd ..
+  546  source oe-init-build-env
+  547  runqemu qemux86-64
+  548  ls
+  549  sudo apt-get update
+  550  sudo apt-get install build-essential gdb cmake
+  551  sudo mkdir /opt/pi
+  552  sudo apt-get install build-essential gdb cmake
+  553  sudo apt install git
+  554  sudo apt-get update
+  555  clean
+  556  clear
+  557  sudo apt-get install build-essential gdb cmake
+  558  sudo mkdir /opt/pi
+  559  sudo apt-get install build-essential gdb cmake
+  560  sudo mkdir /opt/pi
+  561  mkdir /opt/pi
+  562  sudo chown $(whoami) /opt/pi
+  563  mkdir /opt/pi
+  564  mkdir /opt/
+  565  mkdir /opt
+  566  clean
+  567  clear
+  568  mkdir -p /opt/pi
+  569  mkdir /opt/pi
+  570  mkdir -p /opt/pi
+  571  man mkdir
+  572  sudo mkdir -p /opt/pi
+  573  sudo chown $(whoami) /opt/pi
+  574  cd /opt/pi/
+  575  git clone https://github.com/raspberrypi/tools.git
+  576  ls
+  577  cd /opt/pi/
+  578  ls
+  579  g++ main.cpp -o a.out
+  580  g++ main.cpp -o a.out
+  581  cd Mine/
+  582  sudo apt install inxi
+  583  inxi -SMA
+  584  clean
+  585  clear
+  586  sudo gedit /usr/share/
+  587  sudo gedit /usr/share/pulseaudio/
+  588  clear
+  589  sudo gedit /usr/share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf
+  590  clear
+  591  sudo apt-get install alsa-utils-y
+  592  lspci
+  593  sudo apt-get install libasound2 alsa.utils alsa.oss
+  594  alsamixer
+  595  sudo alsactl store
+  596  alsamixer
+  597  pulseaudio --start
+  598  sudo apt install pavucontrol
+  599  pulseaudio --start
+  600  pavucontrol
+  601  sudo alsa force-reload
+  602  sudo apt install alsa-base pulseaudio
+  603  alsamixer
+  604  sudo alsactl store
+  605  clear
+  606  sudo apt update
+  607  clear
+  608  sudo apt install gcc g++ clang gdb
+  609  cmake
+  610  cmake --help
+  611  ..
+  612  ../
+  613  cd ..
+  614  cd /Downloads/
+  615  cd Downloads/
+  616  touch notes
+  617  wget http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.24.0.tar.xz
+  618  sudo apt-get install gcc-arm-linux-gnueabi
+  619  git clone git://busybox.net/busybox.git --branch=1_33_0 --depth=1
+  620  sudo apt-get install -y gcc g++ gperf bison flex texinfo help2man make libncurses5-dev \ 
+  621  python3-dev autoconf automake libtool libtool-bin gawk wget bzip2 xz-utils unzip \ 
+  622  patch libstdc++6 rsync
+  623  sudo apt-get install -y gcc g++ gperf bison flex texinfo help2man make libncurses5-dev python3-dev autoconf automake libtool libtool-bin gawk wget bzip2 xz-utils unzip patch libstdc++6 rsync
+  624  sudo apt-get install gcc-arm-linux-gnueabi
+  625  touch hello
+  626  vim hello
+  627  git clone https://github.com/u-boot/u-boot.git
+  628  cd u-boot/
+  629  git checkout v2022.07
+  630  git clone https://github.com/u-boot/u-boot.git
+  631  touch main.cpp
+  632  cd ..
+  633  cd Lesson_2
+  634  main.cpp
+  635  touch main.cpp
+  636  cd Lesson(2) Lesson(3) Lesson(4) Lesson(5) Lesson(6) Lesson(7) Lesson(8) Lesson(8) Lesson(10)
+  637  cd Lesson_2 Lesson_3 Lesson_4
+  638  mkdir Lesson(2) Lesson(3) Lesson(4) Lesson(5) Lesson(6) Lesson(7) Lesson(8) Lesson(8) Lesson(10)
+  639  mkdir Lesson(2)
+  640  mkdir Lesson_2
+  641  mkdir Lesson_3 Lesson_4 Lesson_5
+  642  mkdir Lesson_6 Lesson_7 Lesson_8 Lesson_9 Lesson_10
+  643  clea
+  644  clear
+  645  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+  646  cd linux
+  647  git checkout v5.19.6
+  648  git clone https://github.com/u-boot/u-boot.git
+  649  cd u-boot/
+  650  git checkout v2022.07
+  651  clear
+  652  cd ..
+  653  sudo apt update && sudo apt install default-jre
+  654  sudo snap install --classic eclipse
+  655  ls
+  656  cd Downloads/
+  657  ls
+  658  sudo snap install --classic eclipse
+  659  snap help refresh
+  660  whereis eclipse
+  661  ls
+  662  cd snap
+  663  ls
+  664  cd bin
+  665  ls
+  666  whereis eclipse
+  667  whereis arm-none-eabi-gcc
+  668  whereis arm
+  669  git clone https://github.com/xpack-dev-tools/arm-none-eabi-gcc-xpack
+  670  which make --> /usr/bin/make 
+  671  which echo --> /bin/echo 
+  672  which echo --> /usr/bin/echo
+  673  sudo which echo --> /usr/bin/echo
+  674  echo $0 --> bash
+  675  xpm install @xpack-dev-tools/arm-none-eabi-gcc@latest --verbose
+  676  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+  677  cd linux
+  678  git checkout v5.19.6
+  679  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+  680  cd linux
+  681  git checkout v5.19.6
+  682  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+  683  clear
+  684  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+  685  cd linux
+  686  git checkout v5.19.6
+  687  git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+  688  wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.15.31.tar.xz
+  689  mkdir StaticLibrary
+  690  cd StaticLibrary/
+  691  vim main.c
+  692  gcc main.c
+  693  vim main.c
+  694  gcc main.c
+  695  vim Libadd.c
+  696  touch add.h
+  697  touch main.c
+  698  gcc -c main.c -I ./include
+  699  clear
+  700  gcc -o main.c -I ./include
+  701  gcc -o main.c
+  702  gcc -c main.c main.o
+  703  clear
+  704  gcc -c main.c main.o
+  705  gcc -c main.c main.o -I ./include
+  706  gcc -c main.c main.o ./include
+  707  gcc -c main.c -I ./include
+  708  clear
+  709  gcc -c main.c -I ./include
+  710  gcc -c main.c ./include
+  711  clear
+  712  gcc Libadd.c
+  713  gcc -c Libadd.c -I Libadd.o
+  714  gcc -c Libadd.c 
+  715  gcc -c Libadd.c ./include
+  716  clear
+  717  gcc -c Libadd.c -I ./include
+  718  clear
+  719  gcc -c Libadd.c
+  720  gcc -c Libadd.c -I ./include
+  721  gcc main.c
+  722  gcc -c main.c -I ./include
+  723  gcc -c Libadd.c -I ./include
+  724  gcc -c main.c -I ./include
+  725  gcc -c main.c main.o
+  726  gcc -c Libadd.c -I ./include
+  727  gcc -c main.c main.o
+  728  gcc -c main.c -I ./include
+  729  gcc -c main.c -I 
+  730  gcc -c main.c main.o
+  731  touch lib.c
+  732  gcc main.c
+  733  gcc -o main.c
+  734  gcc -o main.c main.o
+  735  ar -rcs libadd.a Libadd.o
+  736  touch main.c
+  737  vim main.c
+  738  gcc -c main.c main.o
+  739  clear
+  740  gcc -c main.c main.o
+  741  gcc -c main.c -I ./include
+  742  gcc main.c
+  743  vim main.c
+  744  gcc -c main.c -I ./include
+  745  gcc main.c -L -lDLL -o test -I ./include
+  746  gcc main.c -L -lDLL -o main -I ./include
+  747  clear
+  748  gcc main.c -L -lDLL -I ./include
+  749  gcc main.c -L -libLibadd -I ./include
+  750  env
+  751  gcc -c Libadd.c -I ./include
+  752  gcc -c -g -Wall -fPIC Libadd.c
+  753  objdump -x Libadd.o
+  754  cd ../
+  755  gcc -c -g -Wall -fPIC main.c
+  756  gcc -c main.c -I ./include
+  757  gcc -c -g -Wall -fPIC main.c
+  758  gcc -c -g -Wall -fPIC main.o
+  759  gcc -c main.c -I ./include
+  760  sudo apt install xpad
+  761  cd "/home/doaa/C++_for_Embedded/Mine/output"
+  762  ./"main"
+  763  cd "/home/doaa/C++_for_Embedded/Mine/output"
+  764  ./"main"
+  765  cd "/home/doaa/C++_for_Embedded/Mine/output"
+  766  ./"main"
+  767  cd "/home/doaa/C++_for_Embedded/Mine/output"
+  768  ./"main"
+  769  touch notes
+  770  system
+  771  clear
+  772  pidof 
+  773  sudo snap install playlist-dl
+  774  ar -rcs Libadd.a Libadd.o
+  775  cd ../
+  776  gcc -c main.c -I ./include
+  777  gcc -o main.o lib/Libadd.a
+  778  gcc -o main.o ./lib/Libadd.a
+  779  gcc -c main.c -I ./include
+  780  gcc -o main.o ./lib/Libadd.a
+  781  gcc -c main.c -I ./include
+  782  objdump -x main.o
+  783  cd lib/
+  784  touch add.h
+  785  vim add.h 
+  786  cd ../
+  787  cd lib/
+  788  touch Libadd.c
+  789  vim Libadd.c 
+  790  cd ../
+  791  touch main.c
+  792  vim main.c 
+  793  gcc -c main.c -I ./include
+  794  gcc main.exe main.o lib/libadd.a
+  795  gcc main.o lib/libadd.a
+  796  objdump a.out 
+  797  a.out
+  798  cd a.out
+  799  ./a.out
+  800  sudo cp ./lib/lib*.so /usr/lib
+  801  gcc main.c -L ./lib/ -WL,-rpath=./lib -Wall -ladd -o main.exe -I ./include/
+  802  clear
+  803  sudo cp ./lib/lib*.so /usr/lib
+  804  sudo chmod 0755 /usr/lib/lib*.so
+  805  sudo ldconfig
+  806  gcc main.c -L ./lib/ -ladd -o main.exe -I ./include/
+  807  gcc main.c -L ./lib/ -ladd -o main -I ./include/
+  808  gcc main.c -L./lib -lDLL -o test -I./include
+  809  gcc main.c -L ./lib/ -WL,-rpath=./lib -Wall -ladd -o main.exe -I ./include/
+  810  gcc main.exe main.o lib/libadd.a
+  811  gcc main.c -L ./lib -l[Libadd] -o test.exe -I./include
+  812  ./main.exe
+  813  ./test.exe
+  814  sudo cp ./lib/lib*.so /usr/lib
+  815  sudo chmod 0755 /usr/lib/lib*.so
+  816  sudo ldconfig
+  817  gcc main.c -L ./lib/ -Wl,-rpath=./lib -Wall -ladd -o test.exe -I ./include/
+  818  gcc main.c -L ./lib -l[Libadd] -o test.exe -I./include
+  819  ./bootstrap
+  820  clear
+  821  gcc -c -g -Wall -fPIC Libadd.c
+  822  clear
+  823  gcc -shared -o lib Libadd.so Libadd.o
+  824  clear
+  825  objdump -x Libadd.o
+  826  gcc -shared -o lib[Libadd].so Libadd.o
+  827  gcc main.c -L./lib -l[DynamicLib] -o test -I./include
+  828  gcc main.c -L./lib -l[DynamicLib] -o test -I./include
+  829  clear
+  830  gcc main.c -L./lib -l[DynamicLib] -o test -I./include
+  831  gcc main.c -L./lib -l[Libadd] -o test -I./include
+  832  test
+  833  ./bootstrap
+  834  clear
+  835  wget http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.24.0.tar.xz
+  836  ./bootstrap
+  837  ./configure --enable-local
+  838  make
+  839  ./ct-ng list-samples
+  840  ./ct-ng menuconfig
+  841  ./ct-ng menuconfig | grep cortexm9
+  842  ./ct-ng menuconfig | grep cortexa9
+  843  ./ct-ng menuconfig | grep cortex
+  844  ./ct-ng list-samples | cortexa9
+  845  ./ct-ng list-samples | cortex
+  846  ./ct-ng 
+  847  clear
+  848  ./ct-ng list-samples | cortexa9
+  849  ./ct-ng list-samples | grep  cortexa9
+  850  ./ct-ng arm-cortexa9_neon-linux-gnueabihf
+  851  ./ct-ng menuconfig
+  852  ./ct-ng build
+  853  git clone https://github.com/crosstool-ng/crosstool-ng.git
+  854  strings bootcode.bin 
+  855  clear
+  856  ls
+  857  strings bootcode.bin | less
+  858  strings start.elf 
+  859  strings start.elf | cmdline
+  860  strings start.elf | grep cmdline
+  861  touch CV_Session1.txt
+  862  vim CV_Session1.txt 
+  863  du -sh sysroot
+  864  ./bootstrap
+  865  ./configure --enable-local
+  866  make
+  867  ./ct-ng list-samples
+  868  ./ct-ng list-samples | grep cortex
+  869  ./ct-ng arm-cortexa9_neon-linux-gnueabihf
+  870  ./ct-ng menuconfig
+  871  ./ct-ng build
+  872  clear
+  873  touch exp_letter.txt
+  874  touch arm_notes.txt
+  875  vim arm_notes.txt 
+  876  ls
+  877  clear
+  878  gcc -Wall -std=c++14 main.cpp
+  879  g++ -Wall -std=c++14 main.cpp
+  880  g++ -Wall -std=c++15 main.cpp
+  881  g++ -Wall -std=c++11 main.cpp
+  882  ./a.out 
+  883  clear
+  884  g++ -Wall -std=c++14 main.cpp
+  885  touch AUTOSAR.txt
+  886  ./main 
+  887  touch Linux_Day1
+  888  sudo snap install notepad-plus-plus
+  889  sudo apt update
+  890  sudo apt upgrade
+  891  sudo snap install snapd
+  892  sudo snap install core
+  893  sudo snap install notepad-plus-plus
+  894  sudo snap help refresh
+  895  python -version
+  896  python
+  897  man python
+  898  clear
+  899  py man
+  900  clear
+  901  py --version
+  902  python --version
+  903  python3 -version
+  904  python3 -c
+  905  clear
+  906  python3-version
+  907  python -V
+  908  sudo apt install python3.7
+  909  wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
+  910  python -V
+  911  cd Python-3.7.7
+  912  ./configure --enable-optimizations
+  913  make -j 8
+  914  python3.7 --version
+  915  make -j 8
+  916  python3.7 --version
+  917  sudo apt install python3.7
+  918  sudo apt install software-properties-common
+  919  sudo apt update
+  920  sudo apt install software-properties-common
+  921  sudo add-apt-repository ppa:deadsnakes/ppa
+  922  sudo apt install python3.7
+  923  sudo apt update
+  924  sudo apt install software-properties-common
+  925  ps aux | grep -i apt
+  926  sudo kill all
+  927  sudo killall apt apt-get
+  928  sudo killall apt apt
+  929  sudo killall apt
+  930  ps aux | grep -i apt
+  931  sudo killall apt install
+  932  sudo killall apt apt install
+  933  sudo killall apt apt-install
+  934  sudo apt install python3.7
+  935  ps aux | grep -i apt
+  936  sudo reboot
+  937  cd "/home/doaa/Github/ITI_9-Month_ES/20-CPP_Learning_Journey/Lesson_1/output"
+  938  ./"main"
+  939  cd "/home/doaa/Github/ITI_9-Month_ES/20-CPP_Learning_Journey/Lesson_1/output"
+  940  ./"main"
+  941  cd "/home/doaa/Github/ITI_9-Month_ES/20-CPP_Learning_Journey/Lesson_1/output"
+  942  ./"main"
+  943  cd "/home/doaa/Github/ITI_9-Month_ES/20-CPP_Learning_Journey/Lesson_1/output"
+  944  ./"main"
+  945  touck Python_Day2
+  946  touch Python_Day2
+  947  sudo apt update
+  948  sudo apt install software-properties-common
+  949  sudo add-apt-repository ppa:deadsnakes/ppa
+  950  python3.7 -version
+  951  python3.7 -V
+  952  sudo apt install python3.7
+  953  python3.7 -V
+  954  cd Python-3.7.7
+  955  ./configure --enable-optimizations
+  956  make -j 8
+  957  sudo make altinstall
+  958  python3.7 --version
+  959  sudo apt update
+  960  python3.7 --version
+  961  python file.py
+  962  py file.py
+  963  sudo apt install pythonpy
+  964  py file.py
+  965  python file.py 
+  966  python3 file.py 
+  967  touch file.py
+  968  touch Python_Day3
+  969  touch Python_Day4
+  970  touch lib.py
+  971  touch Python_Day5 Python_Day6 Python_Day7
+  972  mkdir Lecture_1 Lecture_2 Lecture_3 Lecture_4 Lecture_5 Lecture_6 Lecture_7 Lecture_8
+  973  touch notes
+  974  python3 file.py 
+  975  clear
+  976  python3 file.py 
+  977  clear
+  978  python3 file.py 
+  979  clear
+  980  python3 file.py 
+  981  clear
+  982  python3 file.py 
+  983  clear
+  984  python3 file.py 
+  985  clear
+  986  python3 file.py 
+  987  clear
+  988  python3 file.py 
+  989  clear
+  990  python3 file.py 
+  991  clear
+  992  python3 file.py 
+  993  clear
+  994  python3 file.py 
+  995  clear
+  996  python3 file.py 
+  997  clear
+  998  python3 file.py 
+  999  clear
+ 1000  python3 file.py 
+ 1001  python3 -B  file.py 
+ 1002  python3  file.py 
+ 1003  touch Bit_Math.py
+ 1004  python3  file.py 
+ 1005  sudo ufw status
+ 1006  pwd
+ 1007  man pwd
+ 1008  ls -a
+ 1009  ls -all
+ 1010  ls --all
+ 1011  ls -a
+ 1012  ls --all
+ 1013  ls -all
+ 1014  clear
+ 1015  type pwd
+ 1016  type man
+ 1017  type ls
+ 1018  time
+ 1019  history
+ 1020  cal
+ 1021  uname -r
+ 1022  cat Lec3
+ 1023  gedit Lec3
+ 1024  history > history.txt
+ 1025  cat history.txt 
+ 1026  clear
+ 1027  gedit Lec_4
+ 1028  nano nano_file
+ 1029  nano nano_file 
+ 1030  vim vim_file
+ 1031  ls
+ 1032  ls -l
+ 1033  ls -li
+ 1034  ls -i
+ 1035  ls -lia
+ 1036  ls -a
+ 1037  ls -h
+ 1038  ls -liah
+ 1039  ls -liah | grep text
+ 1040  ls -liah | grep linux
+ 1041  ls -liah | grep use
+ 1042  ls -liah | grep ls
+ 1043  Lec
+ 1044  clear
+ 1045  ls -liah | grep Lec
+ 1046  ls -liah | grep Lec > pipelined_file
+ 1047  man more
+ 1048  more Lec3 
+ 1049  clear
+ 1050  less Lec3 
+ 1051  man less
+ 1052  less Lec Lec3 
+ 1053  history | less
+ 1054  more Lec3 
+ 1055  less Lec3 
+ 1056  clear
+ 1057  head Lec3 
+ 1058  tail Lec3 
+ 1059  head Lec3 
+ 1060  tail Lec3 
+ 1061  ls *
+ 1062  clear
+ 1063  more Lec3 -2
+ 1064  more Lec3 -1
+ 1065  less Lec3 -1
+ 1066  head Lec3 -1
+ 1067  more Lec3 -5
+ 1068  clear
+ 1069  less Lec3 -5
+ 1070  head Lec3 -4
+ 1071  tail Lec3 -4
+ 1072  clear
+ 1073  history | grep head -2
+ 1074  history | grep tail -2
+ 1075  history | grep tail -20
+ 1076  clear
+ 1077  grep Lec Lec3 
+ 1078  grep -v Lec Lec3
+ 1079  clear
+ 1080  cat etc/passwd
+ 1081  cat /etc/passwd
+ 1082  cat /etc/passwd > pipelined_file 
+ 1083  car pipelined_file 
+ 1084  cat pipelined_file 
+ 1085  cat /etc/passwd | grep root >> pipelined_file 
+ 1086  cat pipelined_file 
+ 1087  clear
+ 1088  ls -l
+ 1089  cd ..
+ 1090  cd..
+ 1091  cd .
+ 1092  cd ..
+ 1093  clear
+ 1094  ls -l
+ 1095  ls -a
+ 1096  ls -al
+ 1097  clear
+ 1098  useradd -c dodo -s /bin/bash -m -c "I'm new user" dodu
+ 1099  su 
+ 1100  sudo useradd -c dodo -s /bin/bash -m -c "I'm new user" dodu
+ 1101  ls /etc/passwd
+ 1102  cat /etc/passwd
+ 1103  sudo passwd dodu
+ 1104  sudo su
+ 1105  sudo usermod -aG sudoers dodu
+ 1106  cat /etc/passwd
+ 1107  sudo usermod -aG sudoers dodu
+ 1108  clear
+ 1109  cat /etc/passwd > all_users.txt
+ 1110  cd ..
+ 1111  cd home/
+ 1112  ls
+ 1113  ls doaa
+ 1114  cd doaa
+ 1115  ls
+ 1116  cd Github/
+ 1117  ls
+ 1118  cd ITI_9-Month_ES/
+ 1119  cd 16-Embedded_Linux/
+ 1120  ls
+ 1121  cd ..
+ 1122  cd 21-LINUX_Learning_Journey/
+ 1123  cd
+ 1124  ls
+ 1125  cd Github/
+ 1126  ls
+ 1127  sudo su dodu
+ 1128  ls
+ 1129  nano
+ 1130  clear
+ 1131  ls
+ 1132  sudo su dodu
+ 1133  ls
+ 1134  ls -l
+ 1135  cd /Videos
+ 1136  cd Videos/
+ 1137  clear
+ 1138  cd ..
+ 1139  ls -l
+ 1140  sudo usermod -aG sudo dodu
+ 1141  su dodu
+ 1142  ls
+ 1143  cd dodu
+ 1144  ls
+ 1145  cd doaa/
+ 1146  ls
+ 1147  cd Videos/
+ 1148  ls
+ 1149  mkdir my_foler
+ 1150  ls -l
+ 1151  chmod my_folder 777
+ 1152  chmod  777 my_foler/
+ 1153  cp my_foler my_Folder
+ 1154  clear
+ 1155  ls
+ 1156  ls -l
+ 1157  chmod 111 my_foler
+ 1158  ls -l
+ 1159  chmod 222 my_foler
+ 1160  ls -l
+ 1161  touch bash_script.bash
+ 1162  nano bash_script 
+ 1163  ls -l
+ 1164  chmod u+rwx bash_script 
+ 1165  ls -l
+ 1166  ./bash_script 
+ 1167  nano bash_script 
+ 1168  bash bash_script 
+ 1169  source bash_script 
+ 1170  nano bash_script 
+ 1171  ./bash_script 
+ 1172  source bash_script 
+ 1173  cd Github/ITI_9-Month_ES/21-LINUX_Learning_Journey/01-Admininstration/Lecture_4
+ 1174  nano bash_script 
+ 1175  ls
+ 1176  ./bash_script 
+ 1177  nano bash_script 
+ 1178  ./bash_script 
+ 1179  nano bash_script 
+ 1180  ./bash_script 
+ 1181  export global_var=98
+ 1182  nano bash_script 
+ 1183  ./bash_script 
+ 1184  nano bash_script 
+ 1185  ./bash_script 
+ 1186  nano bash_script 
+ 1187  ./bash_script 
+ 1188  nano bash_script 
+ 1189  ./bash_script 
+ 1190  nano bash_script 
+ 1191  ./bash_script
+ 1192  export glob=1
+ 1193  nano bash_script 
+ 1194  ./bash_script
+ 1195  nano bash_script 
+ 1196  ./bash_script
+ 1197  echo #PATH
+ 1198  env
+ 1199  nano bash_script 
+ 1200  clear
+ 1201  ./bash_script
+ 1202  nano bash_script 
+ 1203  ./bash_script
+ 1204  nano bash_script 
+ 1205  ./bash_script
+ 1206  nano bash_script 
+ 1207  ./bash_script
+ 1208  clear
+ 1209  nano bash_script 
+ 1210  ./bash_script hi hi
+ 1211  nano bash_script 
+ 1212  ./bash_script hi hi
+ 1213  nano bash_script 
+ 1214  ./bash_script hola
+ 1215  nano bash_script 
+ 1216  ./bash_script hola dodo
+ 1217  ./bash_script hola dodo dodoz
+ 1218  nano bash_script 
+ 1219  ./bash_script hola dodo dodoz
+ 1220  cat history > bash_script_history
+ 1221  cat bash_script_history 
+ 1222  clear
+ 1223  nano bash_script 
+ 1224  ./bash_script
+ 1225  nano bash_script 
+ 1226  gedit Lec_5
+ 1227  cat /etc/passwd > new_users.txt
+ 1228  cat new_users.txt 
+ 1229  clear
+ 1230  sudo cat /etc/sudoers
+ 1231  cat /etc/sudoers > info_sudoers.txt
+ 1232  sudo cat /etc/sudoers > info_sudoers.txt
+ 1233  df
+ 1234  touch file_permission
+ 1235  ls -l
+ 1236  chmod 555 file_permission 
+ 1237  ls -l
+ 1238  chmod 655 file_permission 
+ 1239  ls -l
+ 1240  touch try
+ 1241  rm try 
+ 1242  ls
+ 1243  ls -l
+ 1244  chmod ugo+x file_permission 
+ 1245  ls -l
+ 1246  chmod o+x file_permission 
+ 1247  ls -l
+ 1248  chmod go-w file_permission 
+ 1249  ls -l
+ 1250  chmod u-x file_permission 
+ 1251  ls -l
+ 1252  chmod g-x file_permission 
+ 1253  ls -l
+ 1254  chmod o-x file_permission 
+ 1255  ls -l
+ 1256  cat history less 50 > my_history_terminal
+ 1257  cat less history 50 > my_history_terminal
+ 1258  cat less history > my_history_terminal
+ 1259  cat history > my_history
+ 1260  sudo cat history > my_history
+ 1261  clear
+ 1262  history
+ 1263  history | grep sudo
+ 1264  history less -50
+ 1265  history less 
+ 1266  less history
+ 1267  history
+ 1268  cat history > my_history
+ 1269  history > my_history
+ 1270  type cd
+ 1271  ls
+ 1272  mkdir trial
+ 1273  cd trial/
+ 1274  touch file[1-9].txt
+ 1275  ls
+ 1276  rm file\[1-9\].txt 
+ 1277  ls
+ 1278  touch [1..10]
+ 1279  ls
+ 1280  rm \[1..10\] 
+ 1281  ls
+ 1282  touch file{1-9}.txt
+ 1283  ls
+ 1284  rm file\{1-9\}.txt 
+ 1285  touch {1..9}.txt
+ 1286  ls
+ 1287  ls -l
+ 1288  cd ..
+ 1289  chmod -R 111 trial
+ 1290  sudo chmod -R 111 trial
+ 1291  ls -l
+ 1292  chmod -R ug+rw trial
+ 1293  ls -l
+ 1294  cd trial/
+ 1295  ls -l
+ 1296  clear
+ 1297  alias go="cd"
+ 1298  go ..
+ 1299  ls
+ 1300  go trial/
+ 1301  unalias go
+ 1302  cd ..
+ 1303  cd trial/
+ 1304  cat /etc/shells
+ 1305  sudo apt install fish
+ 1306  fish
+ 1307  clear
+ 1308  nano bash_script2 
+ 1309  cp bash_script2 bash_script2.sh
+ 1310  nano bash_script2.sh 
+ 1311  touch dodo.txt
+ 1312  chmod u+x bash_script2.sh 
+ 1313  ./bash_script2.sh 
+ 1314  nano bash_script2.sh 
+ 1315  ./bash_script2.sh 
+ 1316  nano bash_script2.sh 
+ 1317  ./bash_script2.sh 
+ 1318  nano bash_script2.sh 
+ 1319  ./bash_script2.sh 
+ 1320  nano bash_script2.sh 
+ 1321  ./bash_script2.sh 
+ 1322  nano bash_script2.sh 
+ 1323  ./bash_script2.sh 
+ 1324  nano bash_script2.sh 
+ 1325  nano script_check_file.sh
+ 1326  clear
+ 1327  ./script_check_file.sh
+ 1328  chmod u+rwx script_check_file.sh 
+ 1329  clear
+ 1330  ./script_check_file.sh
+ 1331  nano script_check_file.sh 
+ 1332  ./script_check_file.sh
+ 1333  nano script_check_file.sh 
+ 1334  nano script_switch_case
+ 1335  nano script_switch_case.sh
+ 1336  chmod u+rwx script_switch_case.sh 
+ 1337  ./script_switch_case.sh 
+ 1338  clear
+ 1339  ./script_switch_case.sh 
+ 1340  ls -l
+ 1341  clear
+ 1342  ./script_switch_case.sh 
+ 1343  clear
+ 1344  nano simple_calculator.sh
+ 1345  chmod u+rwx simple_calculator.sh 
+ 1346  ls -l
+ 1347  ./simple_calculator.sh 
+ 1348  nano simple_calculator.sh
+ 1349  ./simple_calculator.sh 
+ 1350  nano simple_calculator.sh
+ 1351  ./simple_calculator.sh 
+ 1352  nano simple_calculator.sh
+ 1353  ./simple_calculator.sh 
+ 1354  nano simple_calculator.sh
+ 1355  ./simple_calculator.sh 
+ 1356  nano simple_calculator.sh
+ 1357  ./simple_calculator.sh 
+ 1358  nano simple_calculator.sh
+ 1359  nano simple_login.sh
+ 1360  clear
+ 1361  chmod u+wrx simple_login.sh 
+ 1362  ./simple_login.sh 
+ 1363  nano simple_login.sh
+ 1364  ./simple_login.sh 
+ 1365  nano simple_login.sh
+ 1366  ./simple_login.sh 
+ 1367  clear
+ 1368  ./simple_login.sh 
+ 1369  clear
+ 1370  ./simple_login.sh 
+ 1371  clear
+ 1372  ./simple_login.sh 
+ 1373  nano for_script.sh
+ 1374  mkdir For_Example
+ 1375  cd For_Example/
+ 1376  touch file{0..9}.txt
+ 1377  cd ..
+ 1378  nano for_script.sh 
+ 1379  chmod u+rwx for_script.sh 
+ 1380  ./for_script.sh 
+ 1381  nano for_script.sh 
+ 1382  ./for_script.sh 
+ 1383  nano for_script.sh 
+ 1384  ./for_script.sh 
+ 1385  cd For_Example/
+ 1386  pwd
+ 1387  nano for_script.sh 
+ 1388  cd ..
+ 1389  nano for_script.sh 
+ 1390  ./for_script.sh 
+ 1391  nano for_script.sh 
+ 1392  ./for_script.sh 
+ 1393  ls -l
+ 1394  nano for_script.sh 
+ 1395  ./for_script.sh 
+ 1396  nano for_script.sh 
+ 1397  ./for_script.sh 
+ 1398  clear
+ 1399  nano while_script.sh
+ 1400  chmod u+rwx while_script.sh 
+ 1401  nano while_script.sh
+ 1402  ./while_script.sh 
+ 1403  nano while_script.sh
+ 1404  ./while_script.sh 
+ 1405  nano while_script.sh
+ 1406  ./while_script.sh 
+ 1407  nano while_script.sh
+ 1408  ./while_script.sh 
+ 1409  nano while_script.sh
+ 1410  ./while_script.sh 
+ 1411  nano while_script.sh
+ 1412  ./while_script.sh 
+ 1413  clear
+ 1414  nano while_script.sh
+ 1415  ./while_script.sh 
+ 1416  sudo apt install xterm
+ 1417  clear
+ 1418  bash
+ 1419  gedit Lec_6
+ 1420  nano show_internal_fragmentation.txt
+ 1421  ls -li | grep show_internal_fragmentation.txt 
+ 1422  stat show_internal_fragmentation.txt 
+ 1423  history > file_system.txt

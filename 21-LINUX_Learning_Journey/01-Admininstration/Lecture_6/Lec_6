@@ -1,0 +1,94 @@
+			    															 Lec(6)
+																		=====
+1) File System
+
+
+
+/* ========================================================================== */
+																	1) File System
+																	=========
+1- What is file system?
+	- The way your system organize your data and deals with them on the Hard disk.
+	- The directories structure of the main files in the system.
+2- meta-data : carries info for the data
+	- Like a library
+
+3- Storage Devices : 
+	1) Floppy Disk
+		- We store "0s and 1s" physically on a magnetic disk, was so small in size.  
+	2) Flash Memory
+		- Floating Gate MOSFET, applied on it high voltage to write 0 on it, while reading requires less voltage.
+	3) Hard Disks
+		- Magnetic Disks different from floppy disks ones.
+		- Data are scatterd.
+	4) CDROMs
+		- Laser Engravings.
+		
+4- Info about data to collect them together to say where they're located?		[collect 0s and 1s on Hard disk]
+	- An array of pointers was created that has the address of the data blocks of a specefic file.
+	- Each file has it's ID = Inode number.
+	- Each Inode number has it's corresponding pointer.
+	- Each file has permissions
+	- Each file has size
+	- Each file has a type
+	- Each file has info.
+5- This Table is called : 					[Inode Table]
+	- It's the meta-data.
+6- There's a table "Dentry table"		[To detect which file_name has the inode number]
+	- File name
+	- Inode number
+7- Partitions -> Folders -> Files
+8- The hard disk has a group of partitions :
+	- 512MB 			-> 		MBR : Master boot record		:	it loads the file system, where there's the partition table that shows each partition starting address & ending address, so it loads the 2nd stage BL.
+	- Partitions :
+	some data : SUPER BLOCK (meta-data)
+		- Partition C
+	some data : SUPER BLOCK (meta-data)
+		- Partition D
+	-Then for each partition it's meta-data.
+
+9- Why do we make partitions?
+	1) To organize data (User friendly organization)
+	2) Files security & safety.
+	3) Each partition can have a different file system.
+	
+10) FAT file system is an old file system that can handle MAX 4GB (usually used with flasha)
+11) File systems for windows NTFS and for Linux EXT4 , Linux can support Windows but tut windows can't support Linux. Carries meta-data.
+12) When you mount the partition, the SUPER BLOCK gets loaded into RAM from Hard Disk.
+13) Then, every partition with a file system must first be loaded into RAM to be able to deal with it as a files & directories.
+14) What is the difference between different file systems ?
+	- Size variable in inode table, what is it's type? unsigned char , can hold to MAX size = 255 block only.
+	- What if a block with size > 255 ?  
+15) Used space in a formatted flasha, is the size of the SUPER BLOCK meta-data.
+	- Used space = 16384 Bytes.		=>		2**14.
+16) Windows has file systems trees for each storage device while Linux has only 1 file system regarding how many storage devices.
+17) What vaires between a file systems is the size of data blocks saved in sequence, what is it's size?
+	1- If the block size was big, we'd use alot of pointers (large array of pointers) that will use large meta-data, then theres more waste in meta-data storage (like what happend at the flasha) that will cause => Internal Fragmentation = if block size = 4MB, and our pic is only 1MB, then there is a waste of bytes (3MB) those are internal fragmentation.
+	Then, Internal Fragmentation : It's the wasted space not used due to the large size of block.
+	It also has less number of read requests.
+	When data loss, repeat the transition of the whole big block.
+	Slower block transmission.
+	2- If the block size was small, has so small internal fragmentation.
+	Has more number of reading requests.
+	When data loss, repeat the transition of a small block.
+	Faster block transmission.
+	EX: Like a bowl of fish, we want to transfer it from a room to another.
+	----
+18) Dentry table is presented at each directory.
+19) Linux VFS (Virtual file system) :
+	1- Detects the needed File system to perform the operation.
+	2- Load this File system into the RAM if not loaded already
+	3- Performs the operation.
+20) lsblk 		=> shows all paritions in system.
+21) Partitions :
+	1- Data Partition
+	2- Swap Partition : Tells the OS when the RAM is full to load data into this swap partition [un-needed data]
+		To avoid Linux crashing due the full RAM, we create this swap partition, it carries the programs running in background while you're using other programs, and when you use them [alt+tab] they're loaded into RAM and the other program is moved  to the swapped partition. [extension like RAM but slower]
+22) sudo fdisk + partition_name
+23) sudo blockdev --getbsz /dev/sda				[ To get the block size ]			=> 4096B = 4KB
+24) ls -li													[ i: iNode nuber ]
+25) To show the internal fragmentation 
+26) when Inode number range is full , then it's full.
+27) df -h													[df -ih : to view Inodes too]
+28) stat file_name
+/* ========================================================================== */
