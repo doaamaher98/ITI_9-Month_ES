@@ -1,3 +1,127 @@
-																		 Lec 8
-																		====
+																		  Lec 8
+																		 ====
+1) Process Managment
+2) Build Process
+3) Process States
+4) Background & Foreground Processes
+5) Priority & Niceness Values
+/* ======================================================================== */
+																 1) Process Managment
+																==============
+1) Thread vs Process?
+	1- Process 	:	Running program
+	2- Thread 	:	Light weight Process.
+2) A Process can have multifunctions 
+	1- As Schedular : it's a thread.		[light weight]
+	2- Or can have multiple threads.
+3) Thread needs more resources than than process.
+4) When we make Context Switching "going from a process to another" : 
+	1- It takes more time switching between 2 processes (as it requries more resources)
+5) When we make Context Switching "going from a thread to another"  :
+	1- It takes less time between 2 threads 				   (as it requries less resouces)
+6) Context Switching :-
+	i) Saves the state = "PCB : Process Control Block" of the currently running process in RAM.
+	ii) Fetches PCB of the process to be run on the CPU.
+7) To make Processes share memory, we need to make : [IPC : Interprocess communication] via Shared memory , Pipelining & Message Queuing.
+8) To make Threads share memory, we have global vars & has it's local stack. so it's much easier than between processes.
+9) Threads share the (.data) section.
+10) Creation/Termination time of process > Creation/Termination time of thread.
+11) There are no dependencies between processes, while in Threads, they can depend on each other.
+/* ======================================================================== */
+																	2) Build Process
+																	==========
+													[ALL FILES DEALS WITH LOGICAL ADDRESSES]
+1) Preprocessror
+	1- Resolves all (#)
+2) Compiler
+	1- Compiler
+	2- Assembler
+3) Linker									   		 [GAVE THEM THE PHYSICAL ADDRESSES]
+	1- Takes LinkerScript/ ld,ls
+	2- Takes (.o) files
+	3-Links them all to output [at compile time]:
+		i) executable files 		[.elf, .hex, .srec,..]
+		ii) .map files	
+ex:		
+----
+I] file1.c =>		int x = 5;						[Compiler gave it a logical address, and made it in symbol table]
+   file2.c =>		extern int x;					[When compiler sees extern, it generates it in symbol table as needed "as it doesn't know it yet" it tells the linker to go look for this variables at the other (.o) files , if yes, give it the same address in memory; as it's the same variable]
+- If the Linker didn't find it => Linker Error : Undefined Reference to ...
 
+4) In Windows we have Linker & LOADER ".dll" ".so" : 
+	1- Loader works at runtime. [links at runtime] unlike the linker which links at compile time.
+	2- If OS needed the (.dll file) , the LOADER loads it into RAM.
+	3- Like at last level in games, there's a video while the game is loading "slow"
+	4- If 2 Apps uses same Library working at same time : It gets loaded in RAM only ONCE = "shared libraries" unlike the linker.
+/* ======================================================================== */	
+																3) Process States
+																===========
+																
+					1) Dormant (Created)																5) Terminated
+	
+													2) Ready							4) Running
+	
+																	3) Waiting
+												
+1- Created :
+	- Didn't start yet.
+2- Ready	  :
+	- The Ready Queue, when the process is starting it comes here.
+3- Waiting :
+	- Processor is waiting for fetching files from Hard disk to RAM
+4- Running :
+	- Depends on the Algorithm.
+5- Terminated :
+6- Zombie 	   :
+	- Parent process sends the child process to Zombie mode, as the OS need the info in child process.
+
+- Schedular : runs every OS ticks, to decided which of the process is higher priority to be executed.
+  =======
+- Dispatcher : Does the Context Switching
+========
+
+/* ======================================================================== */
+															4) Background & Foreground Processes
+															========================
+1) UNRELATED TO RTOS!
+
+2) Background Process :	[Non-interactive process]
+	1- Runs at background as :											[Apps running at task manager]
+	2- Background processes that run with the starting of the OS is called : Deamon process.
+	3-  [gnome-system-monitor] : Like a task manager in Linux
+		[top] : Shows the Processes.
+		[ps]  : Shows the Current Processes at terminal.
+		[ps axu] : Shows the Running Processes for all system.
+		[ps -eo 'tty,pid,comm' | grep ^?] : Shows all Deamons in system.
+		[jobs] 	   : Shows current jobs at shell.
+		[sleep]  : delays for a time. [seconds]
+		[sleep 5 &] : the "&" says that we want this process to run at background.
+	4- To create a background process :
+		[bg ./name_of_script]			or 			[script_name &]
+3) Foreground Process :   [Interactive process]
+	[fg] : bring process from bg to fg
+	[ps -ely] : 
+	[pidof some_process] : To get the PID
+	[pstree] : Processes into a tree shape 
+/* ======================================================================== */
+															5) Priority & Niceness Values
+															==================
+1) Priority    : Decides which process must be executed first to make the schedular give it the access to run. [CAN'T BE MODIFIED]
+2) Niceness : It's the priority that you can edit. [-20 : 19] the less the more in priority
+	1- [nice -n process_name]
+	2- [killall process_name or process_ID]
+	
+3) Kill signal has types :
+	1- [kill -l]
+	2- [signal 7 man]
+	3- [kill  -9 process_ID]
+
+4) You can renice.
+
+5)	Commands Helpers :-
+===============
+		 ; 	: to run commands sequentially			[ls;pws;cd Desktop/]
+		|| 	: second cmd will run if the first cmd returned false.
+			  first cmd will run if the second won't.
+		&& : It's opposite, second cmd will run if the first cmd returned true.
+/* ======================================================================== */
