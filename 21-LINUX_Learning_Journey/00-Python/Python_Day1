@@ -1,0 +1,59 @@
+							Day (1)
+						-----------------------
+						Python Programming Lec(1)
+						-------------------------
+- High Level Language
+- Algorithms
+- Development Boards
+- Supporting Tools [Desktop Applications]
+- Web Development 
+/* =========================================================================================================== */
+						  File.py   [Doesn't change]
+						Interpreter [Depends on the OS],[Interprets line by line]
+						    OS
+- Python Started in 1991.
+|---------------------------------------------------------------------------------------------------------------|
+| C									Python					|
+| - Must have Entry point [main]					- The file is the entry point		|
+| - Libraries must be included						- Has internal functions		|
+| - Identation isn't that nessecary					- Spaces has meaning			|
+| - Has ;								- No ; if u added it no problem		|
+| --------------------------------------------------------------------------------------------------------------|
+- To define a variable : 
+		x = 20
+		x = "Doaa"
+- Interpreter can detect the type of this variable.
+- The variable type could be changed in runtime.
+- Python can declare 14 types of data (without writing their types)
+
+Strings :
+-------------
+- ' or " are the same but in 1 line
+- ''' can be in multpile lines
+
+Comments :
+------------
+- # single line
+- No multiline comments in python.
+- If you want it, you can use ''' as it's a string but not assiged to a variable, so it's useless.
+
+Input :
+--------
+x = input ("Message")
+- Use + for concatinating strings.
+
+Casting :
+----------
+type(variable to be casted)
+	ex : 	x = "hi"
+		y = int(x)
+		
+Operators :
+------------
+%  : Modulus
+	ex : 5%3 => 5 has how many 3? only 3, then reminder = 2.
+	     7%50 => 7 has how many 50? none, then reminder = 7.
+	     
+** : Power
+// : Float division
+/* =========================================================================================================== */

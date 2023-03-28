@@ -1,0 +1,65 @@
+							     	 Day(3)
+								 Strings & Functions
+								---------------------
+1- Strings:
+------------
+- They are array of characters
+- Can be indexed [from 0 -> length-1]
+- Can be negative indexed [from the right, in reverse direction]
+	[-1] : last char
+	[-2],..
+- Can be Sliced
+	string[0:3]	=> [0 is included, while 3 is excluded]
+	string[:2]
+	string[2:]
+
+2- Len : an internal function (without inclusions)
+-------
+- Get the length
+	value = len(string)
+/* ========================================================================== */
+- Has object private functions :
+	- lower : make all lower case
+	- upper : make all upper case
+	ex : x = string.lower()
+	- strip : remove spaces
+	- find  : find the string you asked (returns the location of the first occurance of it)
+								 (returns 0 if not found)
+	- count : counts the number of occurance
+	They both work with a part of the string (not nessecarry to use the whole string, but both are case-sensitive.
+	- replace : replaces a current string with another -> replace("old","new")
+	
+/* ========================================================================== */	
+Functions :
+-----------
+def Function():				# Function Implementation - Takes no arguments -
+	....
+
+Function()					# Function Call
+
+def Function2(x,y)				# Has arguments
+	...
+Function2(10,20)
+
+- No void
+- May return something
+	- Multiple return [return a,b,c]
+- Default values : they exist if you didn't pass the values relative to them
+	- def Func(x=1,y=2,z=3)
+		...
+		...
+	Func(10,20,30)		=> 60
+	Func()			=> 6
+	Func(1,4)			=> 8
+	Func(z=10,y=20)	=> 31
+- Global word, to use the variable in a different scope with same name.
+
+
+
+
+
+
+
+
+
+

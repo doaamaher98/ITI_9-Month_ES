@@ -1,0 +1,32 @@
+																		Day(6)
+																		File I/O
+																		-----------
+File Handling :
+=========
+- open ("path", "mode")
+	where mode : r,w,a :
+		r: read
+		w: write
+		a: append 
+- file.write("Something")			[if file existed, it overwrites it]
+- file.close() 							[at the end is a must]
+- file.append("Second Thing")	[with append it doesn't overwrite the file]
+- file.read()
+- file.readline()						[return each line in file
+/* ================================================================== */
+- Try & except : To handle exceptions
+try :
+	# Code of what I fear to  happen
+except :
+	# How to handle it
+ex :
+------
+try :
+	file=open(path,"r")
+expect :
+	print("Invalid File Path")
+finally :									[gets executed everytime]
+	....
+	
+	
+

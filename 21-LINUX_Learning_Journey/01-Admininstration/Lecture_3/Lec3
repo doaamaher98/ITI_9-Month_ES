@@ -1,0 +1,138 @@
+																			Lec(3)
+																		   =====
+1- Text Editors in Linux
+2- Pipelining in Linux
+3- Wildcards
+4- Task
+5- File naming rules
+6- How to search on files?
+7- How to search in files?
+8- Users & Groups
+9- Files Permission
+10- Package Managment.
+/* ===================================================================== */
+																1- Text Editors in Linux :
+																==============
+1) Gedit :
+- GUI based
+- Easy to use
+2) Nano :
+- Medium to use
+- From terminal NO GUI
+- Can be used on Target if installed on it.
+3) VIM :
+- Hard to use
+- Most professional text editor.
+- Has modes of operation :
+	1- Navigation Mode				[esc]
+	2- Insertion Mode					[i]
+/* ===================================================================== */					
+																2- Pipelining in Linux :
+																==============					
+- Process 	: 	It's a program running as it got loaded from [HDD to RAM], program is a file in the Hard Disk.
+- Pipelining 	:    It's a way of communication between 2 processes [process 1 output "p1" is passed to process 2 intput "p2"] they're running in parallel , It's a way of IPC [Interprocess Communication]
+					To do so, write : CMD1 | CMD2 		=> command1 | command2
+- "Grep pattern file"					
+- | vs > (Pipelining vs Redirection)?
+	1-  ls > listof_files 									: Redirection the listof_files
+	2- ls -liah | grep hi	> new_pipelined_file		: Pipelining between 2 processes : [ls & grep], taking output of ls and passed to grep.
+/* ===================================================================== */						
+																3- Wildcards :
+																=========	
+												It's the way you operate on more than 1 file
+- more, less, head, tail.
+	-more file -number of lines 						[Shows the file content every number_of_lines passed]
+	-history | grep tail/head -20
+	
+- To create many files, use the command :
+	- Touch f{1..100}.txt								[Creates 100 file from 1 command] Numbers
+	- Touch f{a..z}.txt									[Creates 100 file from 1 command] Letters
+- To list the files f+alphabet			:				ls f[a-z].txt
+
+																 Wildcards :
+																=======
+1- * 					[Zero character or more]															ls *
+2- [a-z]				[Range of Characters to be replaced in one digit]
+3- or [abfld]			[Only those Characters to be replaced in one digit]
+4- [a-vo-z]			[Range from A -> V, and O -> Z, two ranges together]
+5- [!a-c]				[All characters except from a to c]
+6- [!agz]			
+7- ? 					[Replaced with one digit]															ls f?.txt : "could be character or digit"
+8- $+CMD
+/* ======================================================================= */
+																5- Task
+																=====
+EXAMPLES :
+=======
+1- List any file ending with .txt
+	ls *.txt
+2- List all files starting with ns and ending with .log
+	ls ns*.log
+3- List all files starting with s and then two numbers
+	ls s[0-9][0-9]*
+4- List all files starting with s and then 1 number only
+	ls s[0-9][!0-9]* 				or 				ls s[0-9][a-z]*
+5- Remove all files
+	rm *
+/* ======================================================================= */
+																5- File naming rules
+																=============
+1- Any Character can be used except 	"/"
+2- Hidden files names starts with 		"."								[ls .fileMakhfy]
+																				To list it : [ls -a]
+/* ======================================================================= */
+															6- How to search on file ?
+															===============
+1- whereis CMD	 [searches in whole system]					=> 							[whereis cd] [whereis cat] 
+	- To search for binary files, use [-b]															[whereis -b cat]
+2- locate - FASTER THAN whereis and find, searchs in whole system -
+	- It uses database in searching [FAST]
+	- If you added a new file, you must update the database [HAS SEARCHING ALGORITHMS]
+		- sudo updatedb	: to update the database.
+3- find : takes path to search in
+	-ex : find /home/doaa -file_name  -file
+/* ======================================================================= */
+															7- How to search in files?	
+															===============
+1- Grep pattern file_name
+2- grep -v exception_line file_name
+/* ======================================================================= */
+															8- Users & Groups	
+															===========
+- Group of users : [with same privillages]
+	- users inside each group.
+- Some Users can be in different groups
+- Sudoers Group :
+	1- Group of Admins of the system
+	2- They have all privillages on system.
+- Data about each user :
+	1- /etc/passwd
+		- cat /etc/passwd
+		- man -f passwd
+		- LogingName : EncryptedPasswd:NumericalUserID:NumericalGroupID:UserName:UserHomeDir:DefaultShell
+		- cat /etc/shadow								[Shows the passwords of useres "Encrypted" by encryption algorithm at sender, and at Reciever there is a Decryption Algorithm]
+		- Key + MSG = Encrypted message.
+		- sudo cat /etc/passwd | grep root			[root user is the first user in the system]
+- To Switch between users :
+	1- su + another user
+		- Will ask for the password for the switched user.
+- To Create a New User  & Creating him a home directory "-m" :
+	- useradd -c "Name" -s "/bin/bash" -m -c "This is a Comment" NEW_USER
+- To Create the new user a password :
+	- sudo passwd NEW_USER 
+- Use (CTRL + h) to show hidden files.
+- To switch to root :
+	- sudo su								=> [goes to root]
+- Admin must add new user to sudoers group to be able to use the sudo command, to do so :
+	- Use usermode to :
+		- used to modify existing user account details, such as username, password, home directory location, default shell, and more.
+		REF : https://phoenixnap.com/kb/usermod-linux
+	- Use chgrp to :
+		- Used to change the group ownership of a file or directory.
+	- Use groupadd to :
+		- creates a new group account using the values specified on the command line and the default values from the system.
+	- Use groupdel to :
+		-  modifies the system account files, deleting all entries that refer to group
+- To get the Max users on system :
+	- grep UID /etc/login.defs
+/* ===================================================================== */

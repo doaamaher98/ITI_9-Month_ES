@@ -1,0 +1,94 @@
+																			Lec(5)
+																			====
+1) Bash Scripting
+2) Conditions
+3) Loops
+4) Shell Sessions
+5) Archeiving & Compressing
+/* ======================================================================== */
+																	1) Bash Scripting
+																	===========
+1) Make multiple commands
+2) Make debugging
+3) Make Conditions
+4) Make Loops
+- To display shells :
+	cat /etc/shells
+- sudo apt install fish :		Friendly interactive shell.
+- env : Lists the environment variables.
+- uname -a : prints user info
+- ` : x=`ls /home/doaa/Desktop  | grep file`			(`: Im going to run a command)
+- Supported operations :
+	id++, ++id
+	id--,   --id
+	-,+,*,/,%
+	**, +-, -=
+	<<,>> , >=, <= ==, !=
+/* ======================================================================== */
+																	2) Conditions
+																	========
+1- If Condition :
+	- if [ condition ]
+	  then
+	  	#statements
+	  elif [ condition ]
+	  then
+	  	#statements
+	  else
+	  	#statements
+	  fi
+2- Switch case :
+	- case $var_Name in 
+	value_1)
+		#Statements;;
+	value_2)
+		$Statements;;
+	value_3)
+		#Statements;;
+	*)									#DEFAULT ACTION;;
+	esac
+/* ======================================================================== */
+																	3) Loops
+																	======
+1- For loop :
+	- for iterator in list
+	do 
+		#statements
+	done
+2- While loop:
+	- while [ condition ] 
+	do
+		#statements
+	done
+/* ======================================================================== */
+															4) Shell Sessions
+															===========
+- Shell types :
+	1) Interactive non-login shells			: Normal GUI terminal
+	2) Interactive login shells					: As in Raspberry Pi, you have to login to use the shell	[far terminals]
+	3) Non-Interactive non-login shells		: Running scripts without requiring any log-ins			[Typical script]
+	4) Non-Interactive login shells			: Shell script got invoked 			=> To make script more secure [is given an argument]
+		ex : #!/bash/bin --login																					[Specific option]
+
+- IMPORTANT FILES THAT RUNS IN BACKGROUND :
+=============================
+1- ~/bashrc				: A hidden file that gets exectued with non-login shells
+2-   /etc/profile			: runs when bash login shells
+3- ~/.profile				: In login shells
+4- ~/.bash_logout		: Logout from login shells
+	
+/* ======================================================================== */
+															5) Archeiving & Compressing
+															==================
+1- Archeiving : 
+	- .o files are collected into -> Library (.a)
+	- This Library (.a) has a size more than all (.o) files as it also includes some info about them.
+
+2- Compressing :	
+	- Reduces file size though a compressing algorithms.	[videos, pics, text files, ...]
+
+3- Commands :
+	1- tar :  is used to create Archive and extract the Archive files.  tar command in Linux is one of the important command which provides archiving functionality in Linux. We can use Linux tar command to create compressed or uncompressed Archive files and also maintain and modify them. 
+	2- cut : cutting out the sections from each line of files and writing the result to standard output.
+	3- sed : stream editor and it can perform lots of functions on file like searching, find and replace, insertion or deletion.
+/* ======================================================================== */	

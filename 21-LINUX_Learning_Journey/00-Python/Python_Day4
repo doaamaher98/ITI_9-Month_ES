@@ -1,0 +1,58 @@
+											 Day (4)
+											---------
+- Python Modules :
+	Like libraries in C, they are files with functions to be used in another file.
+	If you want to use them, use import them.
+	
+ex :
+-----
+import lib
+lib.print_function()
+
+BUT, py_cache folder appears!
+use -B after the python3 command, then the file name.
+- python3 -B file.py
+
+Also we can only access a specific function from a library, instead of calling the whole library.
+from lib import my_func
+to directly call thw function : 
+my_func()
+/* ================================================================ */
+- Constructor Function :
+==============
+x= 10
+x = int(x) 	=> int() : Constructor function.
+/* ================================================================ */
+- List : Group of variables sharing same list name
+====
+- myList = [1,2,3,4]
+- To access list :
+	1- myList[0]
+- Have have multiple data types.
+	myList = [1,40.4,"dodo",False]
+- Can be modified
+- Supports negative indexing.
+- Supports Slicing.
+Operations :
+-----------------
+1- Len (Built in function)
+2- For loop
+3- Checking value [if ... in ...] -> returns True or False
+Object private functions :
+-----------------------------------
+1- Append										[Puts the value at the end of the list]
+	myList.append("Doaa")
+2- Insert 											[don't replace the value]
+	myList.insert(1,"Dodo")
+3- Remove										[Given the value we want to remove, first occured value mentioned]
+	myList.remove("Dodo")
+4- Pop												[doesnt take any value, just delete the last value in list, or could be passed the integer we want to delete, it also take the value poped as it's return value]
+	x = myList.pop()
+	myList.pop(2)								[Index to be deleted]
+Index :											[Shows the index number where the variable in, first occurance]
+=====
+myList.index("Doaa")
+Count :											[Counts the number of occurance of a number/string]]
+=====
+myList.count("Doaa")
+/* ================================================================ */

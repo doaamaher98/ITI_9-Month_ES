@@ -1,0 +1,142 @@
+																		  Lec 7
+																		=====
+1) File Operations 
+2) Soft & Hard Links
+3) Mount & Unmount
+4) How Linux detects the file type?
+5) Linux File system.
+6) Device Types
+/* ======================================================================== */
+																		1) File Operations 
+																		===========
+I] COPY OPERATION :
+=============
+1) What changes when copying from a FS1 to another FS2?
+	1- Inode number/table
+	2- Destination Dentry table
+	3- Data Blocks
+2) What stays constant when copying from a FS1 to another FS2?
+	1- Names
+	2- Pointers
+II] MOVE OPERATION :
+=============
+1- In same File System?
+-----------------------------------
+1) What changes when moving from a FS1 to  FS1?
+	1- Dentry table [Parent directory]
+2) What stays constant when moving from a FS1 to FS1?
+	- The rest.
+
+2- In different File System?
+-----------------------------------
+1) What changes when moving from a FS1 to  FS2?
+	1- Dentry table [Parent directory]
+	2- Inode number/table
+	3- Data blocks
+2) What stays constant when moving from a FS1 to FS2?
+	- The rest.
+	
+III] RENAMING OPERATION :
+================
+1) Changes :
+	1- Dentry table
+2) Constant :
+	- The rest.
+	
+IV] DELETION OPERATION :
+================
+1) Changes / Deleted :
+	1- Dentry table
+	2- Inode table
+2) Stays :
+	1- Data Blocks :			That's why the data can be recovered.
+/* ======================================================================== */
+																		2) Soft & Hard Links
+																		============
+1- Soft Links = Symbolic Link :
+==================
+1) Like a shortcut : a pointer to point on the file you want to execute.
+2) It carries the path or the original file.
+3) Size = size of file it points at.
+4) If we change the name of the original file, then a Dangling link will occur.
+5) You can create it between different file systems.
+6) You can create it for a directory.
+7) ln -s <original_file_name> <link_name>	
+8) file type is l => link
+	- Static_Linked_File.txt -> soft_hard_links.txt
+2- Hard Links :
+=========																		
+1) In Inode table, a new entry is added with the same Inode number of the pointed file. 																		
+2) Exact like the file we're exeucting
+3) Can't make Hard links between different file systems
+4) As they both pointing to the same data blocks in memory, then changing the hard link will cause change in the original one.
+5) If we renamed the file pointed to by the hard link , the hard link won't be affected.
+6) ln <original_file_name> <link_name>																		
+7) 	Considers it as a normal file
+	- Hard_Linked_File.txt
+/* ======================================================================== */
+																		3) Mount & Unmount
+																		=============
+1) dmesg -w																																				
+2) Mount : It's the loading process of the meta-data drom the hard fisk into the RAM
+	- You also choose the mounting point : which indicates the entry point of accessing the directory.
+	- [mkdir -p flasha]
+	- [sudo demsg -w] 						: To unmount the dir		=> -w : make it able to listen to the connected devices.
+		When it senses the flasha connected, it says "Attached removable disk" => It's Auto Mounted.
+		flasha's device => sdb
+3) To do the mounting on your own, unmount the auto mounted flasha to start the mounting process :
+	1- mount the sdb from the /dev/sdb "flasha's name" + dir_name	
+4) To unmount the device in terminal :
+	1- unmount -f flasha				[-f to remove it immedienly]
+	2- unmount -l flasha				[-l for lazy unmount : if some process is currently working, wait until it finishs]
+5) Then,
+	1- dmesg -w
+	2- sudo mount <dev_name> <mount_point>
+	3- sudo unmount -f <mount_point>
+/* ======================================================================== */
+												4) How Linux detects the file type?
+												=====================
+1) Magic Numbers for every file type, to detect it's type.
+	1- EX : To read .elf file, 	readelf -h Module.elf											[WINDOWS]
+	2- The first thing shown is the Magic Number of the elf file.							[WINDOWS]
+2) How linux detects file type if it was .c or .bin or .cpp or more?
+	1- To know the type of a file :			[file file_name]
+/* ======================================================================== */
+															5) Linux File system.
+															=============
+1) Root file system :-
+	1- bin					:	Got all the scripts that run the programs run in terminal.
+	2- boot				: 	Has the BL : Kernel, has the grub.cfg where you can customize the configurations of the booting process.
+								To see the Kernel version : [uname -r]	, [uname -a] 
+								It has the older versions of kernel; if there was a bug detected, it goes to the older version.
+	3- cdrom			
+	4- dev					:	It's a Virtual file system [Has loops, block, stdin, stdout, null, full, log, terminal, zero, urandom , xxd...]
+	5- etc					: 	Carries the configurations of the system. [network, passwd, ...] : The place to customize the image.
+	6- home				:	Has the home dirs for the users on the system.
+	7- lib					:	Shared libraries with the kernel modules.
+	8- lib64
+	9- media				: 	Contains the Standard Mount Point, External storage	[Common]
+	10- mnt				:	Mount point for some devices.
+	11- opt				:	Optional programs
+	12- proc				: 	Our second Virtual file system, has directories of processes IDs. [ps] : shows process ID
+	13- root				:	[sudo su] switch to root user, this is it's working directory.
+	14- run				:	Virtual file for sharing the same variables among different programs/scripts.
+	15- sbin				:	System binaries. [as fdisk] 
+	16- snap				: 	A Tool like apt that you can setup programs through it.
+	17- srv
+	18- sys				:	Processes for the HW.
+	19- tmp				: 	Carries log temp files.
+	20- usr
+	21- var
+	22- lost+found		:	Journaling => if the machine was shutted down, before powering off it saves some info, & then when it's turned on once again, you can restore the data.
+2) 3 Types of Files in the Root FS :-
+	1- Normal Files	:	Normal files we're dealing with
+	2- Virtual Files 	:	Created in RAM, to interface with a specific process ex [/dev, /proc, /sys]
+	3- Mount Points : 	Window that deals with the device.
+3) IN LINUX EVERYTHING LOADED IN RAM IS A FILE
+/* ======================================================================== */
+																6) Device Types
+																==========
+1) Block Devices			[Hard disks, USB, SDCARD]						: Data are stored in blocks				[b : block device]
+2) Character Devices		[Keyboard, UART, Bluetooth, Sound Cards]	: Data are stored in Stream of Bytes.	[c : character device]
+/* ======================================================================== */
