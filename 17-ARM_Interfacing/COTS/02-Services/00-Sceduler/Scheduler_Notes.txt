@@ -1,0 +1,187 @@
+                                                Scheduler
+                                                ==========
+1- RTOS : [Real time OS] 
+=========
+1- Real time : Correct function at Correct time.
+  "doesn't mean fast or slow, but happens in the time"
+    - In Embedded there are 2 types of real time systems :
+    1- Soft Real time:
+      Can be a little delayed.
+    2- Hard Real time:
+      Can't be delayed!
+2- OS : 
+  - It supports multitasking [each in a specific task all working at the same time]
+
+/* =================================================================================== */
+- RTOS is located between SW & HW :
+  1- It's lower priority than Foreground background architecture "less priorit than interrupts = foreground"
+  2- It's higher priority than super loop architecture.
+
+- What is the purpose of RTOS ?
+  1- It makes an order for the execution tasks [Controls the order of the background]
+
+- What does RTOS consist of ?
+  1- It's a Kernel (A MUST!) + some items (could be found or not but kernel is mandatory!)
+    - What are the components of the Kernel ?
+      1- Objects          (any data types used by the programmer ex:Task)
+      2- Services         (APIs applied to these objects = data types ex:Create_Task, Kill_Task ,...)
+      3- Scheduler        (MOST IMPORTANT ITEM IN KERNEL!)
+        - What is the Scheduler?
+          1- It's the System responsible for determining the order of the executing tasks.
+        - What are the components of the Scheduler?
+          1- Algorithm    [Brain]
+            - Says which task should be run [ex: 1) Shortest task first come, 2) Priority based, 3) Round Robin : if 2 tasks having same priority, the 2 tasks are taken into slices, ...]
+          2- Dispatcher   [Muscles]
+            - It executes the decision taken by the algorithm [ex: it's reponsible for executing the context switching]
+  2- It's the mid layer between the application layer and the hardware.
+
+- How to calculate the execution time of a function ?
+    1- Use Oscilloscope : before the function make a pin [LOW] and after it make the same pin [HIGH], so the time that the pin is low at is the time taken to execute the function with it's context switching. [MOST ACCURATE WAY]
+    2- With an externel tool.
+    3- With Assembly instructions "convert the code into assembly instructions as they're known for their execution time"
+    4- With a Timer : Enable it before the function and disable it after the function, and read the timer's value.
+    5- With the help of the Listing file [in debug folder in eclipse : .lss] where you can add the execution time of the function.
+/* =================================================================================== */
+- Scheduler :   [Can be multitasks]
+  1- If you add MCAL layer to it (ex : Timer), it could be a KERNEL! and if you added more features, then that's would be a [RTOS]
+  
+  
+- What is a Task?
+  1- It's a normal C function +
+  2- Timing [Priodicity] +
+  3- Context switching +
+  4- Storage.
+  
+  - Each task thinks that it has occupied all the CPU! and that there are no other tasks working with it.
+  - But that's not true, we need something to control the process with the tasks :
+    - TCB :   [Task control block]  for each task.
+      - ex :          Task(1)                                 Task(2)                                 Task(3)
+             =================================================================================================================
+            - Each with it's size in RAM.               - Each with it's size in RAM.           - Each with it's size in RAM.
+            - Each with a SP                            - Each with a SP                        - Each with a SP
+            - Each with a TCB that saves the            - Each with a TCB that saves the        - Each with a TCB that saves the 
+              result of its context switching             result of its context switching         result of its context switching
+              to make it easy to recover the func         to make it easy to recover the func     to make it easy to recover the func
+              by getting it's values from its TCB.        by getting it's values from its TCB.    by getting it's values from its TCB.
+                                                     
+                                                     |=======================================|
+                                                     |  CPU (Processor)                      |
+                                                     |  - SP points to only 1 from them and  |
+                                                     |    does th context switching and save.|
+                                                     |=======================================|
+      
+      - What does the TCB carries?
+        - It carries info about it's task :
+          1- SP
+          2- Periodicity    [repeated for ... time?]
+          3- Context switcing
+          4- First delay.
+/* =================================================================================== */
+- Task states?
+  1- Dormant :    [The place the task is created]
+  2- READY   :    [When the task is created, ready to be run in CPU]
+                  [It also re-order the tasks according to the used Algorithm, to say which task is next]
+  3- Waiting :    [If the task in runnable is polled : waiting for an interrupt and doesn't know when it'll come, it'll be in waiting state for the ISR]
+                  [If ISR came, it'll go to next state , if it didn't come, it'll be deleted and goes back to Dormant state]
+  4- Runnable:    [Runs the task in the CPU , CAN'T BE EMPTY!, an imaginary[default = IDLE] task if put to keep it busy until tasks come]
+  ** ISR     :    [Interrupts the runnable and goes back in it]
+  5- Suspended:   [If the Runnable needs to be paused]
+  6- (Could run to READY state)
+     (Could be terminated : going back to Dorment)
+/* =================================================================================== */
+- Concept to make sure that the RTOS is in a correct way :
+  = CPU LOAD.           [How much the CPU is used]
+  
+                 Summtion of Executing Tasks @ WORST case [all executing together]
+    CPU LOAD =  -------------------------------------------------------------------
+                                            Tick time
+- CPU LOAD could be calculated by tools too.
+- The best range for the CPU LOAD is : (60% - 80%) or below.
+
+- To lower the CPU Load, use "First Delay"   
+  
+          Tasks              
+  if :    ^ 
+          |
+          |
+          |
+          |
+          |
+          |
+          |
+          |
+          |
+          |
+          | T1,T2,T3   T1       T1,T2      T1        T1,T2,T3   T1        T1,T2
+          ----------------------------------------------------------------------> Time
+          0            1         2         3         4          5         6
+    - At 0: CPU LOAD = 500+400+200/1000 x100% = 110%??          => WRONG!
+    - At 1: CPU LOAD = 500/1000 x100%         = 50%
+    - At 2: CPU LOAD = 500+400/1000 x100%     = 90% 
+    - At 3: CPU LOAD = 500/1000 x100%         = 50%
+    - ....
+      
+- Scheduler :
+  1- A function that's called every tick = 1sec = 1000msec.
+  2- Orders the tasks.
+  ex :
+              Task (1)                                               Task(2)                                                   Task(3)
+            Toggling LED                                          Turn Sensor ON                                            Turn Sensor OFF
+    /* =============================================================================================================================================================== */
+    1- I want to call it every 1msec.                       1- I want to call it every 2msec                        1- I want to call it every 4msec
+    2- Then, this time is the periodicity of the task       2- Then, this time is the periodicity of the task       2- Then, this time is the periodicity of the task 
+       =1msec [the time the task will be repeatd]              =2msec [the time the task will be repeatd]              =4msec [the time the task will be repeatd]     
+    3- Execution time = 500usec                             3- Execution time = 400usec                             3- Execution time = 200usec 
+                - Now Designing the Tick time, usually it's prefered to be 1msec to call all the 3 tasks, but why is it prefered?
+                      1- Getting the periodicity of every task : 1msec, 2msec, 4sec
+                      2- Divide it by the Tick time
+                      3- If the result is a WHOLE numbers, it's good! [1/1 = 1msec, 2/1 = 2msec , 4/1 = 4msec]
+                      4- 0.5msec could also work for the Tick time :  [1/0.5 = 2msec , 2/0.5 = 4msec, 4/0.5 = 8msec]
+                      5- Which is better for the tick time? [1msec or 0.5msec] ?
+                        - MAKE SURE THAT THE SUMMTION OF EXECUTION TIME <= Tick Time, if the Tick = 1000msec, and the total execution time = 1100msec, THERE MUST BE AN INTIAL DELAY TO DECREASE THE CPU LOAD:
+                          - Initial delay = First Delay:
+                            
+    4- First Delay for Task(1)                                4- First Delay for Task(2)                            4- First Delay for Task(3) 
+       =0msec                                                   =1msec                                                = 2msec
+       "It won't be delayed = will work                         "It'll be delayed for 1msec = will                    "It'll be delayed for 2msec = will
+       every tick"                                               work after 1msec from the first tick"                 work after 2msec from the first tick"
+
+    - Then with First Delay :
+            Tasks
+              ^ 
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |
+              |                                    T1,T2      T1          T1,T2       T1,T3             
+              | T1         T1,T2       T1,T3       (0)  
+              -----------------------------------------------------------------------------> Time
+               0          1            2            3          4           5           6
+          Then, After first Delay, CPU LOAD Calculations are :
+          - At 0: CPU LOAD = 500/1000 x100%       = 50%
+          - At 1: CPU LOAD = 500+400/1000 x100%   = 90%             [Worst case]
+          - At 2: CPU LOAD = 500+200/1000 x100%   = 70%
+          - ....
+
+      - This made sure that the 3 Tasks won't be executing together!
+/* =================================================================================== */
+- Layerd Architecture :
+========================
+                        |=================|     APP
+                        |    |    |       |
+                        |    |  . |       |   Services  : [A layer that has any HW component could be expressed by SW instead of HW]
+                        |    |  | |       |               [Has OS too.]
+                        |    |  | |       |     HAL
+                        |    |  | |--|    |   
+                        |    ---  |--|    |     MCAL
+                        |                 |
+                        |=================|      HW
+
+- I want only the application layer to call the OS.
+  
+/* =================================================================================== */
