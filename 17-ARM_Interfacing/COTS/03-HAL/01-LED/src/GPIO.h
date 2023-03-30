@@ -187,7 +187,7 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config);
 
 GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port, GPIO_tenu_Pins Cpy_u8Pin, GPIO_tenu_PinStatus Cpy_u8Value);
 
-GPIO_tenuErrorStatus GPIO_enuGetPinValue(GPIO_tenu_Ports Cpy_u8Port, GPIO_tenu_Pins Cpy_u8Pin, u8 *Cpy_Addu8Value);
+GPIO_tenuErrorStatus GPIO_enuGetPinValue(GPIO_tenu_Ports Cpy_u8Port,GPIO_tenu_Pins Cpy_u8Pin, u8 *Cpy_Addu8Value) ;
 
 GPIO_tenuErrorStatus GPIO_enuSetPortValue(GPIO_tenu_Ports Cpy_u8Port, GPIO_tenu_PinStatus Cpy_u8Value);
 

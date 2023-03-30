@@ -4,12 +4,12 @@
 
 // GPIO Registers for each PORT
 GPIO_tstr_Registers_t * const volatile GPIO[6] = {
-/*GPIOA*/{ 0x40020000 },
-/*GPIOB*/{ 0x40020400 },
-/*GPIOC*/{ 0x40020800 },
-/*GPIOD*/{ 0x40020C00 },
-/*GPIOE*/{ 0x40021000 },
-/*GPIOH*/{ 0x40021C00 } };
+		/*GPIOA*/{ 0x40020000 },
+		/*GPIOB*/{ 0x40020400 },
+		/*GPIOC*/{ 0x40020800 },
+		/*GPIOD*/{ 0x40020C00 },
+		/*GPIOE*/{ 0x40021000 },
+		/*GPIOH*/{ 0x40021C00 } };
 
 GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) {
 	GPIO_tenuErrorStatus LocalErrorStatus = GPIO_enuOK;
@@ -53,13 +53,13 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) 
 					/* OUTPUT TYPE */
 					Local_u32RegBuffer = GPIO[0]->GPIO_OTYPER;
 					Local_u32RegBuffer |= ((LocalMode >> 2) & 1)
-							<< (LocalIterator);
+																											<< (LocalIterator);
 					GPIO[0]->GPIO_OTYPER = Local_u32RegBuffer;
 
 					/* OUTPUT SPEED */
 					Local_u32RegBuffer = GPIO[0]->GPIO_OSPEEDR;
 					Local_u32RegBuffer |= (LocalOutputSpeed)
-							<< (LocalIterator * 2);
+																											<< (LocalIterator * 2);
 					GPIO[0]->GPIO_OSPEEDR = Local_u32RegBuffer;
 
 					/* PUPD */
@@ -85,13 +85,13 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) 
 					/* OUTPUT TYPE */
 					Local_u32RegBuffer = GPIO[1]->GPIO_OTYPER;
 					Local_u32RegBuffer |= ((LocalMode >> 2) & 1)
-							<< (LocalIterator);
+																											<< (LocalIterator);
 					GPIO[1]->GPIO_OTYPER = Local_u32RegBuffer;
 
 					/* OUTPUT SPEED */
 					Local_u32RegBuffer = GPIO[1]->GPIO_OSPEEDR;
 					Local_u32RegBuffer |= (LocalOutputSpeed)
-							<< (LocalIterator * 2);
+																											<< (LocalIterator * 2);
 					GPIO[1]->GPIO_OSPEEDR = Local_u32RegBuffer;
 
 					/* PUPD */
@@ -117,13 +117,13 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) 
 					/* OUTPUT TYPE */
 					Local_u32RegBuffer = GPIO[2]->GPIO_OTYPER;
 					Local_u32RegBuffer |= ((LocalMode >> 2) & 1)
-							<< (LocalIterator);
+																											<< (LocalIterator);
 					GPIO[2]->GPIO_OTYPER = Local_u32RegBuffer;
 
 					/* OUTPUT SPEED */
 					Local_u32RegBuffer = GPIO[2]->GPIO_OSPEEDR;
 					Local_u32RegBuffer |= (LocalOutputSpeed)
-							<< (LocalIterator * 2);
+																											<< (LocalIterator * 2);
 					GPIO[2]->GPIO_OSPEEDR = Local_u32RegBuffer;
 
 					/* PUPD */
@@ -149,13 +149,13 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) 
 					/* OUTPUT TYPE */
 					Local_u32RegBuffer = GPIO[3]->GPIO_OTYPER;
 					Local_u32RegBuffer |= ((LocalMode >> 3) & 1)
-							<< (LocalIterator);
+																											<< (LocalIterator);
 					GPIO[3]->GPIO_OTYPER = Local_u32RegBuffer;
 
 					/* OUTPUT SPEED */
 					Local_u32RegBuffer = GPIO[3]->GPIO_OSPEEDR;
 					Local_u32RegBuffer |= (LocalOutputSpeed)
-							<< (LocalIterator * 3);
+																											<< (LocalIterator * 3);
 					GPIO[3]->GPIO_OSPEEDR = Local_u32RegBuffer;
 
 					/* PUPD */
@@ -181,13 +181,13 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) 
 					/* OUTPUT TYPE */
 					Local_u32RegBuffer = GPIO[4]->GPIO_OTYPER;
 					Local_u32RegBuffer |= ((LocalMode >> 4) & 1)
-							<< (LocalIterator);
+																											<< (LocalIterator);
 					GPIO[4]->GPIO_OTYPER = Local_u32RegBuffer;
 
 					/* OUTPUT SPEED */
 					Local_u32RegBuffer = GPIO[4]->GPIO_OSPEEDR;
 					Local_u32RegBuffer |= (LocalOutputSpeed)
-							<< (LocalIterator * 4);
+																											<< (LocalIterator * 4);
 					GPIO[4]->GPIO_OSPEEDR = Local_u32RegBuffer;
 
 					/* PUPD */
@@ -213,13 +213,13 @@ GPIO_tenuErrorStatus GPIO_enuInit(GPIO_tsrt_PortConfig_t *Cpy_LocalPort_Config) 
 					/* OUTPUT TYPE */
 					Local_u32RegBuffer = GPIO[5]->GPIO_OTYPER;
 					Local_u32RegBuffer |= ((LocalMode >> 5) & 1)
-							<< (LocalIterator);
+																											<< (LocalIterator);
 					GPIO[5]->GPIO_OTYPER = Local_u32RegBuffer;
 
 					/* OUTPUT SPEED */
 					Local_u32RegBuffer = GPIO[5]->GPIO_OSPEEDR;
 					Local_u32RegBuffer |= (LocalOutputSpeed)
-							<< (LocalIterator * 5);
+																											<< (LocalIterator * 5);
 					GPIO[5]->GPIO_OSPEEDR = Local_u32RegBuffer;
 
 					/* PUPD */
@@ -248,17 +248,23 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 	u32 LocalTemp;
 
 	/************ Validatios *************/
-	if (Cpy_u8Port > GPIO_enuNumberOfPorts) {
+	if (Cpy_u8Port > GPIO_enuNumberOfPorts)
+	{
 		LocalErrorStatus = GPIO_enuInvalidPort;
-	} else if (Cpy_u8Pin > GPIO_enuNumberOfPins) {
+	} else if (Cpy_u8Pin > GPIO_enuNumberOfPins)
+	{
 		LocalErrorStatus = GPIO_enuInvalidPin;
-	} else {
+	} else
+	{
 		switch (Cpy_u8Port) {
 		case GPIO_enuPort_A:
 			/* Check SET OR RESET Vals */
+
 			// RESET
-			if (Cpy_u16Value == GPIO_enuPin_LOW) {
-				GPIO[0]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+			if (Cpy_u16Value == GPIO_enuPin_LOW)
+			{
+				GPIO[0]->GPIO_BSRR &= ~(Cpy_u8Pin);
+				GPIO[0]->GPIO_BSRR |= (Cpy_u8Pin << 16);
 			}
 
 			// SET
@@ -271,7 +277,8 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 			/* Check SET OR RESET Vals */
 			// RESET
 			if (Cpy_u16Value == GPIO_enuPin_LOW) {
-				GPIO[1]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				GPIO[1]->GPIO_BSRR &= ~(Cpy_u8Pin);
+				GPIO[1]->GPIO_BSRR |= (Cpy_u8Pin << 16);
 			}
 
 			// SET
@@ -284,7 +291,8 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 			/* Check SET OR RESET Vals */
 			// RESET
 			if (Cpy_u16Value == GPIO_enuPin_LOW) {
-				GPIO[2]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				GPIO[2]->GPIO_BSRR &= ~(Cpy_u8Pin);
+				GPIO[2]->GPIO_BSRR |= (Cpy_u8Pin << 16);
 			}
 
 			// SET
@@ -297,7 +305,8 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 			/* Check SET OR RESET Vals */
 			// RESET
 			if (Cpy_u16Value == GPIO_enuPin_LOW) {
-				GPIO[3]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				GPIO[3]->GPIO_BSRR &= ~(Cpy_u8Pin);
+				GPIO[3]->GPIO_BSRR |= (Cpy_u8Pin << 16);
 			}
 
 			// SET
@@ -310,7 +319,8 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 			/* Check SET OR RESET Vals */
 			// RESET
 			if (Cpy_u16Value == GPIO_enuPin_LOW) {
-				GPIO[4]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				GPIO[4]->GPIO_BSRR &= ~(Cpy_u8Pin);
+				GPIO[4]->GPIO_BSRR |= (Cpy_u8Pin << 16);
 			}
 
 			// SET
@@ -324,7 +334,8 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 			/* Check SET OR RESET Vals */
 			// RESET
 			if (Cpy_u16Value == GPIO_enuPin_LOW) {
-				GPIO[5]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				GPIO[5]->GPIO_BSRR &= ~(Cpy_u8Pin);
+				GPIO[5]->GPIO_BSRR |= (Cpy_u8Pin << 16);
 			}
 
 			// SET
@@ -339,50 +350,51 @@ GPIO_tenuErrorStatus GPIO_enuSetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
 	}
 }
 /************************************************************************************/
-GPIO_tenuErrorStatus GPIO_GetPinValue_(GPIO_tenu_Ports Cpy_u8Port,
-		GPIO_tenu_Pins Cpy_u8Pin, u8 *Cpy_Addu8Value) {
+GPIO_tenuErrorStatus GPIO_enuGetPinValue(GPIO_tenu_Ports Cpy_u8Port,GPIO_tenu_Pins Cpy_u8Pin, u8 *Cpy_Addu8Value)
+{
 
 	GPIO_tenuErrorStatus LocalErrorStatus = GPIO_enuOK;
 
 	u32 LocalMode;
+	u16 CurrentPinNumber = 0;
+
+	u8 LocalIterator;
 
 	/************ Validatios *************/
-	if (Cpy_u8Port > GPIO_enuNumberOfPorts) {
-		LocalErrorStatus = GPIO_enuInvalidPort;
-	} else if (Cpy_u8Pin > GPIO_enuNumberOfPins) {
-		LocalErrorStatus = GPIO_enuInvalidPin;
-	} else {
-		switch (Cpy_u8Port) {
-		case GPIO_enuPort_A:
-			/* Getting Value from IDR Register */
-			*Cpy_Addu8Value = (GPIO[0]->GPIO_IDR >> Cpy_u8Pin) & 1;
-			break;
+//	if (Cpy_u8Port > GPIO_enuNumberOfPorts) {
+//		LocalErrorStatus = GPIO_enuInvalidPort;
+//	} else if (Cpy_u8Pin > GPIO_enuNumberOfPins) {
+//		LocalErrorStatus = GPIO_enuInvalidPin;
+//	} else {
+		for (LocalIterator = 0; LocalIterator < GPIO_enuNumberOfPins; LocalIterator++) {
+			// Getting the Pin
+			if (((Cpy_u8Pin >> LocalIterator) & 1) == 1)
+			{
+				switch (Cpy_u8Port)
+				{
+				case GPIO_enuPort_A:
+					*Cpy_Addu8Value = ((GPIO[0]->GPIO_IDR) >> LocalIterator) &1;
+					break;
+				case GPIO_enuPort_B:
+					*Cpy_Addu8Value = ((GPIO[1]->GPIO_IDR) >> LocalIterator) &1;
+					break;
+				case GPIO_enuPort_C:
+					*Cpy_Addu8Value = ((GPIO[2]->GPIO_IDR) >> LocalIterator) &1;
+					break;
+				case GPIO_enuPort_D:
+					*Cpy_Addu8Value = ((GPIO[3]->GPIO_IDR) >> LocalIterator) &1;
+					break;
+				case GPIO_enuPort_E:
+					*Cpy_Addu8Value = ((GPIO[4]->GPIO_IDR) >> LocalIterator) &1;
+					break;
+				case GPIO_enuPort_H:
+					*Cpy_Addu8Value = (GPIO[5]->GPIO_IDR) >> LocalIterator;
+					break;
+				}
+			}
 
-		case GPIO_enuPort_B:
-			*Cpy_Addu8Value = (GPIO[1]->GPIO_IDR >> Cpy_u8Pin) & 1;
-			break;
-
-		case GPIO_enuPort_C:
-			*Cpy_Addu8Value = (GPIO[2]->GPIO_IDR >> Cpy_u8Pin) & 1;
-			break;
-
-		case GPIO_enuPort_D:
-			*Cpy_Addu8Value = (GPIO[3]->GPIO_IDR >> Cpy_u8Pin) & 1;
-			break;
-
-		case GPIO_enuPort_E:
-			*Cpy_Addu8Value = (GPIO[4]->GPIO_IDR >> Cpy_u8Pin) & 1;
-			break;
-
-		case GPIO_enuPort_H:
-			*Cpy_Addu8Value = (GPIO[5]->GPIO_IDR >> Cpy_u8Pin) & 1;
-
-			break;
-
-		default:
-			LocalErrorStatus = GPIO_enuNOK;
 		}
-	}
+//	}
 	return LocalErrorStatus;
 }
 /************************************************************************************/
@@ -630,47 +642,84 @@ GPIO_tenuErrorStatus GPIO_enuSetMultiplePins(GPIO_tenu_Ports Cpy_u8Port,
 
 	u8 LocalIterator;
 	u8 LocalIterator2;
-	u16 CurrentLocation=0;
+	u16 CurrentLocation = 0;
 
 	if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port <= GPIO_enuNumberOfPorts) {
-		if (Cpy_u8Pin >= GPIO_enuPin_0 && Cpy_u8Pin <= 0xFF) {
-
-			for (LocalIterator = 0; LocalIterator < 16; LocalIterator++) {
-				switch (Cpy_u8Port) {
-				case GPIO_enuPort_A:
-					// Get Current Location
-					CurrentLocation = GPIO[0]->GPIO_BSRR;
-					for (LocalIterator2=1; LocalIterator2 <=4 ; LocalIterator2++)
-					{
-						CurrentLocation = ((Cpy_u8Pin & LocalIterator2) << (LocalIterator * 4));
-
-
-					}
-
-
-
-
-
-					break;
-
-				case GPIO_enuPort_B:
-					break;
-
-				case GPIO_enuPort_C:
-					break;
-
-				case GPIO_enuPort_D:
-					break;
-
-				case GPIO_enuPort_E:
-					break;
-
-				case GPIO_enuPort_H:
-					break;
-
+		if (Cpy_u8Pin >= GPIO_enuPin_0 && Cpy_u8Pin <= GPIO_enuNumberOfPins) {
+			switch (Cpy_u8Port) {
+			case GPIO_enuPort_A:
+				// Set
+				if (Cpy_u8Value == GPIO_enuPin_HIGH) {
+					GPIO[0]->GPIO_BSRR |= Cpy_u8Pin;
 				}
-			}
 
+				// RESET
+				if (Cpy_u8Value == GPIO_enuPin_LOW) {
+					GPIO[0]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				}
+				break;
+
+			case GPIO_enuPort_B:
+				// Set
+				if (Cpy_u8Value == GPIO_enuPin_HIGH) {
+					GPIO[1]->GPIO_BSRR |= Cpy_u8Pin;
+				}
+
+				// RESET
+				if (Cpy_u8Value == GPIO_enuPin_LOW) {
+					GPIO[1]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				}
+				break;
+
+			case GPIO_enuPort_C:
+				// Set
+				if (Cpy_u8Value == GPIO_enuPin_HIGH) {
+					GPIO[2]->GPIO_BSRR |= Cpy_u8Pin;
+				}
+
+				// RESET
+				if (Cpy_u8Value == GPIO_enuPin_LOW) {
+					GPIO[2]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				}
+				break;
+
+			case GPIO_enuPort_D:
+				// Set
+				if (Cpy_u8Value == GPIO_enuPin_HIGH) {
+					GPIO[3]->GPIO_BSRR |= Cpy_u8Pin;
+				}
+
+				// RESET
+				if (Cpy_u8Value == GPIO_enuPin_LOW) {
+					GPIO[3]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				}
+				break;
+
+			case GPIO_enuPort_E:
+				// Set
+				if (Cpy_u8Value == GPIO_enuPin_HIGH) {
+					GPIO[4]->GPIO_BSRR |= Cpy_u8Pin;
+				}
+
+				// RESET
+				if (Cpy_u8Value == GPIO_enuPin_LOW) {
+					GPIO[4]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				}
+				break;
+
+			case GPIO_enuPort_H:
+				// Set
+				if (Cpy_u8Value == GPIO_enuPin_HIGH) {
+					GPIO[5]->GPIO_BSRR |= Cpy_u8Pin;
+				}
+
+				// RESET
+				if (Cpy_u8Value == GPIO_enuPin_LOW) {
+					GPIO[5]->GPIO_BSRR |= (Cpy_u8Pin + 16);
+				}
+				break;
+
+			}
 		} else {
 			LocalErrorStatus = GPIO_enuInvalidPin;
 		}
