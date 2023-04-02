@@ -144,6 +144,29 @@ void EXT_INT2_Disable (void)
 	CLR_BIT(GICR,GICR_INT2);
 }
 
+/************************* Set Sense Control *******************************/
+u8 EXTI_u8InterruptSetSenseControl (u8 Cpy_u8Sense)
+{
+	switch (Cpy_u8Sense)
+	{
+		case EXT_INT_LowLevel :
+		CLR_BIT(MCUCR,MCUCR_ISC00);
+		CLR_BIT(MCUCR,MCUCR_ISC01);
+		break;
+		case EXT_INT_OnChange :
+		SET_BIT(MCUCR,MCUCR_ISC00);
+		CLR_BIT(MCUCR,MCUCR_ISC01);
+		break;
+		case EXT_INT_FallingEdge :
+		CLR_BIT(MCUCR,MCUCR_ISC00);
+		SET_BIT(MCUCR,MCUCR_ISC01);
+		break;
+		case EXT_INT_RaisingEdge :
+		SET_BIT(MCUCR,MCUCR_ISC00);
+		SET_BIT(MCUCR,MCUCR_ISC01);
+		break;
+	}
+}
 
 /************************************ CallBack Function ************************************/
 EXT_INT_tenuErrorStatus EXT_INT0Callback_Set (void (*ptr_int)(void))

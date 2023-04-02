@@ -1,6 +1,6 @@
 /*******************************************************/
 /* Author    : Doaa Maher                              */
-/* Date      : 4 FEB 2023                              */
+/* Date      : 27 JAN 2023                             */
 /* Version   : V.01                                    */
 /* Target    : AVR32								   */
 /* Descrip.  : Interface file that includes :		   */
@@ -52,6 +52,9 @@ void EXT_INT2_Enable (void);
 void EXT_INT0_Disable (void);
 void EXT_INT1_Disable (void);
 void EXT_INT2_Disable (void);
+
+// Sense Control
+u8 EXTI_u8InterruptSetSenseControl (u8 Cpy_u8Sense);
 
 
 
