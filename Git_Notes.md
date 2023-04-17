@@ -9,4 +9,7 @@ Use git diff to see the differences which are unstaged.
 Use git git diff  --cached to see the differences at everytime for unstaged changes.
 Use git reset to make the changes unstaged once again.
 Use git reset --hard removed all files staged and make them unstaged, as well as removing changes made on this file as well.
+Use git commit to record changes made. it use SHA: Secure Hash Algorithm, unique 40 chars identifiers based on the current content.
+Use git log to see the history log.
+Use git reset to revert the maded changes.
 
