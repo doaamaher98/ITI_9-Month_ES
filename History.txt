@@ -177,3 +177,153 @@
    99  vim Git_Notes.md 
   100  git status
   101  history >> History.txt 
+    1  git pull origin main
+    2  git pull origin <main>
+    3  git pull origin main
+    4  git clone git@github.com:AbdullahHanfy/CPP_43.git
+    5  git clone git@github.com:AbdullahHanfy/CPP_43.git
+    6  git clone git@github.com:AbdullahHanfy/CPP_43.git
+    7  git clone git@github.com:AbdullahHanfy/CPP_43.git
+    8  git clone git@github.com:AbdullahHanfy/CPP_43.git
+    9  git config --global user.name "Doaa Maher"
+   10  git config --global user.email "end.doaa.m.maher@gmail.com"
+   11  ssh-keygen -t rsa -b 4096 -C "eng.doaa.m.maher@gmail.com"
+   12  ssh-keygen -t rsa -b 4096 -C "eng.doaa.m.maher@gmail.com"
+   13  ssh-keygen -t rsa -b 4096 -C "eng.doaa.m.maher@gmail.com"
+   14  ssh-keygen -t rsa -b 4096 -C "eng.doaa.m.maher@gmail.com"
+   15  git clone git@github.com:AbdullahHanfy/CPP_43.git
+   16  git branch
+   17  git push
+   18  clone git@github.com:RomarioBasm/ITI_ES_Intake43.git
+   19  git clone git@github.com:RomarioBasm/ITI_ES_Intake43.git
+   20  git push
+   21  git push
+   22  git push
+   23  git push
+   24  git push
+   25  git puah
+   26  git puash
+   27  git push
+   28  git push
+   29  git push
+   30  git push
+   31  git push
+   32  git push
+   33  git push
+   34  git push
+   35  git push
+   36  git push
+   37  git push
+   38  git push
+   39  git push
+   40  git push
+   41  git push
+   42  git pull
+   43  git push
+   44  git push --help
+   45  git push -
+   46  git push 
+   47  git push
+   48  git push
+   49  git status
+   50  git pull
+   51  git push
+   52  git push
+   53  git status
+   54  vim Git_Notes.md
+   55  git status
+   56  git add Git_Notes.md Git_Notes.md ii
+   57  git add Git_Notes.md Git_Notes.md
+   58  git status
+   59  git add .
+   60  git diff
+   61  vim Git_Notes.md 
+   62  git status
+   63  git add .
+   64  git status
+   65  git diff -cashed
+   66  git diff -cached
+   67  git diff -cached
+   68  git diff -help
+   69  git diff --help
+   70  vim Git_Notes.md 
+   71  git diff
+   72  git diff -cached
+   73  git diff --cached
+   74  vim Git_Notes.md 
+   75  git diff --cached
+   76  git add .
+   77  history
+   78  history >> History.txt
+   79  git status
+   80  git diff --cached
+   81  git status
+   82  vim Git_Notes.md 
+   83  git status
+   84  git add .
+   85  git status
+   86  git reset
+   87  git status
+   88  vim Git_Notes.md 
+   89  git status
+   90  git add .
+   91  vim Git_Notes.md 
+   92  git status
+   93  git commit
+   94  git status
+   95  git log
+   96  vim Git_Notes.md 
+   97  git log
+   98  git log --oneline
+   99  vim Git_Notes.md 
+  100  git status
+  101  history >> History.txt 
+  102  git status
+  103  git log
+  104  git status
+  105  git add .
+  106  git status
+  107  clear
+  108  git statys
+  109  git status
+  110  git commit
+  111  git log
+  112  clear
+  113  git status
+  114  git add .
+  115  git push
+  116  git log
+  117  wclear
+  118  clear
+  119  vim Git_Notes.md 
+  120  git status
+  121  git add .
+  122  git status
+  123  git branch new_feature
+  124  git branch
+  125  clear
+  126  git switch
+  127  vim Git_Notes.md 
+  128  git status
+  129  git add .
+  130  git branch new_feature 
+  131  git switch 
+  132  git switch new_feature 
+  133  clear
+  134  vim Git_Notes.md 
+  135  git status
+  136  git add .
+  137  git status
+  138  git commit
+  139  git push
+  140  vim Git_Notes.md 
+  141  git status
+  142  git add .
+  143  git commit
+  144  git push --set-upstream origin new_feature 
+  145  git branch
+  146  git branch -r
+  147  vim Git_Notes.md 
+  148  git add .
+  149  git push --set-upstream origin new_feature 
+  150  history >> History.txt 
