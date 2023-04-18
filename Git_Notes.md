@@ -19,4 +19,7 @@ Stages :
 #Use git switch + branch_name to switch between branches
 ######################## This line is added from the new feature branch #####################
 #For Pushing from a new branch, you first need to set up an upstream for it, to know where to push this commit , use git push --set-upstream origin + branch name
+#For Checking the remote branches , use git branch -r
+#To Delete the branch , use git branch -d + branch name, but first merge the remote branch to the main branch.
+#To Delete Remote branch, use git push origin : remote branch to be deleted.
 
