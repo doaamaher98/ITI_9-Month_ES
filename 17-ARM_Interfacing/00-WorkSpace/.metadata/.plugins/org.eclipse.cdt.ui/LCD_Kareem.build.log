@@ -1,0 +1,230 @@
+15:58:30 **** Incremental Build of configuration Debug for project LCD_Kareem ****
+make all 
+Building file: ../src/APP1.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/APP1.d" -MT"src/APP1.o" -c -o "src/APP1.o" "../src/APP1.c"
+Finished building: ../src/APP1.c
+ 
+Building file: ../src/APP2.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/APP2.d" -MT"src/APP2.o" -c -o "src/APP2.o" "../src/APP2.c"
+Finished building: ../src/APP2.c
+ 
+Building file: ../src/APP3.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/APP3.d" -MT"src/APP3.o" -c -o "src/APP3.o" "../src/APP3.c"
+Finished building: ../src/APP3.c
+ 
+Building file: ../src/GPIO.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -c -o "src/GPIO.o" "../src/GPIO.c"
+../src/GPIO.c:7:12: warning: braces around scalar initializer
+   /*GPIOA*/{ 0x40020000 },
+            ^
+../src/GPIO.c:7:12: note: (near initialization for 'GPIO[0]')
+../src/GPIO.c:7:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOA*/{ 0x40020000 },
+              ^
+../src/GPIO.c:7:14: note: (near initialization for 'GPIO[0]')
+../src/GPIO.c:8:12: warning: braces around scalar initializer
+   /*GPIOB*/{ 0x40020400 },
+            ^
+../src/GPIO.c:8:12: note: (near initialization for 'GPIO[1]')
+../src/GPIO.c:8:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOB*/{ 0x40020400 },
+              ^
+../src/GPIO.c:8:14: note: (near initialization for 'GPIO[1]')
+../src/GPIO.c:9:12: warning: braces around scalar initializer
+   /*GPIOC*/{ 0x40020800 },
+            ^
+../src/GPIO.c:9:12: note: (near initialization for 'GPIO[2]')
+../src/GPIO.c:9:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOC*/{ 0x40020800 },
+              ^
+../src/GPIO.c:9:14: note: (near initialization for 'GPIO[2]')
+../src/GPIO.c:10:12: warning: braces around scalar initializer
+   /*GPIOD*/{ 0x40020C00 },
+            ^
+../src/GPIO.c:10:12: note: (near initialization for 'GPIO[3]')
+../src/GPIO.c:10:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOD*/{ 0x40020C00 },
+              ^
+../src/GPIO.c:10:14: note: (near initialization for 'GPIO[3]')
+../src/GPIO.c:11:12: warning: braces around scalar initializer
+   /*GPIOE*/{ 0x40021000 },
+            ^
+../src/GPIO.c:11:12: note: (near initialization for 'GPIO[4]')
+../src/GPIO.c:11:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOE*/{ 0x40021000 },
+              ^
+../src/GPIO.c:11:14: note: (near initialization for 'GPIO[4]')
+../src/GPIO.c:12:12: warning: braces around scalar initializer
+   /*GPIOH*/{ 0x40021C00 } };
+            ^
+../src/GPIO.c:12:12: note: (near initialization for 'GPIO[5]')
+../src/GPIO.c:12:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOH*/{ 0x40021C00 } };
+              ^
+../src/GPIO.c:12:14: note: (near initialization for 'GPIO[5]')
+../src/GPIO.c: In function 'GPIO_enuSetPinValue_':
+../src/GPIO.c:248:6: warning: unused variable 'LocalTemp' [-Wunused-variable]
+  u32 LocalTemp;
+      ^
+../src/GPIO.c: In function 'GPIO_enuGetPinValue':
+../src/GPIO.c:373:5: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+     switch (Cpy_u8Port)
+     ^
+../src/GPIO.c:359:6: warning: unused variable 'CurrentPinNumber' [-Wunused-variable]
+  u16 CurrentPinNumber = 0;
+      ^
+../src/GPIO.c:358:6: warning: unused variable 'LocalMode' [-Wunused-variable]
+  u32 LocalMode;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetPortValue':
+../src/GPIO.c:406:6: warning: unused variable 'LocalTemp' [-Wunused-variable]
+  u32 LocalTemp;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetAlternateFunctionLow':
+../src/GPIO.c:524:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port < GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:526:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    if (Cpy_u8AF >= GPIO_enu_AF_LOW_0
+                 ^
+../src/GPIO.c:530:39: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+      if ((Cpy_u8Pin >> LocalIterator) & 1 == GPIO_enuPin_HIGH) {
+                                       ^
+../src/GPIO.c:531:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port) {
+       ^
+../src/GPIO.c:522:6: warning: unused variable 'LocalAFLow' [-Wunused-variable]
+  u32 LocalAFLow;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetAlternateFunctionHigh':
+../src/GPIO.c:585:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port < GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:587:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    if (Cpy_u8AF >= GPIO_enu_AF_HIGH_0
+                 ^
+../src/GPIO.c:591:39: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+      if ((Cpy_u8Pin >> LocalIterator) & 1 == GPIO_enuPin_HIGH) {
+                                       ^
+../src/GPIO.c:592:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port) {
+       ^
+../src/GPIO.c:583:6: warning: unused variable 'LocalAFHigh' [-Wunused-variable]
+  u32 LocalAFHigh;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetMultiplePins':
+../src/GPIO.c:647:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port <= GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:649:4: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+    switch (Cpy_u8Port) {
+    ^
+../src/GPIO.c:645:6: warning: unused variable 'CurrentLocation' [-Wunused-variable]
+  u16 CurrentLocation = 0;
+      ^
+../src/GPIO.c:644:5: warning: unused variable 'LocalIterator2' [-Wunused-variable]
+  u8 LocalIterator2;
+     ^
+../src/GPIO.c:643:5: warning: unused variable 'LocalIterator' [-Wunused-variable]
+  u8 LocalIterator;
+     ^
+../src/GPIO.c:641:6: warning: unused variable 'LocalBuffer' [-Wunused-variable]
+  u32 LocalBuffer = 0;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetPinValue_':
+../src/GPIO.c:351:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/GPIO.c
+ 
+Building file: ../src/LCD_2.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/LCD_2.d" -MT"src/LCD_2.o" -c -o "src/LCD_2.o" "../src/LCD_2.c"
+In file included from ../src/LCD_2.c:1:0:
+../src/LCD_2.h:28:2: error: unknown type name 'GPIO_Cfg_t'
+  GPIO_Cfg_t RS;
+  ^
+../src/LCD_2.h:29:2: error: unknown type name 'GPIO_Cfg_t'
+  GPIO_Cfg_t RW;
+  ^
+../src/LCD_2.h:30:2: error: unknown type name 'GPIO_Cfg_t'
+  GPIO_Cfg_t E;
+  ^
+../src/LCD_2.h:31:2: error: unknown type name 'GPIO_Cfg_t'
+  GPIO_Cfg_t data[8];
+  ^
+../src/LCD_2.c: In function 'LCD_pins_Init':
+../src/LCD_2.c:16:2: warning: implicit declaration of function 'GPIO_Init' [-Wimplicit-function-declaration]
+  GPIO_Init(&pins.RS);
+  ^
+../src/LCD_2.c: In function 'WriteCommand':
+../src/LCD_2.c:38:2: warning: implicit declaration of function 'GPIO_SetPins' [-Wimplicit-function-declaration]
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_LOW);
+  ^
+../src/LCD_2.c:38:30: error: request for member 'GPIO_PIN' in something not a structure or union
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_LOW);
+                              ^
+../src/LCD_2.c:38:41: error: 'GPIO_SET_PIN_VALUE_LOW' undeclared (first use in this function)
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_LOW);
+                                         ^
+../src/LCD_2.c:38:41: note: each undeclared identifier is reported only once for each function it appears in
+../src/LCD_2.c:39:32: error: request for member 'GPIO_PIN' in something not a structure or union
+  GPIO_SetPins(&pins.RS, pins.RS.GPIO_PIN, GPIO_SET_PIN_VALUE_LOW);
+                                ^
+../src/LCD_2.c:40:32: error: request for member 'GPIO_PIN' in something not a structure or union
+  GPIO_SetPins(&pins.RW, pins.RW.GPIO_PIN, GPIO_SET_PIN_VALUE_LOW);
+                                ^
+../src/LCD_2.c:44:43: error: request for member 'GPIO_PIN' in something not a structure or union
+   GPIO_SetPins(&pins.data[i], pins.data[i].GPIO_PIN, temp);
+                                           ^
+../src/LCD_2.c:46:30: error: request for member 'GPIO_PIN' in something not a structure or union
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_HIGH);
+                              ^
+../src/LCD_2.c:46:41: error: 'GPIO_SET_PIN_VALUE_HIGH' undeclared (first use in this function)
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_HIGH);
+                                         ^
+../src/LCD_2.c: In function 'Writedata':
+../src/LCD_2.c:56:27: error: subscripted value is neither array nor pointer nor vector
+  GPIO_enuSetPinValue_(pins[0].E.GPIO_Port,LCD_Array[LCD_enuAdvertisement].LCD_tstrLCD_Pins_t.LCD_E.GPIO_Pin,GPIO_enuPin_LOW);
+                           ^
+../src/LCD_2.c:56:43: error: 'LCD_Array' undeclared (first use in this function)
+  GPIO_enuSetPinValue_(pins[0].E.GPIO_Port,LCD_Array[LCD_enuAdvertisement].LCD_tstrLCD_Pins_t.LCD_E.GPIO_Pin,GPIO_enuPin_LOW);
+                                           ^
+../src/LCD_2.c:56:53: error: 'LCD_enuAdvertisement' undeclared (first use in this function)
+  GPIO_enuSetPinValue_(pins[0].E.GPIO_Port,LCD_Array[LCD_enuAdvertisement].LCD_tstrLCD_Pins_t.LCD_E.GPIO_Pin,GPIO_enuPin_LOW);
+                                                     ^
+../src/LCD_2.c:58:27: error: subscripted value is neither array nor pointer nor vector
+  GPIO_enuSetPinValue_(pins[0].RS.GPIO_Port,LCD_Array[LCD_enuAdvertisement].LCD_tstrLCD_Pins_t.LCD_RS.GPIO_Pin,GPIO_enuPin_HIGH);
+                           ^
+../src/LCD_2.c:60:27: error: subscripted value is neither array nor pointer nor vector
+  GPIO_enuSetPinValue_(pins[0].RW.GPIO_Port,LCD_Array[LCD_enuAdvertisement].LCD_tstrLCD_Pins_t.LCD_RW.GPIO_Pin,GPIO_enuPin_LOW);
+                           ^
+../src/LCD_2.c:66:43: error: request for member 'GPIO_PIN' in something not a structure or union
+   GPIO_SetPins(&pins.data[i], pins.data[i].GPIO_PIN, temp);
+                                           ^
+../src/LCD_2.c:68:30: error: request for member 'GPIO_PIN' in something not a structure or union
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_HIGH);
+                              ^
+../src/LCD_2.c:68:41: error: 'GPIO_SET_PIN_VALUE_HIGH' undeclared (first use in this function)
+  GPIO_SetPins(&pins.E, pins.E.GPIO_PIN, GPIO_SET_PIN_VALUE_HIGH);
+                                         ^
+../src/LCD_2.c: In function 'LCD_Init':
+../src/LCD_2.c:97:3: warning: enumeration value 'LCD_NotInit' not handled in switch [-Wswitch]
+   switch(state)
+   ^
+../src/LCD_2.c:97:3: warning: enumeration value 'LCD_Idle' not handled in switch [-Wswitch]
+../src/LCD_2.c:97:3: warning: enumeration value 'LCD_Busy' not handled in switch [-Wswitch]
+../src/LCD_2.c:97:3: warning: enumeration value 'LCD_OK' not handled in switch [-Wswitch]
+../src/LCD_2.c:97:3: warning: enumeration value 'LCD_NOK' not handled in switch [-Wswitch]
+../src/LCD_2.c: In function 'LCD_Task':
+../src/LCD_2.c:248:3: warning: enumeration value 'NoRequest' not handled in switch [-Wswitch]
+   switch(request_type)
+   ^
+make: *** [src/subdir.mk:68: src/LCD_2.o] Error 1
+
+15:58:32 Build Finished (took 2s.60ms)
+

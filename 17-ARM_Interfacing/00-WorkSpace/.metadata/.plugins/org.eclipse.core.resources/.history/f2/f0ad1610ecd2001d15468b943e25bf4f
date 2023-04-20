@@ -1,0 +1,26 @@
+#include "RCC_Driv.h"
+#include "GPIO.h"
+#include "STK_Interface.h"
+
+#include "Scheduler_Interface.h"
+
+#include "LED.h"
+#include "LCD_Interface.h"
+
+void main (void)
+{
+	RCC_enuSelectSysClk(RCC_enu_HSI);
+
+	RCC_enuEnablePeripheralClk(RCC_enuAHB1,RCC_enuAHB1_GPIOA);
+	RCC_enuEnablePeripheralClk(RCC_enuAHB1,RCC_enuAHB1_GPIOB);
+
+	LED_enuLEDInit();
+
+	Sched_enuInit();
+	Sched_enuStart();
+
+	while(1)
+	{
+
+	}
+}

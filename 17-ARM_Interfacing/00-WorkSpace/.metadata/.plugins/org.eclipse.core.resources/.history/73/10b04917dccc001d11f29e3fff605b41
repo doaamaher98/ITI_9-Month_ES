@@ -1,0 +1,34 @@
+#include "RCC.h"
+#include "STK_Interface.h"
+
+#include "GPIO.h"
+#include "LED.h"
+
+/*** ISR ***/
+//void func1(void)
+//{
+//	LED_enuSetLEDValue(LED_enuLED1,LED_enuActiveHigh);
+//	LED_enuSetLEDValue(LED_enuLED0,LED_enuActiveLow);
+//}
+
+void main(void)
+{
+	RCC_enuEnablePeripheralClk(RCC_enuAHB1,RCC_enuAHB1_GPIOA);
+
+	STK_enuInit();
+	LED_enuLEDInit();
+
+	//	STK_enuSetCallback(&func1);
+	//		STK_enuSetCounts(10);
+	STK_enuStartTimer();
+
+	while(1)
+	{
+
+		LED_enuSetLEDValue(LED_enuLED1,LED_enuActiveHigh);
+		STK_enuSetPeriodMS(STK_enuHSI,STK_enuAHB,1000);
+		LED_enuSetLEDValue(LED_enuLED0,LED_enuActiveLow);
+
+	}
+
+}

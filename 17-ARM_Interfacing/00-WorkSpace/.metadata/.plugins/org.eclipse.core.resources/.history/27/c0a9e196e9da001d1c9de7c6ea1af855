@@ -1,0 +1,37 @@
+/*
+ * Chat_Interface.h
+ *
+ *  Created on: Apr 14, 2023
+ *      Author: Doaa Maher
+ */
+
+#ifndef CHAT_INTERFACE_H_
+#define CHAT_INTERFACE_H_
+
+
+// Error Status
+typedef enum
+{
+	Chat_enuOK=0,
+	Chat_enuNOK,
+}Chat_tenuErrorStatus;
+
+// Chat Type
+typedef enum
+{
+	Chat_enuUSART=0,
+	Chat_enuSPI,
+	Chat_enuI2C,
+}Chat_tenuCommunicationType;
+
+/* ==================================== APIs =========================================== */
+Chat_tenuErrorStatus Chat_enuInit (void);
+
+
+
+
+
+
+
+
+#endif /* CHAT_INTERFACE_H_ */

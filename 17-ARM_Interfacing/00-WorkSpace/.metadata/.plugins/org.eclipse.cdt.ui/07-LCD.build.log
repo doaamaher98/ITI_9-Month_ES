@@ -1,0 +1,25 @@
+00:13:52 **** Incremental Build of configuration Debug for project 07-LCD ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: 07-LCD.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"07-LCD.map" --specs=nano.specs -o "07-LCD.elf"  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xc.o  ./src/Application_1.o ./src/GPIO.o ./src/LCD.o ./src/LCD_Application.o ./src/LCD_Cfg.o ./src/LED.o ./src/LED_Cfg.o ./src/RCC_Driv.o ./src/STK_Program.o ./src/Scheduler.o ./src/Scheduler_Cfg.o ./src/main.o   
+Finished building target: 07-LCD.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "07-LCD.elf"  "07-LCD.hex"
+Finished building: 07-LCD.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "07-LCD.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7862	    236	    468	   8566	   2176	07-LCD.elf
+Finished building: 07-LCD.siz
+ 
+
+00:13:54 Build Finished (took 2s.380ms)
+

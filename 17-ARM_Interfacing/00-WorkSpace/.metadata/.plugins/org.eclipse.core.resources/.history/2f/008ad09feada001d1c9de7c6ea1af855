@@ -1,0 +1,49 @@
+/*
+ * Chat_Interface.h
+ *
+ *  Created on: Apr 14, 2023
+ *      Author: Doaa Maher
+ */
+
+#ifndef CHAT_INTERFACE_H_
+#define CHAT_INTERFACE_H_
+
+#include "Std_Types.h"
+#include "USART_Interface.h"
+
+// Error Status
+typedef enum
+{
+	Chat_enuOK=0,
+	Chat_enuNOK,
+}Chat_tenuErrorStatus;
+
+// Chat Type
+typedef enum
+{
+	Chat_enuUSART=0,
+	Chat_enuSPI,
+	Chat_enuI2C,
+}Chat_tenuCommunicationType;
+
+// Channel
+typedef enum
+{
+
+};
+
+extern USART_tstrConfig_t USART_Cfg [NUMBER_OF_USART_CHANNELS];
+
+/* ==================================== APIs =========================================== */
+Chat_tenuErrorStatus Chat_enuInit (void);
+
+Chat_tenuErrorStatus Chat_enuSend (u8 Cpy_u8Data, u8 Cpy_u8Size, );
+
+u8 Chat_u8Receive (void);
+
+
+
+
+
+
+#endif /* CHAT_INTERFACE_H_ */

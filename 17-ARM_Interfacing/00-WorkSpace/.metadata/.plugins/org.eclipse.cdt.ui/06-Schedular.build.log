@@ -1,0 +1,11 @@
+09:28:43 **** Incremental Build of configuration Debug for project 06-Schedular ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "06-Schedular.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7257	    220	    444	   7921	   1ef1	06-Schedular.elf
+Finished building: 06-Schedular.siz
+ 
+
+09:28:44 Build Finished (took 976ms)
+

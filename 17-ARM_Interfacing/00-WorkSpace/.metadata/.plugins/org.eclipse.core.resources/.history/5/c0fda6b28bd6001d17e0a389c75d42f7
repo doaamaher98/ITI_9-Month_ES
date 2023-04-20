@@ -1,0 +1,96 @@
+/*
+ * UART.c
+ *
+ *  Created on: Apr 6, 2023
+ *      Author: Doaa Maher
+ */
+
+#include "NVIC.h"
+
+#include "USART_Interface.h"
+#include "USART_Config.h"
+
+/* ====================== Defines ============================== */
+#define				IDLE				0
+#define				BUSY				1
+
+#define				INIT				2
+#define				NOT_INIT			3
+
+/* ============================ Types ====================== */
+// USART Registers
+typedef struct
+{
+	volatile u32 USART_SR;
+	volatile u32 USART_DR;
+	volatile u32 USART_BRR;
+	volatile u32 USART_CR1;
+	volatile u32 USART_CR2;
+	volatile u32 USART_CR3;
+	volatile u32 USART_GTPR;
+}USART_tstr_Registers_t;
+
+// Array of 3 Peripherals sharing same type : same registers [on APB1 bus]
+USART_tstr_Registers_t * const volatile USART[3] = {
+		/* USART1 */ [USART_enuUSART1] = {0x40011400},
+		/* USART2 */ [USART_enuUSART2] = {0x40011000},
+		/* USART6 */ [USART_enuUSART6] = {0x40004400},
+};
+
+/* ================= Static Global Vars for TX ================= */
+// For TX States for the 3 USARTs : Initially not initialized
+static u8 TX_State[3] = {NOT_INIT,NOT_INIT,NOT_INIT};
+// For TX Buffer to be Sent [array of pointers]
+static u8 *TX_Buffer[3] = {NULL_PTR,NULL_PTR,NULL_PTR};
+// For TX Size for the 3 USARTs
+static u32 TX_Size[3] = {0,0,0};
+// For TX Indicies
+static u32 TX_Index[3] = {0,0,0};
+
+/* Callback function */
+static Callback_t TX_Cbf[3] = {NULL_PTR,NULL_PTR,NULL_PTR};
+/* ============================================================= */
+/* ================= Static Global Vars for RX ================= */
+// For RX States for the 3 USARTs : Initially not initialized
+static u8 RX_State[3] = {NOT_INIT,NOT_INIT,NOT_INIT};
+// For RX Buffer to be Received [array of pointers]
+static u8 *RX_Buffer[3] = {NULL_PTR,NULL_PTR,NULL_PTR};
+// For RX Size for the 3 USARTs
+static u32 RX_Size[3] = {0,0,0};
+// For RX Indicies
+static u32 RX_Index[3] = {0,0,0};
+
+/* Callback Function */
+static Callback_t RX_Cbf[3] = {NULL_PTR,NULL_PTR,NULL_PTR};
+/* ============================================================= */
+/* ==================== Static Functions Prototypes ============== */
+static void USART_voidBaudRateCalculation (void);
+static void USART_voidHandler (USART_enuChannels USART_Channel);
+/* =============================================================== */
+/* ====================== Global Variables ========================= */
+static u8 Global_Variable=0;
+
+/* ========================= APIs Implementation ============================ */
+static void USART_voidBaudRateCalculation (void)
+{
+
+}
+
+
+/************************************************************************************/
+static void USART_voidHandler (USART_enuChannels USART_Channel)
+{
+
+}
+
+/************************************************************************************/
+USART_tenuErrorStatus USART_enuInit(const USART_tstrConfig_t *USART_Configurations)
+{
+
+}
+/************************************************************************************/
+USART_tenuErrorStatus USART_enuSendAsynchZeroCpy (USART_enuChannels USART_Channel, u8 * Data_Buffer, u32 Data_Size , Callback_t Cpy_Cbf)
+{
+
+}
+/************************************************************************************/

@@ -1,0 +1,11 @@
+01:33:16 **** Incremental Build of configuration Debug for project UART_Karim ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "UART_Karim.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8127	    216	    520	   8863	   229f	UART_Karim.elf
+Finished building: UART_Karim.siz
+ 
+
+01:33:18 Build Finished (took 1s.336ms)
+

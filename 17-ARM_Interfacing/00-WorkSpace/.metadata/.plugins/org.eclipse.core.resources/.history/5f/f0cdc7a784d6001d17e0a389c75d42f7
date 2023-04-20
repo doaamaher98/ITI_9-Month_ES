@@ -1,0 +1,28 @@
+/*
+ * USART_Config.c
+ *
+ *  Created on: Apr 9, 2023
+ *      Author: Doaa Maher
+ */
+#include "USART_Interface.h"
+
+USART_tstrConfig_t USART_Cfg [USART_enuNumberOfChannels] =
+{
+		[USART_enuUSART1] =
+		{
+				.USART_Enable = USART_enuEN,
+
+		},
+
+		[USART_enuUSART2] =
+		{
+				.USART_Enable = USART_enuDS,
+
+		},
+
+		[USART_enuUSART6] =
+		{
+
+		}
+
+};

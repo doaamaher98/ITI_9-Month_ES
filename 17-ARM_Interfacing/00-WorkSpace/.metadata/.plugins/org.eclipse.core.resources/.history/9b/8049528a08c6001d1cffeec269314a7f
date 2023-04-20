@@ -1,0 +1,28 @@
+#include "RCC.h"
+#include "STK_Interface.h"
+
+#include "GPIO.h"
+void main(void)
+{
+	RCC_enuEnablePeripheralClk(RCC_enuAHB1,RCC_enuAHB1_GPIOA);
+	GPIO_tsrt_PortConfig_t LED_Pin;
+
+		LED_Pin.GPIO_Mode = GPIO_MODE_OUTPUT_PP;
+		LED_Pin.GPIO_Port = GPIO_enuPort_A;
+		LED_Pin.GPIO_Pin = GPIO_enuPin_0;
+		LED_Pin.GPIO_Speed = GPIO_OUTPUT_SPEED_HIGH;
+
+		GPIO_enuInit(&LED_Pin);
+
+
+
+
+
+
+
+
+	while(1)
+	{
+
+	}
+}

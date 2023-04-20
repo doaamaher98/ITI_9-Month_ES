@@ -1,0 +1,11 @@
+/*
+ * USART_Config.c
+ *
+ *  Created on: Apr 9, 2023
+ *      Author: Doaa Maher
+ */
+
+USART_tstrConfig_t USART_Cfg [USART_enuNumberOfChannels] =
+{
+
+};

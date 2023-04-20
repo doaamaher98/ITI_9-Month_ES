@@ -1,0 +1,17 @@
+/*
+ * LCD_Application.c
+ *
+ *  Created on: Apr 4, 2023
+ *      Author: engdo
+ */
+
+
+#include "LCD_Interface.h"
+
+
+void LCD_voidRunnable(void)
+{
+	LCD_enuSendStringAsynch("DODO",4,0,0);
+
+}
+

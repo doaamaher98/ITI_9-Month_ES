@@ -1,0 +1,278 @@
+19:54:47 **** Incremental Build of configuration Debug for project 8-Chat ****
+make all 
+Building file: ../src/Chat.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/Chat.d" -MT"src/Chat.o" -c -o "src/Chat.o" "../src/Chat.c"
+Finished building: ../src/Chat.c
+ 
+Building file: ../src/GPIO.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -c -o "src/GPIO.o" "../src/GPIO.c"
+../src/GPIO.c:7:12: warning: braces around scalar initializer
+   /*GPIOA*/{ 0x40020000 },
+            ^
+../src/GPIO.c:7:12: note: (near initialization for 'GPIO[0]')
+../src/GPIO.c:7:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOA*/{ 0x40020000 },
+              ^
+../src/GPIO.c:7:14: note: (near initialization for 'GPIO[0]')
+../src/GPIO.c:8:12: warning: braces around scalar initializer
+   /*GPIOB*/{ 0x40020400 },
+            ^
+../src/GPIO.c:8:12: note: (near initialization for 'GPIO[1]')
+../src/GPIO.c:8:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOB*/{ 0x40020400 },
+              ^
+../src/GPIO.c:8:14: note: (near initialization for 'GPIO[1]')
+../src/GPIO.c:9:12: warning: braces around scalar initializer
+   /*GPIOC*/{ 0x40020800 },
+            ^
+../src/GPIO.c:9:12: note: (near initialization for 'GPIO[2]')
+../src/GPIO.c:9:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOC*/{ 0x40020800 },
+              ^
+../src/GPIO.c:9:14: note: (near initialization for 'GPIO[2]')
+../src/GPIO.c:10:12: warning: braces around scalar initializer
+   /*GPIOD*/{ 0x40020C00 },
+            ^
+../src/GPIO.c:10:12: note: (near initialization for 'GPIO[3]')
+../src/GPIO.c:10:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOD*/{ 0x40020C00 },
+              ^
+../src/GPIO.c:10:14: note: (near initialization for 'GPIO[3]')
+../src/GPIO.c:11:12: warning: braces around scalar initializer
+   /*GPIOE*/{ 0x40021000 },
+            ^
+../src/GPIO.c:11:12: note: (near initialization for 'GPIO[4]')
+../src/GPIO.c:11:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOE*/{ 0x40021000 },
+              ^
+../src/GPIO.c:11:14: note: (near initialization for 'GPIO[4]')
+../src/GPIO.c:12:12: warning: braces around scalar initializer
+   /*GPIOH*/{ 0x40021C00 } };
+            ^
+../src/GPIO.c:12:12: note: (near initialization for 'GPIO[5]')
+../src/GPIO.c:12:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOH*/{ 0x40021C00 } };
+              ^
+../src/GPIO.c:12:14: note: (near initialization for 'GPIO[5]')
+../src/GPIO.c: In function 'GPIO_enuInit':
+../src/GPIO.c:39:41: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   for (LocalIterator = 0; LocalIterator < GPIO_enuNumberOfPins;
+                                         ^
+../src/GPIO.c: In function 'GPIO_enuSetPinValue_':
+../src/GPIO.c:251:6: warning: unused variable 'LocalTemp' [-Wunused-variable]
+  u32 LocalTemp;
+      ^
+../src/GPIO.c: In function 'GPIO_enuGetPinValue':
+../src/GPIO.c:375:41: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   for (LocalIterator = 0; LocalIterator < GPIO_enuNumberOfPins; LocalIterator++) {
+                                         ^
+../src/GPIO.c:379:5: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+     switch (Cpy_u8Port)
+     ^
+../src/GPIO.c:365:6: warning: unused variable 'CurrentPinNumber' [-Wunused-variable]
+  u16 CurrentPinNumber = 0;
+      ^
+../src/GPIO.c:364:6: warning: unused variable 'LocalMode' [-Wunused-variable]
+  u32 LocalMode;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetPortValue':
+../src/GPIO.c:412:6: warning: unused variable 'LocalTemp' [-Wunused-variable]
+  u32 LocalTemp;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetAlternateFunctionLow':
+../src/GPIO.c:529:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port < GPIO_enuNumberOfPorts)
+                 ^
+../src/GPIO.c:533:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    if (Cpy_u8AF >= GPIO_enu_AF_LOW_0 && Cpy_u8AF < GPIO_enu_NumberOfAFLow)
+                 ^
+../src/GPIO.c:540:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port)
+       ^
+../src/GPIO.c:527:6: warning: unused variable 'LocalAFLow' [-Wunused-variable]
+  u32 LocalAFLow;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetAlternateFunction':
+../src/GPIO.c:608:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port)
+       ^
+../src/GPIO.c:658:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port)
+       ^
+../src/GPIO.c: In function 'GPIO_enuSetMultiplePins':
+../src/GPIO.c:718:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port <= GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:720:4: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+    switch (Cpy_u8Port) {
+    ^
+../src/GPIO.c:716:6: warning: unused variable 'CurrentLocation' [-Wunused-variable]
+  u16 CurrentLocation = 0;
+      ^
+../src/GPIO.c:715:5: warning: unused variable 'LocalIterator2' [-Wunused-variable]
+  u8 LocalIterator2;
+     ^
+../src/GPIO.c:714:5: warning: unused variable 'LocalIterator' [-Wunused-variable]
+  u8 LocalIterator;
+     ^
+../src/GPIO.c:712:6: warning: unused variable 'LocalBuffer' [-Wunused-variable]
+  u32 LocalBuffer = 0;
+      ^
+Finished building: ../src/GPIO.c
+ 
+Building file: ../src/NVIC.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/NVIC.d" -MT"src/NVIC.o" -c -o "src/NVIC.o" "../src/NVIC.c"
+Finished building: ../src/NVIC.c
+ 
+Building file: ../src/RCC_Driv.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/RCC_Driv.d" -MT"src/RCC_Driv.o" -c -o "src/RCC_Driv.o" "../src/RCC_Driv.c"
+../src/RCC_Driv.c: In function 'RCC_enuSelectSysClk':
+../src/RCC_Driv.c:23:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC_Driv.c: In function 'RCC_enuEnableSysClk':
+../src/RCC_Driv.c:95:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC_Driv.c: In function 'RCC_enuDisableSysClk':
+../src/RCC_Driv.c:134:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC_Driv.c: In function 'RCC_enuCheckClkReady':
+../src/RCC_Driv.c:172:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC_Driv.c:169:6: warning: unused variable 'LocalTIMEOUT' [-Wunused-variable]
+  u16 LocalTIMEOUT = 0;
+      ^
+../src/RCC_Driv.c:167:6: warning: parameter 'Cpy_u8ClkStatus' set but not used [-Wunused-but-set-parameter]
+   u8 Cpy_u8ClkStatus) {
+      ^
+../src/RCC_Driv.c: In function 'RCC_enuControlPrescaler_AHB':
+../src/RCC_Driv.c:253:27: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u32AHB_Prescaler >= RCC_enuAHB_Prescaler_2
+                           ^
+../src/RCC_Driv.c: In function 'RCC_enuControlPrescaler_APB2':
+../src/RCC_Driv.c:367:28: warning: comparison between 'RCC_tenuAPB2_Prescalers {aka enum <anonymous>}' and 'enum <anonymous>' [-Wenum-compare]
+  if (Cpy_u32APB2_Prescaler >= RCC_enuAPB1_Prescaler_2
+                            ^
+../src/RCC_Driv.c:368:29: warning: comparison between 'RCC_tenuAPB2_Prescalers {aka enum <anonymous>}' and 'enum <anonymous>' [-Wenum-compare]
+    && Cpy_u32APB2_Prescaler < RCC_enuAPB1_NumberOfPrescalers) {
+                             ^
+../src/RCC_Driv.c: In function 'RCC_enuEnablePeripheralClk':
+../src/RCC_Driv.c:413:2: warning: enumeration value 'RCC_enuNumberOfSystemBuses' not handled in switch [-Wswitch]
+  switch (Cpy_u32PeripheralBus) {
+  ^
+../src/RCC_Driv.c: In function 'RCC_enuDisablePeripheralClk':
+../src/RCC_Driv.c:645:2: warning: enumeration value 'RCC_enuNumberOfSystemBuses' not handled in switch [-Wswitch]
+  switch (Cpy_u32PeripheralBus) {
+  ^
+../src/RCC_Driv.c: In function 'RCC_enuConfigurePLL':
+../src/RCC_Driv.c:892:19: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (LocalPLL_Src >= RCC_enuPLL_HSI
+                   ^
+../src/RCC_Driv.c:900:20: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+     if (LocalPLL_P >= 0 && LocalPLL_P < 4) {
+                    ^
+../src/RCC_Driv.c:882:6: warning: unused variable 'LocalPLL' [-Wunused-variable]
+  u32 LocalPLL = RCC->RCC_PLLCFGR;
+      ^
+Finished building: ../src/RCC_Driv.c
+ 
+Building file: ../src/STK_Program.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/STK_Program.d" -MT"src/STK_Program.o" -c -o "src/STK_Program.o" "../src/STK_Program.c"
+../src/STK_Program.c: In function 'STK_enuSetPeriodMS':
+../src/STK_Program.c:244:3: warning: enumeration value 'STK_enuPLL' not handled in switch [-Wswitch]
+   switch (Cpy_u8ClkSrc)
+   ^
+../src/STK_Program.c:244:3: warning: enumeration value 'STK_NumberOfClockSources' not handled in switch [-Wswitch]
+../src/STK_Program.c: In function 'STK_enuSetPeriodUS':
+../src/STK_Program.c:296:3: warning: enumeration value 'STK_enuPLL' not handled in switch [-Wswitch]
+   switch (Cpy_u8ClkSrc)
+   ^
+../src/STK_Program.c:296:3: warning: enumeration value 'STK_NumberOfClockSources' not handled in switch [-Wswitch]
+Finished building: ../src/STK_Program.c
+ 
+Building file: ../src/Scheduler.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/Scheduler.d" -MT"src/Scheduler.o" -c -o "src/Scheduler.o" "../src/Scheduler.c"
+../src/Scheduler.c:26:8: warning: type defaults to 'int' in declaration of 'Sched_Flag' [-Wimplicit-int]
+ static Sched_Flag = 0;
+        ^
+../src/Scheduler.c: In function 'systick_cbf':
+../src/Scheduler.c:91:2: warning: #warning "CPU LOAD EXCEEDED 100%" [-Wcpp]
+ #warning "CPU LOAD EXCEEDED 100%"
+  ^
+../src/Scheduler.c: At top level:
+../src/Scheduler.c:30:13: warning: 'Scheduler_Handle_FirstDelay' declared 'static' but never defined [-Wunused-function]
+ static void Scheduler_Handle_FirstDelay (void);
+             ^
+Finished building: ../src/Scheduler.c
+ 
+Building file: ../src/Scheduler_Cfg.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/Scheduler_Cfg.d" -MT"src/Scheduler_Cfg.o" -c -o "src/Scheduler_Cfg.o" "../src/Scheduler_Cfg.c"
+Finished building: ../src/Scheduler_Cfg.c
+ 
+Building file: ../src/USART.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/USART.d" -MT"src/USART.o" -c -o "src/USART.o" "../src/USART.c"
+../src/USART.c:29:16: warning: braces around scalar initializer
+   /* USART1 */ [USART1] = {0x40011000},
+                ^
+../src/USART.c:29:16: note: (near initialization for 'USART[0]')
+../src/USART.c:29:28: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /* USART1 */ [USART1] = {0x40011000},
+                            ^
+../src/USART.c:29:28: note: (near initialization for 'USART[0]')
+../src/USART.c:30:16: warning: braces around scalar initializer
+   /* USART2 */ [USART2] = {0x40004400},
+                ^
+../src/USART.c:30:16: note: (near initialization for 'USART[1]')
+../src/USART.c:30:28: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /* USART2 */ [USART2] = {0x40004400},
+                            ^
+../src/USART.c:30:28: note: (near initialization for 'USART[1]')
+../src/USART.c:31:16: warning: braces around scalar initializer
+   /* USART6 */ [USART6] = {0x40114000},
+                ^
+../src/USART.c:31:16: note: (near initialization for 'USART[2]')
+../src/USART.c:31:28: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /* USART6 */ [USART6] = {0x40114000},
+                            ^
+../src/USART.c:31:28: note: (near initialization for 'USART[2]')
+Finished building: ../src/USART.c
+ 
+Building file: ../src/USART_Config.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/USART_Config.d" -MT"src/USART_Config.o" -c -o "src/USART_Config.o" "../src/USART_Config.c"
+Finished building: ../src/USART_Config.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: 8-Chat.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"8-Chat.map" --specs=nano.specs -o "8-Chat.elf"  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xc.o  ./src/Chat.o ./src/GPIO.o ./src/NVIC.o ./src/RCC_Driv.o ./src/STK_Program.o ./src/Scheduler.o ./src/Scheduler_Cfg.o ./src/USART.o ./src/USART_Config.o ./src/main.o   
+Finished building target: 8-Chat.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "8-Chat.elf"  "8-Chat.hex"
+Finished building: 8-Chat.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "8-Chat.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4811	    180	    512	   5503	   157f	8-Chat.elf
+Finished building: 8-Chat.siz
+ 
+
+19:54:53 Build Finished (took 6s.667ms)
+

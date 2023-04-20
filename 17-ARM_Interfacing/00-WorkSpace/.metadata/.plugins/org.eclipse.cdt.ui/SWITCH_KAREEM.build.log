@@ -1,0 +1,11 @@
+23:31:53 **** Incremental Build of configuration Debug for project SWITCH_KAREEM ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "SWITCH_KAREEM.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5755	    160	    412	   6327	   18b7	SWITCH_KAREEM.elf
+Finished building: SWITCH_KAREEM.siz
+ 
+
+23:31:54 Build Finished (took 685ms)
+

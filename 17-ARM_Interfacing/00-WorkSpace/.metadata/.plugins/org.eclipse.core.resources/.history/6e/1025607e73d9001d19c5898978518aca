@@ -1,0 +1,23 @@
+
+#include "RCC_Driv.h"
+#include "GPIO.h"
+#include "NVIC.h"
+
+#include "USART_Interface.h"
+
+
+
+
+void main (void)
+{
+	RCC_enuSelectSysClk(RCC_enu_HSI);
+
+	RCC_enuEnablePeripheralClk(RCC_enuAPB2,RCC_enuAPB2_USART1);
+
+
+
+	while (1)
+	{
+
+	}
+}

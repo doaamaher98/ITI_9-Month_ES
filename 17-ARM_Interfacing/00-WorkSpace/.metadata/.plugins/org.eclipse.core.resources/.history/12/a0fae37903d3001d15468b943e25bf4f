@@ -1,0 +1,25 @@
+/*
+ * LCD_Application.c
+ *
+ *  Created on: Apr 4, 2023
+ *      Author: engdo
+ */
+
+
+#include "LCD_Interface.h"
+
+
+void LCD_voidRunnable(void)
+{
+	static u8 Counter =0;
+
+	if (Counter % 2 == 0)
+	{
+		LCD_enuSendStringAsynch("DODO",5,0,0);
+		LCD_enuGotoXY(1,0);
+		LCD_enuSendStringAsynch("Sate Machine",13,0,0);
+	}
+
+
+}
+

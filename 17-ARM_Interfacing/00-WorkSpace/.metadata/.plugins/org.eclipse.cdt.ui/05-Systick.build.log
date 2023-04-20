@@ -1,0 +1,291 @@
+21:18:01 **** Incremental Build of configuration Debug for project 05-Systick ****
+make all 
+Building file: ../system/src/newlib/_cxx.cpp
+Invoking: GNU Arm Cross C++ Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -MMD -MP -MF"system/src/newlib/_cxx.d" -MT"system/src/newlib/_cxx.o" -c -o "system/src/newlib/_cxx.o" "../system/src/newlib/_cxx.cpp"
+Finished building: ../system/src/newlib/_cxx.cpp
+ 
+Building file: ../system/src/newlib/_exit.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/newlib/_exit.d" -MT"system/src/newlib/_exit.o" -c -o "system/src/newlib/_exit.o" "../system/src/newlib/_exit.c"
+Finished building: ../system/src/newlib/_exit.c
+ 
+Building file: ../system/src/newlib/_sbrk.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/newlib/_sbrk.d" -MT"system/src/newlib/_sbrk.o" -c -o "system/src/newlib/_sbrk.o" "../system/src/newlib/_sbrk.c"
+Finished building: ../system/src/newlib/_sbrk.c
+ 
+Building file: ../system/src/newlib/_startup.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -DOS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/newlib/_startup.d" -MT"system/src/newlib/_startup.d" -c -o "system/src/newlib/_startup.o" "../system/src/newlib/_startup.c"
+Finished building: ../system/src/newlib/_startup.c
+ 
+Building file: ../system/src/newlib/_syscalls.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/newlib/_syscalls.d" -MT"system/src/newlib/_syscalls.o" -c -o "system/src/newlib/_syscalls.o" "../system/src/newlib/_syscalls.c"
+Finished building: ../system/src/newlib/_syscalls.c
+ 
+Building file: ../system/src/newlib/assert.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/newlib/assert.d" -MT"system/src/newlib/assert.o" -c -o "system/src/newlib/assert.o" "../system/src/newlib/assert.c"
+Finished building: ../system/src/newlib/assert.c
+ 
+Building file: ../system/src/diag/Trace.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/diag/Trace.d" -MT"system/src/diag/Trace.o" -c -o "system/src/diag/Trace.o" "../system/src/diag/Trace.c"
+Finished building: ../system/src/diag/Trace.c
+ 
+Building file: ../system/src/diag/trace_impl.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/diag/trace_impl.d" -MT"system/src/diag/trace_impl.o" -c -o "system/src/diag/trace_impl.o" "../system/src/diag/trace_impl.c"
+Finished building: ../system/src/diag/trace_impl.c
+ 
+Building file: ../system/src/cortexm/_initialize_hardware.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/cortexm/_initialize_hardware.d" -MT"system/src/cortexm/_initialize_hardware.o" -c -o "system/src/cortexm/_initialize_hardware.o" "../system/src/cortexm/_initialize_hardware.c"
+Finished building: ../system/src/cortexm/_initialize_hardware.c
+ 
+Building file: ../system/src/cortexm/_reset_hardware.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/cortexm/_reset_hardware.d" -MT"system/src/cortexm/_reset_hardware.o" -c -o "system/src/cortexm/_reset_hardware.o" "../system/src/cortexm/_reset_hardware.c"
+Finished building: ../system/src/cortexm/_reset_hardware.c
+ 
+Building file: ../system/src/cortexm/exception_handlers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/cortexm/exception_handlers.d" -MT"system/src/cortexm/exception_handlers.o" -c -o "system/src/cortexm/exception_handlers.o" "../system/src/cortexm/exception_handlers.c"
+Finished building: ../system/src/cortexm/exception_handlers.c
+ 
+Building file: ../system/src/cmsis/system_stm32f4xx.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/cmsis/system_stm32f4xx.d" -MT"system/src/cmsis/system_stm32f4xx.o" -c -o "system/src/cmsis/system_stm32f4xx.o" "../system/src/cmsis/system_stm32f4xx.c"
+Finished building: ../system/src/cmsis/system_stm32f4xx.c
+ 
+Building file: ../system/src/cmsis/vectors_stm32f401xc.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"system/src/cmsis/vectors_stm32f401xc.d" -MT"system/src/cmsis/vectors_stm32f401xc.o" -c -o "system/src/cmsis/vectors_stm32f401xc.o" "../system/src/cmsis/vectors_stm32f401xc.c"
+Finished building: ../system/src/cmsis/vectors_stm32f401xc.c
+ 
+Building file: ../src/GPIO.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/GPIO.d" -MT"src/GPIO.o" -c -o "src/GPIO.o" "../src/GPIO.c"
+../src/GPIO.c:7:12: warning: braces around scalar initializer
+   /*GPIOA*/{ 0x40020000 },
+            ^
+../src/GPIO.c:7:12: note: (near initialization for 'GPIO[0]')
+../src/GPIO.c:7:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOA*/{ 0x40020000 },
+              ^
+../src/GPIO.c:7:14: note: (near initialization for 'GPIO[0]')
+../src/GPIO.c:8:12: warning: braces around scalar initializer
+   /*GPIOB*/{ 0x40020400 },
+            ^
+../src/GPIO.c:8:12: note: (near initialization for 'GPIO[1]')
+../src/GPIO.c:8:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOB*/{ 0x40020400 },
+              ^
+../src/GPIO.c:8:14: note: (near initialization for 'GPIO[1]')
+../src/GPIO.c:9:12: warning: braces around scalar initializer
+   /*GPIOC*/{ 0x40020800 },
+            ^
+../src/GPIO.c:9:12: note: (near initialization for 'GPIO[2]')
+../src/GPIO.c:9:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOC*/{ 0x40020800 },
+              ^
+../src/GPIO.c:9:14: note: (near initialization for 'GPIO[2]')
+../src/GPIO.c:10:12: warning: braces around scalar initializer
+   /*GPIOD*/{ 0x40020C00 },
+            ^
+../src/GPIO.c:10:12: note: (near initialization for 'GPIO[3]')
+../src/GPIO.c:10:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOD*/{ 0x40020C00 },
+              ^
+../src/GPIO.c:10:14: note: (near initialization for 'GPIO[3]')
+../src/GPIO.c:11:12: warning: braces around scalar initializer
+   /*GPIOE*/{ 0x40021000 },
+            ^
+../src/GPIO.c:11:12: note: (near initialization for 'GPIO[4]')
+../src/GPIO.c:11:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOE*/{ 0x40021000 },
+              ^
+../src/GPIO.c:11:14: note: (near initialization for 'GPIO[4]')
+../src/GPIO.c:12:12: warning: braces around scalar initializer
+   /*GPIOH*/{ 0x40021C00 } };
+            ^
+../src/GPIO.c:12:12: note: (near initialization for 'GPIO[5]')
+../src/GPIO.c:12:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   /*GPIOH*/{ 0x40021C00 } };
+              ^
+../src/GPIO.c:12:14: note: (near initialization for 'GPIO[5]')
+../src/GPIO.c: In function 'GPIO_enuSetPinValue_':
+../src/GPIO.c:248:6: warning: unused variable 'LocalTemp' [-Wunused-variable]
+  u32 LocalTemp;
+      ^
+../src/GPIO.c: In function 'GPIO_enuGetPinValue':
+../src/GPIO.c:358:6: warning: unused variable 'LocalMode' [-Wunused-variable]
+  u32 LocalMode;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetPortValue':
+../src/GPIO.c:405:6: warning: unused variable 'LocalTemp' [-Wunused-variable]
+  u32 LocalTemp;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetAlternateFunctionLow':
+../src/GPIO.c:523:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port < GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:525:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    if (Cpy_u8AF >= GPIO_enu_AF_LOW_0
+                 ^
+../src/GPIO.c:529:39: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+      if ((Cpy_u8Pin >> LocalIterator) & 1 == GPIO_enuPin_HIGH) {
+                                       ^
+../src/GPIO.c:530:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port) {
+       ^
+../src/GPIO.c:521:6: warning: unused variable 'LocalAFLow' [-Wunused-variable]
+  u32 LocalAFLow;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetAlternateFunctionHigh':
+../src/GPIO.c:584:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port < GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:586:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    if (Cpy_u8AF >= GPIO_enu_AF_HIGH_0
+                 ^
+../src/GPIO.c:590:39: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+      if ((Cpy_u8Pin >> LocalIterator) & 1 == GPIO_enuPin_HIGH) {
+                                       ^
+../src/GPIO.c:591:7: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+       switch (Cpy_u8Port) {
+       ^
+../src/GPIO.c:582:6: warning: unused variable 'LocalAFHigh' [-Wunused-variable]
+  u32 LocalAFHigh;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetMultiplePins':
+../src/GPIO.c:646:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u8Port >= GPIO_enuPort_A && Cpy_u8Port <= GPIO_enuNumberOfPorts) {
+                 ^
+../src/GPIO.c:648:4: warning: enumeration value 'GPIO_enuNumberOfPorts' not handled in switch [-Wswitch]
+    switch (Cpy_u8Port) {
+    ^
+../src/GPIO.c:644:6: warning: unused variable 'CurrentLocation' [-Wunused-variable]
+  u16 CurrentLocation = 0;
+      ^
+../src/GPIO.c:643:5: warning: unused variable 'LocalIterator2' [-Wunused-variable]
+  u8 LocalIterator2;
+     ^
+../src/GPIO.c:642:5: warning: unused variable 'LocalIterator' [-Wunused-variable]
+  u8 LocalIterator;
+     ^
+../src/GPIO.c:640:6: warning: unused variable 'LocalBuffer' [-Wunused-variable]
+  u32 LocalBuffer = 0;
+      ^
+../src/GPIO.c: In function 'GPIO_enuSetPinValue_':
+../src/GPIO.c:351:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/GPIO.c
+ 
+Building file: ../src/LED.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/LED.d" -MT"src/LED.o" -c -o "src/LED.o" "../src/LED.c"
+Finished building: ../src/LED.c
+ 
+Building file: ../src/LED_Cfg.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/LED_Cfg.d" -MT"src/LED_Cfg.o" -c -o "src/LED_Cfg.o" "../src/LED_Cfg.c"
+Finished building: ../src/LED_Cfg.c
+ 
+Building file: ../src/RCC.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/RCC.d" -MT"src/RCC.o" -c -o "src/RCC.o" "../src/RCC.c"
+../src/RCC.c: In function 'RCC_enuSelectSysClk':
+../src/RCC.c:23:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC.c: In function 'RCC_enuEnableSysClk':
+../src/RCC.c:95:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC.c: In function 'RCC_enuDisableSysClk':
+../src/RCC.c:134:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC.c: In function 'RCC_enuCheckClkReady':
+../src/RCC.c:172:17: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_SysClk >= RCC_enu_HSI && Cpy_SysClk < RCC_enu_NumerOfClkSources) {
+                 ^
+../src/RCC.c:169:6: warning: unused variable 'LocalTIMEOUT' [-Wunused-variable]
+  u16 LocalTIMEOUT = 0;
+      ^
+../src/RCC.c:167:6: warning: parameter 'Cpy_u8ClkStatus' set but not used [-Wunused-but-set-parameter]
+   u8 Cpy_u8ClkStatus) {
+      ^
+../src/RCC.c: In function 'RCC_enuControlPrescaler_AHB':
+../src/RCC.c:253:27: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (Cpy_u32AHB_Prescaler >= RCC_enuAHB_Prescaler_2
+                           ^
+../src/RCC.c: In function 'RCC_enuControlPrescaler_APB2':
+../src/RCC.c:367:28: warning: comparison between 'RCC_tenuAPB2_Prescalers {aka enum <anonymous>}' and 'enum <anonymous>' [-Wenum-compare]
+  if (Cpy_u32APB2_Prescaler >= RCC_enuAPB1_Prescaler_2
+                            ^
+../src/RCC.c:368:29: warning: comparison between 'RCC_tenuAPB2_Prescalers {aka enum <anonymous>}' and 'enum <anonymous>' [-Wenum-compare]
+    && Cpy_u32APB2_Prescaler < RCC_enuAPB1_NumberOfPrescalers) {
+                             ^
+../src/RCC.c: In function 'RCC_enuEnablePeripheralClk':
+../src/RCC.c:413:2: warning: enumeration value 'RCC_enuNumberOfSystemBuses' not handled in switch [-Wswitch]
+  switch (Cpy_u32PeripheralBus) {
+  ^
+../src/RCC.c: In function 'RCC_enuDisablePeripheralClk':
+../src/RCC.c:645:2: warning: enumeration value 'RCC_enuNumberOfSystemBuses' not handled in switch [-Wswitch]
+  switch (Cpy_u32PeripheralBus) {
+  ^
+../src/RCC.c: In function 'RCC_enuConfigurePLL':
+../src/RCC.c:892:19: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  if (LocalPLL_Src >= RCC_enuPLL_HSI
+                   ^
+../src/RCC.c:900:20: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+     if (LocalPLL_P >= 0 && LocalPLL_P < 4) {
+                    ^
+../src/RCC.c:882:6: warning: unused variable 'LocalPLL' [-Wunused-variable]
+  u32 LocalPLL = RCC->RCC_PLLCFGR;
+      ^
+Finished building: ../src/RCC.c
+ 
+Building file: ../src/STK_Program.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/STK_Program.d" -MT"src/STK_Program.o" -c -o "src/STK_Program.o" "../src/STK_Program.c"
+../src/STK_Program.c: In function 'STK_enuSetPeriodMS':
+../src/STK_Program.c:243:3: warning: enumeration value 'STK_enuPLL' not handled in switch [-Wswitch]
+   switch (Cpy_u8ClkSrc)
+   ^
+../src/STK_Program.c:243:3: warning: enumeration value 'STK_NumberOfClockSources' not handled in switch [-Wswitch]
+../src/STK_Program.c: In function 'STK_enuSetPeriodUS':
+../src/STK_Program.c:295:3: warning: enumeration value 'STK_enuPLL' not handled in switch [-Wswitch]
+   switch (Cpy_u8ClkSrc)
+   ^
+../src/STK_Program.c:295:3: warning: enumeration value 'STK_NumberOfClockSources' not handled in switch [-Wswitch]
+Finished building: ../src/STK_Program.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: 05-Systick.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"05-Systick.map" --specs=nano.specs -o "05-Systick.elf"  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xc.o  ./src/GPIO.o ./src/LED.o ./src/LED_Cfg.o ./src/RCC.o ./src/STK_Program.o ./src/main.o   
+Finished building target: 05-Systick.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "05-Systick.elf"  "05-Systick.hex"
+Finished building: 05-Systick.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "05-Systick.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7049	    188	    416	   7653	   1de5	05-Systick.elf
+Finished building: 05-Systick.siz
+ 
+
+21:18:10 Build Finished (took 9s.71ms)
+

@@ -1,0 +1,12 @@
+/*
+ * Chat.c
+ *
+ *  Created on: Apr 14, 2023
+ *      Author: Doaa Maher
+ */
+
+
+Chat_tenuErrorStatus Chat_enuInit (void)
+{
+
+}

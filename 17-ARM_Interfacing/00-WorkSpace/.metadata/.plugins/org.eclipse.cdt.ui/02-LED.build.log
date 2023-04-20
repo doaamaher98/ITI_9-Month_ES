@@ -1,0 +1,11 @@
+03:34:42 **** Incremental Build of configuration Debug for project 02-LED ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "02-LED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6551	    188	    412	   7151	   1bef	02-LED.elf
+Finished building: 02-LED.siz
+ 
+
+03:34:43 Build Finished (took 658ms)
+

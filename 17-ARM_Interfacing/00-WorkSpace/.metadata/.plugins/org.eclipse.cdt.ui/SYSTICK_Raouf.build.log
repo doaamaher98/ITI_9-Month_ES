@@ -1,0 +1,11 @@
+23:41:00 **** Incremental Build of configuration Debug for project SYSTICK_Raouf ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "SYSTICK_Raouf.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4619	    160	    412	   5191	   1447	SYSTICK_Raouf.elf
+Finished building: SYSTICK_Raouf.siz
+ 
+
+23:41:01 Build Finished (took 594ms)
+

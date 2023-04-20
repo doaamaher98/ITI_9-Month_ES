@@ -1,0 +1,28 @@
+/*
+ * UART.c
+ *
+ *  Created on: Apr 6, 2023
+ *      Author: Doaa Maher
+ */
+
+#include "USART_Interface.h"
+#include "USART_Private.h"
+#include "USART_Config.h"
+
+/* Transmission :
+ * * 1- Enable the USART by Setting UE bit in [USART_CR1]
+ * 2- Program the M-bit in [USART_CR1] to define Word length
+ * 3- Program the Stop bits in [USART_CR2]
+ * 4- Select DMA enable [DMAT]bit in [USART_CR3] if Multibuffer communication will take place, with configuring the DMA register.
+ * 5- Select the Desired Baud rate in the [USART_BRR]
+ * 6- Set the [TE]bit in the [USART_CR1] to enable TX and send it the Clock to make an IDLE frame as first transmission.
+ * 7- Write the Data to send in the [USART_DR] which clears the [TXE bit], repeat this for each data transmitted if single buffer.
+ * 8- After Writing the data in the [USART_DR], poll for the flag [TC=1] to indicate that the transmission is completed.
+ */
+
+// Array of 3 Peripherals sharing same type : same registers
+USART_tstr_Registers_t * const volatile USART[3] = {
+		/* USART1 */ {0x40011400},
+		/* USART2 */ {0x40011000},
+		/* USART6 */ {0x40004400},
+};

@@ -1,0 +1,15 @@
+/*
+ * Application_1.c
+ *
+ *  Created on: Apr 4, 2023
+ *      Author: engdo
+ */
+
+#include "LED.h"
+
+void App1_Task(void)
+{
+	LED_enuSetLEDValue(LED_enuPin0,LED_enuLED_ON);
+ }
+
+

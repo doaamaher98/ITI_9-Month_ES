@@ -1,0 +1,33 @@
+
+#include "RCC_Driv.h"
+#include "GPIO.h"
+#include "NVIC.h"
+
+#include "USART_Interface.h"
+
+
+
+
+void main (void)
+{
+	u8 Data[2];
+
+	RCC_enuSelectSysClk(RCC_enu_HSI);
+
+	/* Enable GPIOA,B */
+	RCC_enuEnablePeripheralClk(RCC_enuAHB1,RCC_enuAHB1_GPIOA);
+	RCC_enuEnablePeripheralClk(RCC_enuAHB1,RCC_enuAHB1_GPIOB);
+
+	/* Enable USART1 */
+	RCC_enuEnablePeripheralClk(RCC_enuAPB2,RCC_enuAPB2_USART1);
+
+	/* A0,A1 */
+	LED_enuLEDInit();
+	USART_enuInit();
+
+	while (1)
+	{
+		USART_enuSendAsynchZeroCpy(USART_enuUSART1,Data)
+
+	}
+}

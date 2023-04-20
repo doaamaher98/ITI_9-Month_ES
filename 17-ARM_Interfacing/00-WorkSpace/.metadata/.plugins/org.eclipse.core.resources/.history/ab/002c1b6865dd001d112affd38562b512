@@ -1,0 +1,551 @@
+/****************************************************************************************/
+/* Author 	: Doaa Maher								*/
+/* Date   	: 13 MAR 2023								*/
+/* Version 	: V01									*/	
+/****************************************************************************************/
+
+#include "NVIC.h"
+#include "NVIC_Config.h"
+
+/******************************* Pointers to struct with every register's base address *********************************/
+// SCB Register
+#define 				SCB_AIRCR   				*((volatile u32*)0xE000ED0C)
+
+typedef struct
+{
+	volatile u32 ISER[8];
+	volatile u32 reserved1[24];
+	volatile u32 ICER[8];
+	volatile u32 reserved2[24];
+	volatile u32 ISPR[8];
+	volatile u32 reserved3[24];
+	volatile u32 ICPR[8];
+	volatile u32 reserved4[24];
+	volatile u32 IABR[8];
+	volatile u32 reserved5[56];
+	volatile u8  IPR[240];
+	volatile u32 reserved6[580];
+	volatile u32 STIR;
+}NVIC_tstrConfig_t;
+
+// Base Address
+NVIC_tstrConfig_t const volatile *NVIC = ((NVIC_tstrConfig_t *) 0xE000E100)
+
+		// Array of Pointer to function : Vector Table Declaration
+		void (* ISR_Handler[NVIC_IRQ_NUMBERS])(void)= {NULL_PTR};
+
+
+/************************************************************************************************************************/
+/* Notes :-
+ * -------
+ * To enable an external interrupt, we must :
+ * 1- Set the Enable bit in ISER
+ * 2- Clear the pending flag in ICPR
+ */
+NVIC_tenuErrorStatus NVIC_enuEnableIRQ (u8 Cpy_InterruptNO)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	// Validating the number of interrupts
+	if (Cpy_InterruptNO > NVIC_IRQ_NUMBERS)
+	{
+		LocalErrorStatus = NVIC_enuInvalidIRQ;
+	}
+	else
+	{
+		/* Clear any previous Pending before Enabling the Interrupt */
+		NVIC->ICPR[Cpy_InterruptNO/32] |= (1<< (Cpy_InterruptNO % 32) );
+		/* Enabling the Required Interrupt */
+		NVIC->ISER[Cpy_InterruptNO/32] |= (1<< (Cpy_InterruptNO % 32) );
+	}
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+/* Notes :-
+ * -------
+ * To Disable an external interrupt, we must :
+ * 1- Set the Disable bit in ICER
+ */
+NVIC_tenuErrorStatus NVIC_enuDisableIRQ (u8 Cpy_InterruptNO)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	// Validating the number of interrupts
+	if (Cpy_InterruptNO > NVIC_IRQ_NUMBERS)
+	{
+		LocalErrorStatus = NVIC_enuInvalidIRQ;
+	}
+	else
+	{
+		/* Disabling the Required Interrupt */
+		NVIC->ICER[Cpy_InterruptNO/32] |= (1<< (Cpy_InterruptNO % 32) );
+	}
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+/* Notes :
+ * To set pending flag we must :
+ * 1- Set Pending ISPR flag
+ */
+NVIC_tenuErrorStatus NVIC_enuSetPendingIRQ(NVIC_tstrConfig_t *Add_strNVIC_Cfg)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	/* Local counter */
+	u8 LocalCounter;
+
+	/* Setting the ISPR Register */
+	NVIC_tstrISPR_Reg_t *NVIC_ISPR = Add_strNVIC_Cfg -> NVIC_Reg;
+
+	/* Setting the Bit */
+	NVIC_tenu_Bits Current_Bit = Add_strNVIC_Cfg -> NVIC_Bit;
+
+	/* Checking if NULL PTR */
+	if (Add_strNVIC_Cfg == NULL_PTR)
+	{
+		LocalErrorStatus = NVIC_enuNullPointer;
+	}
+	else
+	{
+		for (LocalCounter =0; LocalCounter < NVIC_enuNumberOfBits ; LocalCounter++)
+		{
+			/* Selecting Current Bit Number */
+			if (((Current_Bit << LocalCounter) & 1) == 1 )
+			{
+				/* Switch registers */
+				switch (Add_strNVIC_Cfg -> NVIC_Reg_Number)
+				{
+				case NVIC_enuISPR0:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR0 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR1:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR1 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR2:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR2 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR3:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR3 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR4:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR4 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR5:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR5 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR6:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR6 |= NVIC_ISPR_SET;
+					break;
+
+				case NVIC_enuISPR7:
+					/* Setting the Pending Set Register */
+					NVIC_ISPR->NVIC_ISPR7 |= NVIC_ISPR_SET;
+					break;
+				}
+			}
+			else
+			{
+				LocalErrorStatus = NVIC_enuInvalidISPR;
+			}
+		}
+	}
+
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+/* Notes :
+ * To clear pending flag we must :
+ * 1- Set Pending ICPR flag
+ */
+NVIC_tenuErrorStatus NVIC_enuClearPendingIRQ(NVIC_tstrConfig_t *Add_strNVIC_Cfg)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	/* Local counter */
+	u8 LocalCounter;
+
+	/* Setting the ISPR & ICPR Registers */
+	NVIC_tstrICPR_Reg_t *NVIC_ICPR = Add_strNVIC_Cfg -> NVIC_Reg;
+	//	NVIC_tstrIABR_Reg_t *NVIC_IABR = Add_strNVIC_Cfg -> NVIC_Reg;
+
+	/* Setting the Bit */
+	NVIC_tenu_Bits Current_Bit = Add_strNVIC_Cfg -> NVIC_Bit;
+
+	/* Checking if NULL PTR */
+	if (Add_strNVIC_Cfg == NULL_PTR)
+	{
+		LocalErrorStatus = NVIC_enuNullPointer;
+	}
+	else
+	{
+		for (LocalCounter =0; LocalCounter < NVIC_enuNumberOfBits ; LocalCounter++)
+		{
+			/* Selecting Current Bit Number */
+			if (((Current_Bit << LocalCounter) & 1) == 1 )
+			{
+				/* Switch registers */
+				switch (Add_strNVIC_Cfg -> NVIC_Reg_Number)
+				{
+				case NVIC_enuICPR0:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR0 |= NVIC_ICPR_SET;
+					break;
+
+				case NVIC_enuICPR1:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR1 |= NVIC_ICPR_SET;
+					break;
+
+				case NVIC_enuICPR2:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR2 |= NVIC_ICPR_SET;;
+					break;
+
+				case NVIC_enuICPR3:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR3 |= NVIC_ICPR_SET;
+					break;
+
+				case NVIC_enuICPR4:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR4 |= NVIC_ICPR_SET;
+					break;
+
+				case NVIC_enuICPR5:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR5 |= NVIC_ICPR_SET;
+					break;
+
+				case NVIC_enuICPR6:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR6 |= NVIC_ICPR_SET;
+					break;
+
+				case NVIC_enuICPR7:
+					/* Setting the Clear Pending Register */
+					NVIC_ICPR->NVIC_ICPR7 |= NVIC_ICPR_SET;
+					break;
+				}
+
+			}
+			else
+			{
+				LocalErrorStatus = NVIC_enuInvalidISPR;
+			}
+		}
+	}
+
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+u8 NVIC_u32ReadPendingIRQ (NVIC_tstrConfig_t *Add_strNVIC_Cfg)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	/* Setting the Bit */
+	NVIC_tenu_Bits Current_Bit = Add_strNVIC_Cfg -> NVIC_Bit;
+	u8 LocalCounter;
+
+	/* Setting the ISPR */
+	//	NVIC_tstrISPR_Reg_t *NVIC_ISPR = Add_strNVIC_Cfg-> NVIC_Reg;
+	/* Setting the Pending Status */
+	u8 LocalPendingStatus;
+
+	/*	Checking for NULL Pointer */
+	if (Add_strNVIC_Cfg != NULL_PTR)
+	{
+		for (LocalCounter =0; LocalCounter < NVIC_IRQ_NUMBERS ; LocalCounter++)
+		{
+			if ((Current_Bit << LocalCounter ) && 1 == 1)
+			{
+				switch(Add_strNVIC_Cfg-> NVIC_Reg_Number)
+				{
+				case NVIC_enuISPR0:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+				case NVIC_enuISPR1:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuISPR2:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuISPR3:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuISPR4:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuISPR5:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuISPR6:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuISPR7:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalPendingStatus = 1;
+					}
+					else {
+						LocalPendingStatus = 0;
+					}
+
+					break;
+
+				}
+				LocalErrorStatus = LocalPendingStatus;
+			}
+		}
+
+	}
+	else
+	{
+		LocalErrorStatus = NVIC_enuNullPointer;
+	}
+
+
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+u8 NVIC_u32ReadActiveStatus (NVIC_tstrConfig_t *Add_strNVIC_Cfg)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+	u8 LocalActiveStatus ;
+
+	/* Setting the Bit */
+	NVIC_tenu_Bits Current_Bit = Add_strNVIC_Cfg -> NVIC_Bit;
+	u8 LocalCounter;
+
+	/* Setting the IABR */
+	//	NVIC_tstrIABR_Reg_t *NVIC_IABR = Add_strNVIC_Cfg ->NVIC_Reg;
+
+	/*	Checking for NULL Pointer */
+	if (Add_strNVIC_Cfg != NULL_PTR)
+	{
+		for (LocalCounter=0; LocalCounter < NVIC_IRQ_NUMBERS ; LocalCounter++)
+		{
+			if ((Current_Bit << LocalCounter) && 1 == 1)
+			{
+				switch(Add_strNVIC_Cfg-> NVIC_Reg_Number)
+				{
+				case NVIC_enuIABR0:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+				case NVIC_enuIABR1:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuIABR2:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuIABR3:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuIABR4:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuIABR5:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuIABR6:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				case NVIC_enuIABR7:
+					if (Add_strNVIC_Cfg -> NVIC_Bit == 1)
+					{
+						LocalActiveStatus = 1;
+					}
+					else {
+						LocalActiveStatus = 0;
+					}
+
+					break;
+
+				}
+				LocalErrorStatus = LocalActiveStatus;
+			}
+		}
+	}
+	else
+	{
+		LocalErrorStatus = NVIC_enuNullPointer;
+	}
+
+
+
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+NVIC_tenuErrorStatus NVIC_enuSetPriority(u8 Cpy_u8PriorityID, u32 Cpy_u8Priority)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	u8 Loc_u8Register;
+
+	/* Checking interrupts */
+	if(Cpy_u8PriorityID > NVIC_IPR_IRQS)
+	{
+		LocalErrorStatus = NVIC_enuInvalidIRQ;
+	}
+
+	else
+	{
+		/* GET REGISTER NUMBER */
+		Loc_u8Register = Cpy_u8PriorityID / 4;
+
+		SCB_AIRCR = NVIC_Group_4_Sub_0;
+
+		/* SET THE PRIORITY */
+		NVIC_IPR->NVIC_IPRx[Loc_u8Register] |= Cpy_u8Priority;
+
+	}
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/
+//u32 NVIC_u32ReadPriority(NVIC_tstrConfig_t *Add_strNVIC_Cfg)
+//{
+//
+//}
+
+
+
+
+
+/************************************************************************************************************************/
+//NVIC_tenuErrorStatus NVIC_enuSetPriorityGrouping(NVIC_tstrConfig_t *Add_strNVIC_Cfg)
+//{
+//
+//}
+/************************************************************************************************************************/
+NVIC_tenuErrorStatus NVIC_enuSystemReset (void)
+{
+	NVIC_tenuErrorStatus LocalErrorStatus = NVIC_enuOK;
+
+	/* Reset all major components except for debugging */
+	SCB_AIRCR |= SCB_AIRCR_CLR;
+
+	return LocalErrorStatus;
+}
+/************************************************************************************************************************/

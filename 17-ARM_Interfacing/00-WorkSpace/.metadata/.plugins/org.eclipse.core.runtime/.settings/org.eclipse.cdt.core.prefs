@@ -1,0 +1,17 @@
+ToolChainManager/order/0.id=gcc-x86_64-C\:/mingw64/bin/gcc.exe
+ToolChainManager/order/0.type=org.eclipse.cdt.build.gcc
+ToolChainManager/order/1.id=gcc-arm-D\:/Doaa Maher/0000-ITI-9M/00-ARM_Tourkey/tools/ARM GCC/bin/arm-none-eabi-gcc.exe
+ToolChainManager/order/1.type=org.eclipse.cdt.build.gcc
+ToolChainManager/order/2.id=gcc-x86_64-C\:/mingw64/bin/x86_64-w64-mingw32-gcc.exe
+ToolChainManager/order/2.type=org.eclipse.cdt.build.gcc
+ToolChainManager/order/3.id=gcc-x86_64-C\:/mingw64/bin/clang.exe
+ToolChainManager/order/3.type=org.eclipse.cdt.build.clang
+ToolChainManager/order/n=4
+build.all.configs.enabled=false
+build.proj.ref.configs.enabled=false
+eclipse.preferences.version=1
+errorparser.default.ids=org.eclipse.cdt.autotools.core.ErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.MakeErrorParser
+language.settings.providers.workspace.prefs.toggle=true
+macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<macros/>\r\n
+org.eclipse.cdt.core.showSourceFilesInBinaries=true
+org.eclipse.cdt.core.showSourceNotFoundEditor=all_time

@@ -1,0 +1,22 @@
+/*
+ * Chat.c
+ *
+ *  Created on: Apr 14, 2023
+ *      Author: Doaa Maher
+ */
+#include "Chat_Interface.h"
+
+Chat_tenuErrorStatus Chat_enuInit (void)
+{
+	Chat_tenuErrorStatus LocalErrorStatus = Chat_enuOK;
+
+	u8 LocalIterator=0;
+
+	for (LocalIterator=0; LocalIterator< NUMBER_OF_USART_CHANNELS; LocalIterator++)
+	{
+		USART_enuInit(&USART_Cfg[LocalIterator]);
+	}
+
+
+	return LocalErrorStatus;
+}

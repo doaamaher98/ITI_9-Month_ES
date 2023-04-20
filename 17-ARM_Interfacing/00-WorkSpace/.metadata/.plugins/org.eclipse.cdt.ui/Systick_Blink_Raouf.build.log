@@ -1,0 +1,11 @@
+05:22:01 **** Incremental Build of configuration Debug for project Systick_Blink_Raouf ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "Systick_Blink_Raouf.elf"
+   text	   data	    bss	    dec	    hex	filename
+   5723	    208	    420	   6351	   18cf	Systick_Blink_Raouf.elf
+Finished building: Systick_Blink_Raouf.siz
+ 
+
+05:22:02 Build Finished (took 742ms)
+

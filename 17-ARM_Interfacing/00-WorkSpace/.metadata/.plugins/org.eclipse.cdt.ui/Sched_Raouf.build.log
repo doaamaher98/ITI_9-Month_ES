@@ -1,0 +1,25 @@
+09:28:45 **** Incremental Build of configuration Debug for project Sched_Raouf ****
+make all 
+Building file: ../src/Schedular_Program.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/Schedular_Program.d" -MT"src/Schedular_Program.o" -c -o "src/Schedular_Program.o" "../src/Schedular_Program.c"
+Finished building: ../src/Schedular_Program.c
+ 
+Building target: Sched_Raouf.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"Sched_Raouf.map" --specs=nano.specs -o "Sched_Raouf.elf"  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xc.o  ./src/GPIO_Program.o ./src/Led_Config.o ./src/Led_Program.o ./src/NVIC_Program.o ./src/RCC_Program.o ./src/SYSTICK_Program.o ./src/Sched_APP.o ./src/Schedular_Config.o ./src/Schedular_Program.o ./src/main.o   
+Finished building target: Sched_Raouf.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "Sched_Raouf.elf"  "Sched_Raouf.hex"
+Finished building: Sched_Raouf.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "Sched_Raouf.elf"
+   text	   data	    bss	    dec	    hex	filename
+   6087	    288	    456	   6831	   1aaf	Sched_Raouf.elf
+Finished building: Sched_Raouf.siz
+ 
+
+09:28:47 Build Finished (took 2s.277ms)
+

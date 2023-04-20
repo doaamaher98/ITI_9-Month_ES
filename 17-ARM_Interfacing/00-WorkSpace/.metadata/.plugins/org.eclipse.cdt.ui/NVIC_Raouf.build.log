@@ -1,0 +1,11 @@
+22:25:25 **** Incremental Build of configuration Debug for project NVIC_Raouf ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "NVIC_Raouf.elf"
+   text	   data	    bss	    dec	    hex	filename
+   4843	    160	    412	   5415	   1527	NVIC_Raouf.elf
+Finished building: NVIC_Raouf.siz
+ 
+
+22:25:26 Build Finished (took 624ms)
+

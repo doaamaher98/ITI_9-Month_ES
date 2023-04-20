@@ -1,0 +1,11 @@
+21:32:08 **** Incremental Build of configuration Debug for project 03-Switch ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "03-Switch.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7443	    252	    484	   8179	   1ff3	03-Switch.elf
+Finished building: 03-Switch.siz
+ 
+
+21:32:09 Build Finished (took 678ms)
+
